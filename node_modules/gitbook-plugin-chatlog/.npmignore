@@ -1,0 +1,10 @@
+test
+examples
+doc
+benchmark
+.travis.yml
+CHANGELOG.md
+UPGRADING.md
+node_modules
+node_modules/*
+*.log
