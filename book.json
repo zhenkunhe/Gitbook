@@ -60,7 +60,8 @@
         "flow",
         "tags",
         "chart",
-        "hints"
+        "hints",
+		"theme-comscore"
     ],
     "pluginsConfig": {
         "theme-default": {
