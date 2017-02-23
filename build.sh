@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cp books/$1/book.json .
-rm -r books/$1/html
+rm -r docs/$1
 gitbook build
-mv _book books/$1/html
+mv _book docs/$1
 rm book.json

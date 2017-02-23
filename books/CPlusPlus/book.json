@@ -12,16 +12,16 @@
         "pages": [{
             "active": true,
             "title": "C++",
-            "url": "https://zhenkunhe.github.io/Gitbook-CPlusPlus/"
+            "url": "https://zhenkunhe.github.io/Gitbook/CPlusPlus/"
         }, {
             "title": "C",
-            "url": "https://zhenkunhe.github.io/Gitbook-C/"
+            "url": "https://zhenkunhe.github.io/Gitbook/C/"
         }, {
             "title": "Python",
-            "url": "https://zhenkunhe.github.io/Gitbook-Python/"
+            "url": "https://zhenkunhe.github.io/Gitbook/Python/"
         }, {
             "title": "Linux",
-            "url": "https://zhenkunhe.github.io/Gitbook-Linux/"
+            "url": "https://zhenkunhe.github.io/Gitbook/Linux/"
         }]
     },
     "plugins": [
@@ -116,7 +116,7 @@
             }]
         },
         "github-buttons": {
-            "repo": "zhenkunhe/Gitbook-CPlusPlus",
+            "repo": "zhenkunhe/Gitbook",
             "types": [
                 "star",
                 "watch"
@@ -131,7 +131,7 @@
             "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
         },
         "editlink": {
-            "base": "https://github.com/zhenkunhe/Gitbook-CPlusPlus/edit/master/",
+            "base": "https://github.com/zhenkunhe/Gitbook/edit/master/books/CPlusPlus/",
             "label": "Edit This Page",
             "multilingual": false
         },

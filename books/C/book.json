@@ -1,0 +1,158 @@
+{
+    "title": "Trashman's Program Note",
+    "author": "Alex Hoh <zhenkunhe@gmail.com>",
+    "description": "Trashman's Program Note",
+    "language": "zh-tw",
+    "root": "./books/C",
+    "project": {
+        "home": {
+            "title": "Trashman's Program Note",
+            "url": "#"
+        },
+        "pages": [{
+            "title": "C++",
+            "url": "https://zhenkunhe.github.io/Gitbook/CPlusPlus/"
+        }, {
+            "active": true,
+            "title": "C",
+            "url": "https://zhenkunhe.github.io/Gitbook/C/"
+        }, {
+            "title": "Python",
+            "url": "https://zhenkunhe.github.io/Gitbook/Python/"
+        }, {
+            "title": "Linux",
+            "url": "https://zhenkunhe.github.io/Gitbook/Linux/"
+        }]
+    },
+    "plugins": [
+        "maxiang",
+        "image-captions",
+        "disqus",
+        "codeblock-filename",
+        "sectionx",
+        "-lunr",
+        "-search",
+        "-sharing",
+        "search-pro",
+        "advanced-emoji",
+        "toggle-chapters",
+        "puml",
+        "katex",
+        "emphasize",
+        "splitter",
+        "editlink",
+        "tbfed-pagefooter",
+        "youtubex",
+        "mermaid",
+        "expandable-chapters",
+        "book-summary-scroll-position-saver",
+        "include-codeblock",
+        "ace",
+        "github-buttons",
+        "spoiler",
+        "youtubex",
+        "back-to-top-button",
+        "codetabs",
+        "copy-code-button",
+        "toolbar",
+        "todo",
+        "chatlog",
+        "bootstrap-callout",
+        "flow",
+        "tags",
+        "chart",
+        "hints",
+		"theme-comscore"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "flow": {
+            "font-color": "#3EB1D0",
+            "line-color": "#cd4545",
+            "fill": "#2d3143"
+        },
+        "chart": {
+            "type": "highcharts"
+        },
+        "chatlog": {
+            "users": {
+                "claylo": {
+                    "balloon": "#08f",
+                    "text": "#fff"
+                },
+                "mojombo": {
+                    "balloon": "#ddd",
+                    "text": "#000"
+                }
+            }
+        },
+        "toolbar": {
+            "buttons": [{
+                "label": "Google+",
+                "icon": "fa fa-google-plus",
+                "url": "https://plus.google.com/106302595834859374854/"
+            }, {
+                "label": "Facebook",
+                "icon": "fa fa-facebook",
+                "url": "https://www.facebook.com/zhenkunhe/"
+            }, {
+                "label": "Twitter",
+                "icon": "fa fa-twitter",
+                "url": "https://twitter.com/zhenkunhe/"
+            }, {
+                "label": "Pinterest",
+                "icon": "fa fa-pinterest",
+                "url": "https://www.pinterest.com/zhenkunhe/"
+            }, {
+                "label": "StackOverflow",
+                "icon": "fa fa-stack-overflow",
+                "url": "http://stackoverflow.com/users/6819791/trashman/"
+            }, {
+                "label": "GitHub",
+                "icon": "fa fa-github",
+                "url": "https://github.com/zhenkunhe/"
+            }]
+        },
+        "github-buttons": {
+            "repo": "zhenkunhe/Gitbook",
+            "types": [
+                "star",
+                "watch"
+            ],
+            "size": "large"
+        },
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        },
+        "image-captions": {
+            "caption": "Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
+        },
+        "editlink": {
+            "base": "https://github.com/zhenkunhe/Gitbook/edit/master/books/C/",
+            "label": "Edit This Page",
+            "multilingual": false
+        },
+        "disqus": {
+            "shortName": "trashmans-program-note"
+        },
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": true,
+            "theme": "monokai"
+        },
+        "tbfed-pagefooter": {
+            "copyright": "© 2017 Trashman",
+            "modify_label": "修訂時間：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "youtubex": {
+            "embedDescription": {
+                "en": "Watch this video!",
+                "de": "Eingebettetes video:"
+            }
+        }
+    }
+}
