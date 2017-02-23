@@ -1,0 +1,1 @@
+# 記憶體配置（Memory Allocation）

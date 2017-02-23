@@ -11,17 +11,17 @@
         },
         "pages": [{
             "title": "C++",
-            "url": "https://zhenkunhe.github.io/Gitbook/CPlusPlus/"
+            "url": "https://zhenkunhe.github.io/Gitbook/CPlusPlus/index.html"
         }, {
             "title": "C",
-            "url": "https://zhenkunhe.github.io/Gitbook/C/"
+            "url": "https://zhenkunhe.github.io/Gitbook/C/index.html"
         }, {
             "active": true,
             "title": "Python",
-            "url": "https://zhenkunhe.github.io/Gitbook/Python/"
+            "url": "https://zhenkunhe.github.io/Gitbook/Python/index.html"
         }, {
             "title": "Linux",
-            "url": "https://zhenkunhe.github.io/Gitbook/Linux/"
+            "url": "https://zhenkunhe.github.io/Gitbook/Linux/index.html"
         }]
     },
     "plugins": [
