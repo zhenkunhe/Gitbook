@@ -376,12 +376,35 @@ body {
 
 /* 配合 gitbook-plugin-image-captions 插件使用 */
 .book.color-theme-2 figure figcaption {
+  align-items: center;
   padding: 5px 10px;
   margin: 0;
   text-shadow: 0 1px 0 #539ACE;
   font-size: 14px;
   color: #9dbed8;
   background-color: #2D3143;
+}
+.book.color-theme-2  .panel-body {
+   background: #1A1A1A;
+}
+
+.book.color-theme-2 a.section {
+   border-color: #373b4e !important;
+}
+
+figure {
+    margin: 1.5em 0px;
+    padding:10px 0;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+figcaption {
+    clear: left;
+    margin: 0.75em 0px;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5em;
 }
 
 /* 配合 gitbook-plugin-maxiang 插件使用 */
