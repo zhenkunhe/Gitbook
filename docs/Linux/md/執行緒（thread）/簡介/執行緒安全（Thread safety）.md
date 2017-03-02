@@ -1,0 +1,1 @@
+# 執行緒安全（Thread safety）
