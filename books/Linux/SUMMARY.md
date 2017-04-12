@@ -54,9 +54,9 @@
 * [目錄與連結（Directory and Link）](/md/檔案系統（file system）/目錄與連結（Directory and Link）.md)
 
 ## 檔案IO
-* [通用的檔案I/O模型](/md/檔案IO/通用的檔案I/O模型.md)
-* [檔案I/O：深入探討](/md/檔案IO/檔案I/O：深入探討.md)
-* [檔案I/O緩衝區](/md/檔案IO/檔案I/O緩衝區.md)
+* [通用的檔案IO模型](/md/檔案IO/通用的檔案IO模型.md)
+* [檔案IO：深入探討](/md/檔案IO/檔案IO：深入探討.md)
+* [檔案IO緩衝區](/md/檔案IO/檔案IO緩衝區.md)
 * [檔案屬性（File Attribute）](/md/檔案IO/檔案屬性（File Attribute）.md)
 
 ## 行程（process）

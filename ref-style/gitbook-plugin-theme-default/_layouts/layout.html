@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="{{ config.language }}" {% if page.dir=="rtl" %}dir="rtl" {% endif %}>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>
+    {% block title %}
+    {{ config.title|d("GitBook", true) }}
+    {% endblock %}
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="generator" content="GitBook {{ gitbook.version }}">
+    {% if config.author %}
+    <meta name="author" content="{{ config.author }}">
+    {% endif %}
+    {% if config.isbn %}
+    <meta name="identifier" content="{{ config.isbn }}" scheme="ISBN">
+    {% endif %}
+
+    {% block style %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      {% for resource in plugins.resources.css %}
+        {% if resource.url %}
+          <link rel="stylesheet" href="{{ resource.url }}">
+        {% else %}
+          <link rel="stylesheet" href="{{ resource.path|resolveAsset }}">
+        {% endif %}
+      {% endfor %}
+    {% endblock %}
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                  </button>
+                  <a class="navbar-brand" href="{{ config.project.home.url }}">{{ config.project.home.title }}</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    {% for item in config.project.pages %}
+                        {% if item.active %}
+                            <li class="active"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                        {% else %}
+                            <li><a href="{{item.url}}">{{item.title}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    {% block body %}{% endblock %} {% block javascript %}{% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+
+</html>
