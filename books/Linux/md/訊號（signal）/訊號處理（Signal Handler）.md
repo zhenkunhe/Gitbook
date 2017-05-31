@@ -1,1 +1,0 @@
-# 訊號處理（Signal Handler）

@@ -1,1 +1,0 @@
-# 虛擬終端機（Pseudo Terminal）

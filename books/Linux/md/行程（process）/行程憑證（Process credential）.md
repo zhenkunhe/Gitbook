@@ -1,1 +1,0 @@
-# 行程憑證（Process credential）
