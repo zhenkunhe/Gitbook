@@ -10,6 +10,9 @@
             "url": "#"
         },
         "pages": [{
+            "title": "Design Patterns",
+            "url": "https://zhenkunhe.github.io/Gitbook/Design_Patterns/index.html"
+        }, {
             "title": "C++",
             "url": "https://zhenkunhe.github.io/Gitbook/CPlusPlus/index.html"
         }, {
@@ -22,6 +25,9 @@
             "active": true,
             "title": "Linux",
             "url": "https://zhenkunhe.github.io/Gitbook/Linux/index.html"
+        }, {
+            "title": "Sample",
+            "url": "https://zhenkunhe.github.io/Gitbook/Sample/index.html"
         }]
     },
     "plugins": [
@@ -62,7 +68,7 @@
         "tags",
         "chart",
         "hints",
-		"theme-comscore"
+        "theme-comscore"
     ],
     "pluginsConfig": {
         "theme-default": {
