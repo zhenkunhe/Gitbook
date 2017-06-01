@@ -68,9 +68,14 @@
         "tags",
         "chart",
         "hints",
-        "theme-comscore"
+        "theme-comscore",
+        "asciitree"
     ],
     "pluginsConfig": {
+        "asciitree": {
+        "leadingChar": "no need, because plugin will guess leadingChar.",
+        "trimRight": true
+        },
         "theme-default": {
             "showLevel": true
         },

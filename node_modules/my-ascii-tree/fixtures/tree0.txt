@@ -1,0 +1,19 @@
+abc
+uuu
+{% asciitree %}
+a
+-b
+--bb
+c
+-d
+{% endasciitree %}
+日本的天空下
+aa
+{% asciitree %}
+我
+-你把
+--他的是
+ok
+-yes
+--right
+{% endasciitree %}

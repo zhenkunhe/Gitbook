@@ -5,4 +5,7 @@
 * [tags](tags.md)
 
 ## CMake
-* [CMake](/md/CMake/CMake.md)
+* [Project](/md/CMake/Project.md)
+* [Target](/md/CMake/Target.md)
+* [Build](/md/CMake/Build.md)
+* [Install](/md/CMake/Install.md)
