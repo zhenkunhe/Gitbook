@@ -9,8 +9,7 @@ ces
 -->
 ### INTERFACE_INCLUDE_DIRECTORIES
 若此Target為`Library`，則此Property代表`public include directories`的List
-- `Target B`若link到此`Target A`，則`Target B`會自動include`Target A`中，
-`INTERFACE_INCLUDE_DIRECTORIES`所指向的directories，因此不必再特別設定`include_directories`
+- `Target B`若link到此`Target A`，則`Target B`會自動include`Target A`Property中`INTERFACE_INCLUDE_DIRECTORIES`所指向的directories，因此不必再特別設定`include_directories`
 - 可以透過`set_target_properties`設定
 
 ``` CMake
@@ -34,7 +33,7 @@ ces
 -->
 
 ### 分析
-- 
+-
 
 ### Directory
 
@@ -131,8 +130,30 @@ void foo(void);
 
 {%- endcodetabs %}
 
+{% hint style='danger' %}
+若將`target_include_directories(PUBLIC)`
+改為以下：
+``` CMake
+target_include_directories(foo PRIVATE
+  ${PROJECT_SOURCE_DIR}/inc
+)
+```
+會造成build `bar.c`失敗 =>
+`bar/src/bar.c:2:21: fatalerror: foo/foo.h: 沒有此一檔案或目錄`
+
+若改為以下：
+``` CMake
+set_target_properties(foo
+  PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES   ${PROJECT_SOURCE_DIR}/inc
+)
+```
+會造成build `foo.c`失敗 =>
+`foo/src/foo.c:2:21: fatal error: foo/foo.h: 沒有此一檔案或目錄`
 
 
+
+{% endhint %}
 ### Bar
 {% codetabs name="bar/CMakeLists.txt", type="cmake" -%}
 
