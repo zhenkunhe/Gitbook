@@ -205,6 +205,16 @@ set_target_properties(foo
 
 此時便需要`set_target_properties`來設置`INTERFACE_INCLUDE_DIRECTORIES`
 
+``` CMake
+add_library( External_lib SHARED IMPORTED GLOBAL )
+
+set_target_properties( External_lib
+    PROPERTIES
+    IMPORTED_LOCATION /path/to/libExternal_lib.so
+    INTERFACE_INCLUDE_DIRECTORIES /path/to/External_lib/include
+)
+```
+
 {% endhint %}
 
 ### Bar
