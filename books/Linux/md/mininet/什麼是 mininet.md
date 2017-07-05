@@ -3,7 +3,8 @@
 <!--sec data-title="什麼是 mininet" data-id="1" data-nopdf="true" data-collapse=false ces-->
 
 - mininet是一個用`python`寫的，跑在你的你電腦的一個`Process`
-- 這個`Process`是一個`網路模擬器(network emulator)`，或者更精確的說：`網路拓樸模擬器(network emulation orchestration system)`
+- 這個`Process`是一個`網路模擬器(network emulator)`，或者更精確的說：   
+`網路拓樸模擬器(network emulation orchestration system)`
 
 {% hint style='info' %}
 既然叫`拓樸模擬器`，代表它模擬了一整個:
@@ -14,7 +15,7 @@
 
 <!--endsec-->
 
-<!--sec data-title="模擬網路系統可以幹嘛？" data-id="2" data-nopdf="true" data-collapse=false ces-->
+<!--sec data-title="模擬網路系統可以做什麼？" data-id="2" data-nopdf="true" data-collapse=false ces-->
 
 - 通常透過mininet模擬的架構,會與實際透過硬體架設的結果一致，因此可做為`實體配線前的臨摹`
 
