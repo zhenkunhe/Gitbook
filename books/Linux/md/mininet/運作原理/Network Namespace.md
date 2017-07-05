@@ -1,5 +1,16 @@
 # Network Namespace
 
+process-based virtualization
+network namespaces
+
+features that are available in recent Linux kernels
+
+hosts are emulated as bash processes running in a network namespace
+
+so any code that would normally run on a Linux server (like a web server or client program) should run just fine within a Mininet "Host".
+
+Python API
+
 Linux Network Namespace機制更是Mininet軟體架構的基石
 
 其實Linux Network Namespace在OpenStack和Docker等開源項目中也廣泛應用。
