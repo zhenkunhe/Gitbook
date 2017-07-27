@@ -309,7 +309,7 @@
   font-size: 120% !important;
   font-weight: 600 !important;
   color: #f4f4f5 !important;
-  background: #1c1f2b;
+  background: #2d3143;
 }
 
 /*
@@ -323,7 +323,7 @@
 
 .book-summary {
   color: #FCFCFC;
-  background: #222222;
+  background: #666666;
   border-right: none;
 }
 .book-summary .book-search {
@@ -334,7 +334,7 @@
   border: 0px;
 }
 .book-summary ul.summary li.divider {
-  background: #222222;
+  background: #666666;
   box-shadow: none;
 }
 .book-summary ul.summary li i.fa-check {
@@ -364,7 +364,7 @@
   font-size: 120% !important;
   font-weight: 600 !important;
   color: #FDF8FB !important;
-  background: #333333;
+  background: #666666;
 }
 
 
