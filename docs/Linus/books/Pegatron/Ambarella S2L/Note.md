@@ -1,0 +1,17 @@
+# Mahalo - Note
+- 2018/2/21 MP
+- SOC - Ambarella H22
+- Camera - Sony 377 or 477
+- `Rohn`
+- - BMI160 - EIS only,raw data
+- - BHI160 - for android規範,MCU+sensor,有pick up
+- - BHI160 - for android規範,MCU+sensor,有pick up
+- `Nordic`6
+- - ??? - MCU+BT 5.0+wake
+- `InvenSense`
+- - ICM(InvenSense cusmer motion) 2(代)06(軸)02 - 3軸獨立設定,EIS,suspend 10uA,
+- - MPU 6050,6500 - 有跟Amba合作過
+- WOM建議
+- - Gyro比較好,G-sensor必有某一軸有g
+- - polling raw data也是一種方式
+- - wom interrupt

@@ -1,5 +1,6 @@
 require(["gitbook"], function(gitbook) {
     gitbook.events.bind("page.change", function() {
+		return true;
         // do something
         var h2_list = document.body.querySelectorAll(".page-wrapper h2");
 

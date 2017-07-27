@@ -1,0 +1,65 @@
+{
+  "_args": [
+    [
+      {
+        "name": "gitbook-plugin-maxiang",
+        "raw": "gitbook-plugin-maxiang@0.0.2",
+        "rawSpec": "0.0.2",
+        "scope": null,
+        "spec": "0.0.2",
+        "type": "version"
+      },
+      "/home/alex/gitbook/directory"
+    ]
+  ],
+  "_from": "gitbook-plugin-maxiang@0.0.2",
+  "_id": "gitbook-plugin-maxiang@0.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gitbook-plugin-maxiang",
+  "_npmUser": {
+    "email": "81735738@qq.com",
+    "name": "gzzhengxuze"
+  },
+  "_npmVersion": "1.4.21",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gitbook-plugin-maxiang",
+    "raw": "gitbook-plugin-maxiang@0.0.2",
+    "rawSpec": "0.0.2",
+    "scope": null,
+    "spec": "0.0.2",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-maxiang/-/gitbook-plugin-maxiang-0.0.2.tgz",
+  "_shasum": "86977d12361584ca640c741d592f0676424509f1",
+  "_shrinkwrap": null,
+  "_spec": "gitbook-plugin-maxiang@0.0.2",
+  "_where": "/home/alex/gitbook/directory",
+  "dependencies": {},
+  "description": "www.maxiang.info Theme plugin for GitBook",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "86977d12361584ca640c741d592f0676424509f1",
+    "tarball": "https://registry.npmjs.org/gitbook-plugin-maxiang/-/gitbook-plugin-maxiang-0.0.2.tgz"
+  },
+  "engines": {
+    "gitbook": "*"
+  },
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "81735738@qq.com",
+      "name": "gzzhengxuze"
+    }
+  ],
+  "name": "gitbook-plugin-maxiang",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "0.0.2"
+}
