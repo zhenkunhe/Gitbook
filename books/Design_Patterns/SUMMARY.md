@@ -2,4 +2,5 @@
 
 ## Introduction
 * [About](README.md)
-* [tags](tags.md)
+## Tags
+* [Tags](tags.md)

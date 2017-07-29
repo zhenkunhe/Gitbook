@@ -1,16 +1,19 @@
 # 什麼是 mininet
 
+tags: mininet
+
 <!--sec data-title="什麼是 mininet" data-id="1" data-nopdf="true" data-collapse=false ces-->
 
 - mininet是一個用`python`寫的，跑在你的你電腦的一個`Process`
-- 這個`Process`是一個`網路模擬器(network emulator)`，或者更精確的說：   
-`網路拓樸模擬器(network emulation orchestration system)`
+
+- 這個`Process`是一個`網路模擬器(network emulator)`，
+
+  或者更精確的說：`網路拓樸模擬器(network emulation orchestration system)`
 
 {% hint style='info' %}
-既然叫`拓樸模擬器`，代表它模擬了一整個:
-`終端主機(end-hosts)`
-`路由器(router)`
-`交換器(switches)`的集成系統
+
+既然叫`拓樸模擬器`，代表它模擬了一整個:`終端主機(end-hosts)`,`路由器(router)`,`交換器(switches)`的集成系統
+
 {% endhint %}
 
 <!--endsec-->

@@ -2,14 +2,14 @@
 
 <!--sec data-title="安裝" data-id="1" data-nopdf="true" data-collapse=false ces-->
 
-### Debian Package  
-`sudo apt-get install mininet`
+- Debian Package
+  - `sudo apt-get install mininet`
 
-### Build source and install
-``` bash
-git clone git://github.com/mininet/mininet
-mininet/util/install.sh -a
-```
+- Build source and install
+  ``` bash
+  git clone git://github.com/mininet/mininet
+  mininet/util/install.sh -a
+  ```
 
 <!--endsec-->
 

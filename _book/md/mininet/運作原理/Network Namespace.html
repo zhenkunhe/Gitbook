@@ -1,0 +1,764 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>
+    Network Namespace · 
+    Trashman's Program Note
+    
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="generator" content="GitBook 3.2.2">
+    
+    <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+    
+    
+
+    
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-maxiang/maxiang.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+        
+      
+        
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-youtubex/player.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chatlog/plugin.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tags/plugin.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+        
+      
+        
+          <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+        
+      
+    
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Node.html" />
+    
+    
+    <link rel="prev" href="../運作原理.html" />
+    
+
+    
+    <script src="../../../gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                  </button>
+                  <a class="navbar-brand" href="#">Trashman's Program Note</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    
+                        
+                            <li><a href="https://zhenkunhe.github.io/Gitbook/Design_Patterns/index.html">Design Patterns</a></li>
+                        
+                    
+                        
+                            <li><a href="https://zhenkunhe.github.io/Gitbook/CPlusPlus/index.html">C++</a></li>
+                        
+                    
+                        
+                            <li><a href="https://zhenkunhe.github.io/Gitbook/C/index.html">C</a></li>
+                        
+                    
+                        
+                            <li><a href="https://zhenkunhe.github.io/Gitbook/Python/index.html">Python</a></li>
+                        
+                    
+                        
+                            <li class="active"><a href="https://zhenkunhe.github.io/Gitbook/Linux/index.html">Linux</a></li>
+                        
+                    
+                        
+                            <li><a href="https://zhenkunhe.github.io/Gitbook/Sample/index.html">Sample</a></li>
+                        
+                    
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1</b>
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">mininet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../什麼是 mininet.html">
+            
+                <a href="../什麼是 mininet.html">
+            
+                    
+                        <b>2.1</b>
+                    
+                    什麼是 mininet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../什麼是 SDN.html">
+            
+                <a href="../什麼是 SDN.html">
+            
+                    
+                        <b>2.2</b>
+                    
+                    什麼是 SDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../mininet 實戰.html">
+            
+                <a href="../mininet 實戰.html">
+            
+                    
+                        <b>2.3</b>
+                    
+                    mininet 實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../運作原理.html">
+            
+                <a href="../運作原理.html">
+            
+                    
+                        <b>2.4</b>
+                    
+                    運作原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.4.1" data-path="Network Namespace.html">
+            
+                <a href="Network Namespace.html">
+            
+                    
+                        <b>2.4.1</b>
+                    
+                    Network Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="Node.html">
+            
+                <a href="Node.html">
+            
+                    
+                        <b>2.4.2</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="Link.html">
+            
+                <a href="Link.html">
+            
+                    
+                        <b>2.4.3</b>
+                    
+                    Link
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="Interface.html">
+            
+                <a href="Interface.html">
+            
+                    
+                        <b>2.4.4</b>
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Namespace</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../Namespace/簡介.html">
+            
+                <a href="../../Namespace/簡介.html">
+            
+                    
+                        <b>3.1</b>
+                    
+                    簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../Namespace/Network namespaces.html">
+            
+                <a href="../../Namespace/Network namespaces.html">
+            
+                    
+                        <b>3.2</b>
+                    
+                    Network namespaces
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../Namespace/Network namespaces/什麼是Network Namespace.html">
+            
+                <a href="../../Namespace/Network namespaces/什麼是Network Namespace.html">
+            
+                    
+                        <b>3.2.1</b>
+                    
+                    什麼是Network Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../Namespace/Network namespaces/範例.html">
+            
+                <a href="../../Namespace/Network namespaces/範例.html">
+            
+                    
+                        <b>3.2.2</b>
+                    
+                    範例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../Docker/簡介.html">
+            
+                <a href="../../Docker/簡介.html">
+            
+                    
+                        <b>4.1</b>
+                    
+                    簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html">
+            
+                    
+                        <b>5.1</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Network Namespace</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#network-namespace"><b>2.4.1. </b>Network Namespace</a></li><ul><li><span class="title-icon "></span><a href="#mininet&#x865B;&#x64EC;&#x5316;&#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x662F;&#xFF1F;"><b>2.4.1.1. </b>Mininet&#x865B;&#x64EC;&#x5316;&#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x662F;&#xFF1F;</a></li></ul></ul></div><a href="#network-namespace" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="network-namespace"><a name="network-namespace" class="anchor-navigation-ex-anchor" href="#network-namespace"><i class="fa fa-link" aria-hidden="true"></i></a>2.4.1. Network Namespace</h1>
+<sec data-title="Mininet&#x865B;&#x64EC;&#x5316;&#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x662F;&#xFF1F;" data-id="1" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="mininet&#x865B;&#x64EC;&#x5316;&#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x662F;&#xFF1F;"><a name="mininet&#x865B;&#x64EC;&#x5316;&#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x662F;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#mininet&#x865B;&#x64EC;&#x5316;&#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x662F;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4.1.1. Mininet&#x865B;&#x64EC;&#x5316;&#x7684;&#x6838;&#x5FC3;&#x6A5F;&#x5236;&#x662F;&#xFF1F;</h2></div><div class="panel-collapse in" id="1"><div class="panel-body">
+<ul>
+<li><code>Linux Network Namespace</code>&#x662F;Mininet&#x8EDF;&#x9AD4;&#x67B6;&#x69CB;&#x7684;&#x57FA;&#x77F3;&#xFF0C;&#x7528;&#x5176;&#x5275;&#x5EFA;&#x865B;&#x64EC;&#x7BC0;&#x9EDE;</li>
+</ul>
+<blockquote>
+<p>&#x9700;&#x8981;&#x5148;&#x4E86;&#x89E3;<a href="https://zhenkunhe.github.io/Gitbook/Linux/md/Namespace/%E7%B0%A1%E4%BB%8B.html" target="_blank">Linux Namespace</a> &#x4E4B;&#x4E2D;&#x7684;  <a href="https://zhenkunhe.github.io/Gitbook/Linux/md/Namespace/Network%20namespaces/%E4%BB%80%E9%BA%BC%E6%98%AFNetwork%20Namespace.html" target="_blank">Network Namespaces</a></p>
+</blockquote>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>&#x5176;&#x5BE6;Linux Network Namespace&#x5728;OpenStack&#x548C;Docker&#x7B49;&#x958B;&#x6E90;&#x9805;&#x76EE;&#x4E2D;&#x4E5F;&#x5EE3;&#x6CDB;&#x61C9;&#x7528;<br>&#x4E3B;&#x8981;&#x7528;&#x65BC;&#x4F5C;&#x696D;&#x7CFB;&#x7D71;&#x5C64;&#x7D1A;&#x7684;&#x865B;&#x64EC;&#x5316;&#xFF0C;&#x5305;&#x542B;&#x865B;&#x64EC;&#x7DB2;&#x8DEF;</p>
+</div></div></p>
+<ul>
+<li><p>&#x9810;&#x8A2D;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;Mininet&#x6703;&#x70BA;&#x6BCF;&#x4E00;&#x500B;<code>host</code>&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x65B0;&#x7684;<code>Network Namespaces</code></p>
+<blockquote>
+<p>&#x7531;&#x65BC;&#x6BCF;&#x500B;<code>host</code>&#x90FD;&#x6709;&#x5404;&#x81EA;&#x7368;&#x7ACB;&#x7684;<code>Network Namespaces</code>&#xFF0C;&#x6211;&#x5011;&#x5C31;&#x53EF;&#x4EE5;&#x9032;&#x884C;&#x500B;&#x6027;&#x5316;&#x7684;&#x7DB2;&#x8DEF;&#x914D;&#x7F6E;&#x548C;&#x7A0B;&#x5F0F;&#x4F48;&#x7F72;</p>
+</blockquote>
+</li>
+<li><p>&#x5728;<code>root Namespace</code>&#x904B;&#x884C;<code>switch</code>&#x548C;<code>controller</code>Process&#xFF0C;&#x56E0;&#x6B64;&#x5169;&#x500B;Processes&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x500B;<code>Network Namespaces</code></p>
+</li>
+<li><p>&#x7531;&#x65BC;<code>Linux Namespace</code>&#x7684;&#x865B;&#x64EC;&#x6280;&#x8853;&#x6C92;&#x6709;&#x63D0;&#x4F9B;&#x985E;&#x4F3C;&#x65BC;<code>VM</code>&#x7684;&#x6301;&#x4E45;&#x5316;&#x80FD;&#x529B;&#xFF0C;&#x6240;&#x4EE5;&#x5728;Mininet<code>&#x95DC;&#x9589;&#x6642;&#x4E0D;&#x80FD;&#x4FDD;&#x5B58;&#x6240;&#x6709;&#x8A2D;&#x5B9A;</code></p>
+</li>
+<li><p>Mininet&#x5275;&#x5EFA;&#x7684;<code>Network namespace</code>&#x662F;<code>nameless</code>&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x900F;&#x904E;<code>ip netns list</code>command&#x662F;&#x67E5;&#x770B;&#x4E0D;&#x5230;&#x7684;</p>
+<blockquote>
+<p>&#x800C;&#x900F;&#x904E;<code>ip netns add</code>command&#x5275;&#x5EFA;&#x7684;<code>Network Namespace</code>&#x662F;&#x5E36;name&#x7684;&#xFF0C;&#x9019;&#x662F;&#x5169;&#x8005;&#x6700;&#x660E;&#x986F;&#x7684;&#x5340;&#x5225;&#x4E4B;&#x8655;<br><a href="https://mailman.stanford.edu/pipermail/mininet-discuss/2014-January/003796.html" target="_blank">Discussions</a></p>
+</blockquote>
+</li>
+</ul>
+</div></div></div></sec>
+<p><div id="container" class="mermaid-container">
+    <div id="mermaid-holder"><div class="mermaid" data-processed="true"><svg id="mermaidChart0" width="348.5" xmlns="http://www.w3.org/2000/svg" height="389" viewbox="0 0 368.5 409"><style type="text/css" title="mermaid-svg-internal-css">/*  */
+#mermaidChart0 .node&gt;rect { ; }
+#mermaidChart0 .node text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart0 .edgeLabel text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart0 .cluster rect  { rx:4px; fill: rgb(255, 255, 222); rx: 4px; stroke: rgb(170, 170, 51); stroke-width: 1px; }
+.mermaid .label { color: rgb(51, 51, 51); }
+.node rect, .node circle, .node ellipse, .node polygon { fill: #ececff; stroke: #ccccff; stroke-width: 1px; }
+.edgepath .path { stroke: #333333; }
+.cluster rect { fill: #ffffde !important; stroke: #aaaa33 !important; stroke-width: 1px !important; }
+.cluster text { fill: #333333; }
+text { font-family: 'trebuchet ms', verdana, arial; font-size: 14px; }
+/*  */
+</style><g><g class="output"><g class="clusters"><g class="cluster" id="subGraph2" style="opacity: 1; " transform="translate(174.25,194.5)"><rect width="308.5" height="349" x="-154.25" y="-174.5"/><g class="label"><g transform="translate(0,0)"><text><tspan space="preserve" dy="1em" x="1"/></text></g></g><text x="0" y="-160.5" fill="black" stroke="none" id="mermaidChart0Text" style="text-anchor: middle; "> Root namespace</text></g><g class="cluster" id="subGraph0" style="opacity: 1; " transform="translate(104.25,291)"><rect width="120" height="106" x="-60" y="-53"/><g class="label"><g transform="translate(0,0)"><text><tspan space="preserve" dy="1em" x="1"/></text></g></g><text x="0" y="-39" fill="black" stroke="none" id="mermaidChart0Text" style="text-anchor: middle; "> No name&lt;br&gt;namespace</text></g><g class="cluster" id="subGraph1" style="opacity: 1; " transform="translate(244.25,291)"><rect width="120" height="106" x="-60" y="-53"/><g class="label"><g transform="translate(0,0)"><text><tspan space="preserve" dy="1em" x="1"/></text></g></g><text x="0" y="-39" fill="black" stroke="none" id="mermaidChart0Text" style="text-anchor: middle; "> No name&lt;br&gt;namespace</text></g></g><g class="edgePaths"><g class="edgePath" style="opacity: 1; "><path class="path" d="M142.83620517505847,141.8061600086694L104.25,195L104.25,238L104.25,263" marker-end="url(#arrowhead52)" style="stroke: #333; stroke-width: 1.5px;fill:none"/><defs><marker id="arrowhead52" viewbox="0 0 10 10" refx="9" refy="5" markerunits="strokeWidth" markerwidth="8" markerheight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333"/></marker></defs></g><g class="edgePath" style="opacity: 1; "><path class="path" d="M205.66379482494153,141.8061600086694L244.25,195L244.25,238L244.25,263" marker-end="url(#arrowhead53)" style="stroke: #333; stroke-width: 1.5px;fill:none"/><defs><marker id="arrowhead53" viewbox="0 0 10 10" refx="9" refy="5" markerunits="strokeWidth" markerwidth="8" markerheight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: #333"/></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1; " transform="translate(104.25,195)"><g transform="translate(-49.5,-18)" class="label"><text><tspan space="preserve" dy="1em" x="1">Two line</tspan><tspan space="preserve" dy="1em" x="1">edge comment</tspan></text></g></g><g class="edgeLabel" style="opacity: 1; " transform="translate(244.25,195)"><g transform="translate(-49.5,-18)" class="label"><text><tspan space="preserve" dy="1em" x="1">Two line</tspan><tspan space="preserve" dy="1em" x="1">edge comment</tspan></text></g></g></g><g class="nodes"><g class="node" style="opacity: 1; " id="s1" transform="translate(174.25,98.5)"><circle x="-53.5" y="-28" r="53.5"/><g class="label" transform="translate(0,0)"><g transform="translate(-43.5,-18)"><text><tspan space="preserve" dy="1em" x="1">OpenvSwitch</tspan><tspan space="preserve" dy="1em" x="1">s1</tspan></text></g></g></g><g class="node" style="opacity: 1; " id="h1" transform="translate(104.25,291)"><rect rx="5" ry="5" x="-25" y="-28" width="50" height="56"/><g class="label" transform="translate(0,0)"><g transform="translate(-15,-18)"><text><tspan space="preserve" dy="1em" x="1">Host</tspan><tspan space="preserve" dy="1em" x="1">h1</tspan></text></g></g></g><g class="node" style="opacity: 1; " id="h2" transform="translate(244.25,291)"><rect rx="5" ry="5" x="-25" y="-28" width="50" height="56"/><g class="label" transform="translate(0,0)"><g transform="translate(-15,-18)"><text><tspan space="preserve" dy="1em" x="1">Host</tspan><tspan space="preserve" dy="1em" x="1">h2</tspan></text></g></g></g></g></g></g></svg></div></div>
+  </div></p>
+<p>&#x5728;&#x5982;&#x4E0B;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5169;&#x500B;&#x865B;&#x64EC;&#x4E3B;&#x6A5F;H1&#x548C;H2&#x9023;&#x63A5;&#x5230;&#x4EA4;&#x63DB;&#x6A5F;S1&#xFF0C;&#x901A;&#x904E;Bash&#x4F86;&#x6A21;&#x64EC;H1&#x548C;H2&#xFF0C;&#x4EA4;&#x63DB;&#x6A5F;S1&#x904B;&#x884C;&#x5728;Linux&#x5167;&#x6838;&#x904B;&#x884C;&#x7684;root namespace</p>
+<p>&#x3002;H1&#x548C;H2&#x5C31;&#x64C1;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7DB2;&#x7D61;&#x547D;&#x540D;&#x7A7A;&#x9593;&#x4EE5;&#x53CA;&#x79C1;&#x6709;&#x7DB2;&#x7D61;&#x63A5;&#x53E3;h1-eth0&#x548C;h2-eth0&#x3002;</p>
+<p>&#x4EA4;&#x63DB;&#x6A5F;S1&#x6709;&#x5169;&#x500B;&#x57E0;s1-eth1&#x548C;s1-eth2&#xFF0C;&#x901A;&#x904E;veth pair&#x8207;&#x5C0D;&#x61C9;&#x7684;&#x4E3B;&#x6A5F;&#x63A5;&#x53E3;&#x76F8;&#x9023;&#xFF0C;&#x9019;&#x6A23;H1&#x548C;H2&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x904E;S1&#x9032;&#x884C;&#x901A;&#x4FE1;&#x3002;</p>
+<p>s1-eth0&#x548C;s1-eth1&#x9593;&#x7684;&#x6578;&#x64DA;&#x5305;&#x8F49;&#x767C;&#x901A;&#x904E;&#x8EDF;&#x9AD4;&#x4EA4;&#x63DB;&#x6A5F;&#x5B8C;&#x6210;&#xFF0C;&#x5B83;&#x904B;&#x884C;&#x5728;root namespace&#x4E26;&#x4F7F;&#x7528;&#x7269;&#x7406;&#x63A5;&#x53E3;eth0&#xFF0C;&#x7B49;&#x5F85;&#x63A7;&#x5236;&#x5668;&#x7684;&#x6307;&#x4EE4;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2017-07-27 22:01:54
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../運作原理.html" class="navigation navigation-prev " aria-label="Previous page: 運作原理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Node.html" class="navigation navigation-next " aria-label="Next page: Node">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Network Namespace","level":"2.4.1","depth":2,"next":{"title":"Node","level":"2.4.2","depth":2,"path":"md/mininet/運作原理/Node.md","ref":"md/mininet/運作原理/Node.md","articles":[]},"previous":{"title":"運作原理","level":"2.4","depth":1,"path":"md/mininet/運作原理.md","ref":"md/mininet/運作原理.md","articles":[{"title":"Network Namespace","level":"2.4.1","depth":2,"path":"md/mininet/運作原理/Network Namespace.md","ref":"md/mininet/運作原理/Network Namespace.md","articles":[]},{"title":"Node","level":"2.4.2","depth":2,"path":"md/mininet/運作原理/Node.md","ref":"md/mininet/運作原理/Node.md","articles":[]},{"title":"Link","level":"2.4.3","depth":2,"path":"md/mininet/運作原理/Link.md","ref":"md/mininet/運作原理/Link.md","articles":[]},{"title":"Interface","level":"2.4.4","depth":2,"path":"md/mininet/運作原理/Interface.md","ref":"md/mininet/運作原理/Interface.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","toggle-chapters","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","mermaid","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","flow","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex","livereload"],"root":"./books/Linux","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"© 2017 Trashman","modify_label":"修訂時間：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/Linux/"},"puml":{},"livereload":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search-pro":{},"mermaid":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"claylo":{"balloon":"#08f","text":"#fff","even":false},"mojombo":{"balloon":"#ddd","text":"#000","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"flow":{"font-color":"#3EB1D0","line-color":"#cd4545","fill":"#2d3143"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"label":"Google+","icon":"fa fa-google-plus","url":"https://plus.google.com/106302595834859374854/"},{"label":"Facebook","icon":"fa fa-facebook","url":"https://www.facebook.com/zhenkunhe/"},{"label":"Twitter","icon":"fa fa-twitter","url":"https://twitter.com/zhenkunhe/"},{"label":"Pinterest","icon":"fa fa-pinterest","url":"https://www.pinterest.com/zhenkunhe/"},{"label":"StackOverflow","icon":"fa fa-stack-overflow","url":"http://stackoverflow.com/users/6819791/trashman/"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/zhenkunhe/"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"toggle-chapters":{},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"md/mininet/什麼是 SDN.html#fig2.2.1","level":"2.2","list_caption":"Figure: SDN","alt":"SDN","nro":1,"url":"image/SDN.png","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"SDN","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"md/mininet/什麼是 SDN.html#fig2.2.2","level":"2.2","list_caption":"Figure: OpenFlow","alt":"OpenFlow","nro":2,"url":"image/Openflow.png","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"OpenFlow","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.1","level":"2.3","list_caption":"Figure: mn","alt":"mn","nro":3,"url":"image/mn.png","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"mn","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.2","level":"2.3","list_caption":"Figure: Topology","alt":"Topology","nro":4,"url":"image/topo.png","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Topology","attributes":{},"skip":false,"key":"2.3.2"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.3","level":"2.3","list_caption":"Figure: nodes","alt":"nodes","nro":5,"url":"image/nodes.png","index":3,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"nodes","attributes":{},"skip":false,"key":"2.3.3"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.4","level":"2.3","list_caption":"Figure: net","alt":"net","nro":6,"url":"image/net.png","index":4,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"net","attributes":{},"skip":false,"key":"2.3.4"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.5","level":"2.3","list_caption":"Figure: dump","alt":"dump","nro":7,"url":"image/dump.png","index":5,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"dump","attributes":{},"skip":false,"key":"2.3.5"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.6","level":"2.3","list_caption":"Figure: ping","alt":"ping","nro":8,"url":"image/ping.png","index":6,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"ping","attributes":{},"skip":false,"key":"2.3.6"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.7","level":"2.3","list_caption":"Figure: xterm","alt":"xterm","nro":9,"url":"image/xterm.png","index":7,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"xterm","attributes":{},"skip":false,"key":"2.3.7"},{"backlink":"md/mininet/mininet 實戰.html#fig2.3.8","level":"2.3","list_caption":"Figure: Server Farm","alt":"Server Farm","nro":10,"url":"image/server_farm.png","index":8,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Server Farm","attributes":{},"skip":false,"key":"2.3.8"},{"backlink":"md/Namespace/簡介.html#fig3.1.1","level":"3.1","list_caption":"Figure: Linux的命名空間技術架構","alt":"Linux的命名空間技術架構","nro":11,"url":"image/Linux的命名空間技術架構.jpg","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Linux的命名空間技術架構","attributes":{},"skip":false,"key":"3.1.1"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.1","level":"3.2.1","list_caption":"Figure: 一般乙太網路應用程式","alt":"一般乙太網路應用程式","nro":12,"url":"../image/一般乙太網路應用程式.jpg","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"一般乙太網路應用程式","attributes":{},"skip":false,"key":"3.2.1.1"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.2","level":"3.2.1","list_caption":"Figure: PPPoE","alt":"PPPoE","nro":13,"url":"../image/PPPoE.jpg","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"PPPoE","attributes":{},"skip":false,"key":"3.2.1.2"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.3","level":"3.2.1","list_caption":"Figure: VPN","alt":"VPN","nro":14,"url":"../image/VPN.jpg","index":3,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"VPN","attributes":{},"skip":false,"key":"3.2.1.3"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.4","level":"3.2.1","list_caption":"Figure: Bridge","alt":"Bridge","nro":15,"url":"../image/Bridge.jpg","index":4,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Bridge","attributes":{},"skip":false,"key":"3.2.1.4"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.5","level":"3.2.1","list_caption":"Figure: 一個Network namespace","alt":"一個Network namespace","nro":16,"url":"../image/一個Network namespace.jpg","index":5,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"一個Network namespace","attributes":{},"skip":false,"key":"3.2.1.5"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.6","level":"3.2.1","list_caption":"Figure: 複數Network namespace","alt":"複數Network namespace","nro":17,"url":"../image/複數Network namespace.jpg","index":6,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"複數Network namespace","attributes":{},"skip":false,"key":"3.2.1.6"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.7","level":"3.2.1","list_caption":"Figure: veth","alt":"veth","nro":18,"url":"../image/veth.jpg","index":7,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"veth","attributes":{},"skip":false,"key":"3.2.1.7"},{"backlink":"md/Namespace/Network namespaces/什麼是Network Namespace.html#fig3.2.1.8","level":"3.2.1","list_caption":"Figure: Bridge+Network namespace","alt":"Bridge+Network namespace","nro":19,"url":"../image/Bridge_NS.jpg","index":8,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Bridge+Network namespace","attributes":{},"skip":false,"key":"3.2.1.8"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.1","level":"3.2.2","list_caption":"Figure: Example1","alt":"Example1","nro":20,"url":"../image/Example1.jpeg","index":1,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Example1","attributes":{},"skip":false,"key":"3.2.2.1"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.2","level":"3.2.2","list_caption":"Figure: Step 1-Result","alt":"Step 1-Result","nro":21,"url":"../image/Step1_Result.png","index":2,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 1-Result","attributes":{},"skip":false,"key":"3.2.2.2"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.3","level":"3.2.2","list_caption":"Figure: Step 1-Topo","alt":"Step 1-Topo","nro":22,"url":"../image/Step1_topo.png","index":3,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 1-Topo","attributes":{},"skip":false,"key":"3.2.2.3"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.4","level":"3.2.2","list_caption":"Figure: Step 2-Topo","alt":"Step 2-Topo","nro":23,"url":"../image/Step2_topo.png","index":4,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 2-Topo","attributes":{},"skip":false,"key":"3.2.2.4"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.5","level":"3.2.2","list_caption":"Figure: Step 3-Result","alt":"Step 3-Result","nro":24,"url":"../image/Step3_Result.png","index":5,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 3-Result","attributes":{},"skip":false,"key":"3.2.2.5"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.6","level":"3.2.2","list_caption":"Figure: Step 4-Result","alt":"Step 4-Result","nro":25,"url":"../image/Step4_Result.png","index":6,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 4-Result","attributes":{},"skip":false,"key":"3.2.2.6"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.7","level":"3.2.2","list_caption":"Figure: Step 4-Topo","alt":"Step 4-Topo","nro":26,"url":"../image/Step4_topo.png","index":7,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 4-Topo","attributes":{},"skip":false,"key":"3.2.2.7"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.8","level":"3.2.2","list_caption":"Figure: Step 5-Topo","alt":"Step 5-Topo","nro":27,"url":"../image/Step5_topo.png","index":8,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 5-Topo","attributes":{},"skip":false,"key":"3.2.2.8"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.9","level":"3.2.2","list_caption":"Figure: Step 6-Result","alt":"Step 6-Result","nro":28,"url":"../image/Step6_Result.png","index":9,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 6-Result","attributes":{},"skip":false,"key":"3.2.2.9"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.10","level":"3.2.2","list_caption":"Figure: Step 8-Result","alt":"Step 8-Result","nro":29,"url":"../image/Step8_Result.png","index":10,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 8-Result","attributes":{},"skip":false,"key":"3.2.2.10"},{"backlink":"md/Namespace/Network namespaces/範例.html#fig3.2.2.11","level":"3.2.2","list_caption":"Figure: Final-Result","alt":"Final-Result","nro":30,"url":"../image/Final_Result.jpeg","index":11,"caption_template":"Image _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Final-Result","attributes":{},"skip":false,"key":"3.2.2.11"}]},"title":"Trashman's Program Note","language":"zh-tw","project":{"home":{"title":"Trashman's Program Note","url":"#"},"pages":[{"title":"Design Patterns","url":"https://zhenkunhe.github.io/Gitbook/Design_Patterns/index.html"},{"title":"C++","url":"https://zhenkunhe.github.io/Gitbook/CPlusPlus/index.html"},{"title":"C","url":"https://zhenkunhe.github.io/Gitbook/C/index.html"},{"title":"Python","url":"https://zhenkunhe.github.io/Gitbook/Python/index.html"},{"active":true,"title":"Linux","url":"https://zhenkunhe.github.io/Gitbook/Linux/index.html"},{"title":"Sample","url":"https://zhenkunhe.github.io/Gitbook/Sample/index.html"}]},"gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"md/mininet/運作原理/Network Namespace.md","mtime":"2017-07-27T14:01:54.326Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-28T15:44:27.187Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+ 
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+
+</html>
+

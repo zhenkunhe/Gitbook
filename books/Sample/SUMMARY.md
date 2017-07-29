@@ -2,7 +2,6 @@
 
 ## Introduction
 * [About](README.md)
-* [tags](tags.md)
 
 ## TestPage
 * [test1](/md/TestPage/test1.md)
@@ -29,3 +28,6 @@
 * [chart](/md/TestPage/chart.md)
 * [hints](/md/TestPage/hints.md)
 * [bootstrap-callout](/md/TestPage/bootstrap-callout.md)
+
+## Tags
+* [Tags](tags.md)
