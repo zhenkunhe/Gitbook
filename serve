@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cp books/$1/book.json .
+cd books/$1
+book sm -s "\d-"
+cd ../../
+python tool/change_summary.py $1
+gitbook serve
+rm book.json

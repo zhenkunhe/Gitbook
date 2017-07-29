@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp books/$1/book.json .
+rm -r docs/$1
+cd books/$1
+book sm -s "\d-"
+cd ../../
+python tool/change_summary.py $1
+gitbook build
+mv _book docs/$1
+rm book.json

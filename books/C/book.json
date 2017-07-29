@@ -41,7 +41,6 @@
         "-sharing",
         "search-pro",
         "advanced-emoji",
-        "toggle-chapters",
         "puml",
         "katex",
         "emphasize",
@@ -74,7 +73,7 @@
     ],
     "pluginsConfig": {
         "anchor-navigation-ex": {
-            "multipleH1":false
+            "multipleH1": false
         },
         "asciitree": {
             "leadingChar": "no need, because plugin will guess leadingChar.",
