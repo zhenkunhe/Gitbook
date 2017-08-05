@@ -1,5 +1,7 @@
 # 簡介
 
+tags: Namespace
+
 <!--sec data-title="什麼是Namespace？" data-id="1" data-nopdf="true" data-collapse=false ces-->
 命名空間就是在`大箱子(Kernel)`裏面再裝一堆`小箱子(Kernel Namespace)`
 <!--endsec-->
