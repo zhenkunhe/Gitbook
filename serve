@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp books/$1/book.json .
+python tool/bookJsonMaker.py $1
 cd books/$1
 book sm -s "\d-"
 cd ../../

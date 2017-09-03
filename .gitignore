@@ -17,3 +17,5 @@ _doc
 *.pdf
 
 *.*~
+
+books/*/SUMMARY.md

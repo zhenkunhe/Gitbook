@@ -108,9 +108,9 @@
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal pre,
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal code {
-  color: #c7254e;
-  background: #23241f;
-  border-color: #23241f;
+  background: #fdf6e3;
+  color: #657b83;
+  border-color: #f8df9c;
 }
 .book.color-theme-1 .book-body .page-wrapper .page-inner section.normal .highlight {
   background-color: inherit;
@@ -154,23 +154,12 @@
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal blockquote {
   border-color: #373b4e;
 }
-
-.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal code{
-  padding: 2px 4px;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 15px;
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal pre,
+.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal code {
   color: #9dbed8;
-	background-color: #2D3143;
-  border-radius: 4px;
+  background: #2d3143;
+  border-color: #2d3143;
 }
-
-.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal pre {
-  color: #c7254e;
-  background: #23241f;
-  border-color: #23241f;
-}
-
 .book.color-theme-2 .book-body .page-wrapper .page-inner section.normal .highlight {
   background-color: #282a39;
 }
@@ -299,86 +288,4 @@
   color: #f4f4f5;
   background: #252737;
   font-weight: 600;
-}
-
-.book.color-theme-2 .header {
-  background: #1c1f2b;
-}
-
-/* 配合 gitbook-plugin-theme-default 插件使用 */
-body {
-  padding-top: 50px;
-}
-
-/* 配合 gitbook-plugin-image-captions 插件使用 */
-.book.color-theme-2 figure figcaption {
-  padding: 5px 10px;
-  margin: 0;
-  text-shadow: 0 1px 0 #539ACE;
-  font-size: 14px;
-  color: #9dbed8;
-  background-color: #2D3143;
-}
-
-/* 配合 gitbook-plugin-maxiang 插件使用 */
-.book.color-theme-1 .book-body .page-wrapper{
-	background-color: #F3EACB;
-}
-.book.color-theme-1 .book-body .page-wrapper .page-inner section{
-	background-color: #F3EACB;
-}
-.book.color-theme-2 .book-body .page-wrapper{
-	background-color: #1C1F2B;
-}
-.book.color-theme-2 .book-body .page-wrapper .page-inner section{
-	background-color: #1C1F2B;
-}
-.book.color-theme-2 .right-nav a.select{
-	color:#f4f4f5;
-}
-.book.color-theme-2 .right-nav a:hover{
-	color:#f4f4f5;
-}
-.book.color-theme-2 .right-nav a{
-	position: relative;
-	display: block;
-	padding: 10px 15px;
-	margin-bottom: -1px;
-	background-color: #2d3143;
-	border: 1px solid #ddd;
-	color: #c1c6d7;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-.book.color-theme-2 .right-nav{
-    font-weight: 600;
-	position: fixed;
-	right: 100px;
-	top: 95px;
-	max-width: 200px;
-	min-width: 150px;
-}
-.book.color-theme-2 .right-nav .title{
-    font-weight: 600;
-	position: relative;
-	display: block;
-	padding: 10px 15px;
-	margin-bottom: -1px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-	color: #f4f4f5;
-	background-color: #2d3143;
-	cursor: default;
-	text-align: center;
-}
-
-/* 配合 gitbook-plugin-codeblock-filename 插件使用 */
-.book.color-theme-2 .code-filename{
-	background-color: #2D3143;
-	display: inline-block;
-	padding: 2px 8px;
-	font-size: small;
-	line-height: inherit;
-	margin-bottom: 0px !important;
 }
