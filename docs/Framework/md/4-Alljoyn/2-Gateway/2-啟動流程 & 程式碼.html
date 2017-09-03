@@ -1,0 +1,863 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>啟動流程 & 程式碼 · Trashman's Program Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-maxiang/maxiang.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chatlog/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../3-Allplay/Readme.html" />
+    
+    
+    <link rel="prev" href="1-架構說明.html" />
+    
+
+    
+    <script src="../../../gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alljoyn</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1-Basic/Readme.html">
+            
+                <a href="../1-Basic/Readme.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Gateway
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="1-架構說明.html">
+            
+                <a href="1-架構說明.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    架構說明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.2" data-path="2-啟動流程 & 程式碼.html">
+            
+                <a href="2-啟動流程 & 程式碼.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    啟動流程 & 程式碼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../3-Allplay/Readme.html">
+            
+                <a href="../3-Allplay/Readme.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Allplay
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >啟動流程 & 程式碼</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x555F;&#x52D5;&#x6D41;&#x7A0B;--&#x7A0B;&#x5F0F;&#x78BC;"><b> </b>&#x555F;&#x52D5;&#x6D41;&#x7A0B; &amp; &#x7A0B;&#x5F0F;&#x78BC;</a></li><ul><li><span class="title-icon "></span><a href="#&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;"><b>1. </b>&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;</a></li><li><span class="title-icon "></span><a href="#connector-code"><b>2. </b>Connector Code</a></li><li><span class="title-icon "></span><a href="#manifestxml"><b>3. </b>Manifest.xml</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88DD;connector"><b>4. </b>&#x5B89;&#x88DD;Connector</a></li><li><span class="title-icon "></span><a href="#&#x555F;&#x52D5;"><b>5. </b>&#x555F;&#x52D5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x555F;&#x52D5;router"><b>5.1. </b>&#x555F;&#x52D5;Router</a></li><li><span class="title-icon "></span><a href="#&#x555F;&#x52D5;gm-app"><b>5.2. </b>&#x555F;&#x52D5;GM App</a></li><li><span class="title-icon "></span><a href="#&#x9A57;&#x8B49;"><b>5.3. </b>&#x9A57;&#x8B49;</a></li><li><span class="title-icon "></span><a href="#&#x76EE;&#x9304;&#x7D50;&#x69CB;"><b>5.4. </b>&#x76EE;&#x9304;&#x7D50;&#x69CB;</a></li><li><span class="title-icon "></span><a href="#controller-app&#x756B;&#x9762;"><b>5.5. </b>Controller App&#x756B;&#x9762;</a></li></ul></ul></ul></div><a href="#&#x555F;&#x52D5;&#x6D41;&#x7A0B;--&#x7A0B;&#x5F0F;&#x78BC;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x555F;&#x52D5;&#x6D41;&#x7A0B;--&#x7A0B;&#x5F0F;&#x78BC;"><a name="&#x555F;&#x52D5;&#x6D41;&#x7A0B;--&#x7A0B;&#x5F0F;&#x78BC;" class="anchor-navigation-ex-anchor" href="#&#x555F;&#x52D5;&#x6D41;&#x7A0B;--&#x7A0B;&#x5F0F;&#x78BC;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x555F;&#x52D5;&#x6D41;&#x7A0B; &amp; &#x7A0B;&#x5F0F;&#x78BC;</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../../../tags.html#alljoyn">Alljoyn</a> <a href="../../../tags.html#framework">Framework</a> <a href="../../../tags.html#gateway">Gateway</a></p></div><!-- tagsstop --><h2 id="&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;"><a name="&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;" class="anchor-navigation-ex-anchor" href="#&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x540D;&#x8A5E;&#x5B9A;&#x7FA9;</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7E2E;&#x5BEB;</th>
+<th style="text-align:right">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GM App</td>
+<td style="text-align:right">Gateway Management app</td>
+</tr>
+<tr>
+<td style="text-align:left">WKN</td>
+<td style="text-align:right">Well-Know Name&#xFF0C;&#x6709;&#x5225;&#x65BC;About&#x7684;&#x5EFA;&#x7ACB;session&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">ACL</td>
+<td style="text-align:right">Access Control List</td>
+</tr>
+<tr>
+<td style="text-align:left">Config file</td>
+<td style="text-align:right">&#x63CF;&#x8FF0;Alljoyn router&#x7684;Policy(Allow or Deny)</td>
+</tr>
+<tr>
+<td style="text-align:left">SLS</td>
+<td style="text-align:right">Sessionless Signal</td>
+</tr>
+</tbody>
+</table>
+<sec data-title="Connector Code" data-id="1" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="connector-code"><a name="connector-code" class="anchor-navigation-ex-anchor" href="#connector-code"><i class="fa fa-link" aria-hidden="true"></i></a>2. Connector Code</h2></div><div class="panel-collapse in" id="1"><div class="panel-body">
+<ol>
+<li>Initialize Bus At  tachment&#xFF1A;<code>Start</code> &amp; <code>Connect</code></li>
+</ol>
+<pre><code class="lang-c++">BusAttachment* bus = <span class="hljs-keyword">new</span> BusAttachment(<span class="hljs-string">&quot;ConnectorApp&quot;</span>, <span class="hljs-literal">true</span>);
+bus-&gt;Start();
+bus-&gt;Connect();
+</code></pre>
+<ol>
+<li>Initialize authentication&#xFF1A;<code>EnablePeerSecurity</code>&#x9019;&#x500B;&#x51FD;&#x6578;&#x662F;&#x7528;&#x4F86;&#x555F;&#x52D5;&#x8EAB;&#x5206;&#x9A57;&#x8B49;&#x8207;&#x52A0;&#x5BC6;&#x6A5F;&#x5236;&#xFF0C;&#x4F7F;&#x7528;&#x524D;&#x9700;&#x8981;&#x5148;<code>Start</code>&#x3002;</li>
+</ol>
+<pre><code class="lang-c++">keyListener.setPassCode(<span class="hljs-string">&quot;000000&quot;</span>);
+
+String keystore = <span class="hljs-string">&quot;/opt/alljoyn/apps/&quot;</span> + wellknownName + <span class="hljs-string">&quot;/store/.alljoyn_keystore.ks&quot;</span>;
+
+bus.EnablePeerSecurity(<span class="hljs-string">&quot;ALLJOYN_PIN_KEYX ALLJOYN_SRP_KEYX ALLJOYN_ECDHE_PSK&quot;</span>, &amp;keyListener, keystore.c_str(), <span class="hljs-literal">false</span>);
+</code></pre>
+<blockquote>
+<p>&#x9019;&#x88E1;&#x6240;&#x51FA;&#x73FE;&#x7684;keyListener&#x662F;&#x4E00;&#x7A2E;&#x81EA;&#x5B9A;&#x985E;&#x5225;&#xFF0C;&#x7E7C;&#x627F;&#x81EA;<code>AuthListener</code>&#x3002;
+<code>class SrpKeyXListener : public ajn::AuthListener</code></p>
+<blockquote>
+<pre><code class="lang-c++">SrpKeyXListener keyListener;
+</code></pre>
+</blockquote>
+<p>&#x800C;<code>AuthListener</code>&#x70BA;&#x555F;&#x52D5;&#x9A57;&#x8B49;&#x6A5F;&#x5236;&#x6642;&#xFF0C;&#x8CA0;&#x8CAC;&#x50B3;&#x9054;Password&#x6216;&#x5176;&#x4ED6;&#x8207;&#x9A57;&#x8B49;&#x6A5F;&#x5236;&#x76F8;&#x95DC;&#x7684;Class&#x3002;</p>
+<p>&#x7E7C;&#x627F;<code>AuthListener</code>&#x6642;&#xFF0C;&#x6709;&#x5E7E;&#x7A2E;virtual method&#x53EF;&#x4EE5;&#x5BE6;&#x4F5C;&#xFF0C;&#x5176;&#x4E2D;&#x6BD4;&#x8F03;&#x5E38;&#x7528;&#x7684;&#x6709;<code>RequestCredentials</code>/<code>AuthenticationComplete</code></p>
+<blockquote>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">RequestCredentials</span> <span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *authMechanism, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> 
+*peerName, uint16_t authCount, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *userName, uint16_t credMask, &gt;&gt;Credentials &amp;credentials)</span>
+</span></code></pre>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span>     <span class="hljs-title">AuthenticationComplete</span> <span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *authMechanism, <span class="hljs-keyword">const</span> &gt;&gt;<span class="hljs-keyword">char</span> *peerName, <span class="hljs-keyword">bool</span> success)</span></span>=<span class="hljs-number">0</span>
+</code></pre>
+</blockquote>
+<p>&#x4EE5;&#x4E0B;&#x7528;<code>SrpKeyXListener</code>&#x6539;&#x5BEB;&#x7684;&#x5167;&#x5BB9;&#x505A;&#x70BA;&#x7BC4;&#x4F8B;&#xFF1A;
+&#x9996;&#x5148;&#x662F;<code>RequestCredentials</code></p>
+<pre><code class="lang-c++"><span class="hljs-keyword">bool</span> SrpKeyXListener::RequestCredentials(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* authMechanism, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* authPeer,<span class="hljs-keyword">uint16_t</span> authCount, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* userId, <span class="hljs-keyword">uint16_t</span> credMask, Credentials&amp; creds)
+{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;RequestCredentials for authenticating &quot;</span> &lt;&lt; authPeer &lt;&lt; <span class="hljs-string">&quot; using mechanism &quot;</span> &lt;&lt; authMechanism &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(authMechanism, <span class="hljs-string">&quot;ALLJOYN_SRP_KEYX&quot;</span>) == <span class="hljs-number">0</span> || <span class="hljs-built_in">strcmp</span>(authMechanism, <span class="hljs-string">&quot;ALLJOYN_PIN_KEYX&quot;</span>) == <span class="hljs-number">0</span> || <span class="hljs-built_in">strcmp</span>(authMechanism, <span class="hljs-string">&quot;ALLJOYN_ECDHE_PSK&quot;</span>) == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">if</span> (credMask &amp; AuthListener::CRED_PASSWORD) {
+            <span class="hljs-keyword">if</span> (authCount &lt;= <span class="hljs-number">3</span>) {
+                qcc::String passCodeFromGet;
+                <span class="hljs-keyword">if</span> (m_GetPassCode) {
+                    m_GetPassCode(passCodeFromGet);
+                }
+                <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;RequestCredentials setPasscode to &quot;</span> &lt;&lt; (m_GetPassCode ? passCodeFromGet.c_str() : m_PassCode.c_str()) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+                creds.SetPassword(m_GetPassCode ? passCodeFromGet.c_str() : m_PassCode.c_str());
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+</code></pre>
+<p>&#x5176;&#x4E2D;<code>Credentials</code>&#x70BA;<code>AuthListener</code>&#x7684;Inner class&#xFF0C;&#x4F5C;&#x70BA;&#x50B3;&#x905E;&#x8A8D;&#x8B49;&#x8CC7;&#x8A0A;&#x7684;&#x95DC;&#x9375;&#x89D2;&#x8272;&#x3002;</p>
+<p>&#x518D;&#x4F86;&#x662F;<code>AuthenticationComplete</code></p>
+<pre><code class="lang-c++"><span class="hljs-keyword">void</span> SrpKeyXListener::AuthenticationComplete(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* authMechanism, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* authPeer, <span class="hljs-keyword">bool</span> success)
+{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Authentication with &quot;</span> &lt;&lt; authMechanism &lt;&lt; (success ? <span class="hljs-string">&quot; was successful&quot;</span> : <span class="hljs-string">&quot; failed&quot;</span>) &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+}
+</code></pre>
+<p>&#x6B64;&#x8655;&#x53EA;&#x6709;&#x4E00;&#x884C;<code>cout</code>&#xFF0C;&#x8868;&#x660E;&#x8A8D;&#x8B49;&#x7D50;&#x679C;&#x3002;</p>
+<p>&#x7576;Interface&#x7684;secure&#x8A2D;&#x70BA;True&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x8ABF;&#x7528;&#x6B64;Interface&#x4E0B;&#x7684;&#x4EFB;&#x4F55;member&#xFF0C;&#x90FD;&#x6703;&#x7522;&#x751F;&#x8A8D;&#x8B49;&#x8981;&#x6C42;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E0A;&#x8FF0;Code&#x7684;&#x8A8D;&#x8B49;&#x57F7;&#x884C;&#x8F38;&#x51FA;&#xFF1A;</p>
+<blockquote>
+<p>RequestCredentials for authenticating org.alljoyn.GWAgent.GMApp using mechanism ALLJOYN_ECDHE_PSK
+RequestCredentials setPasscode to 000000
+Authentication with ALLJOYN_ECDHE_PSK was successful</p>
+</blockquote>
+</blockquote>
+<ol>
+<li>Initialize Connector</li>
+</ol>
+<pre><code class="lang-c++">class MyApp : public GatewayConnector
+
+MyApp myApp(&amp;bus, wellknownName.c_str());
+myApp.init();
+</code></pre>
+<blockquote>
+<p>&#x7E7C;&#x627F;GatewayConnector&#x6642;&#xFF0C;&#x6709;&#x5E7E;&#x9805;Method&#x9700;&#x8981;&#x5BE6;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shutdown</span><span class="hljs-params">()</span> </span>{&#x2026;}
+<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">mergedAclUpdated</span><span class="hljs-params">()</span> </span>{&#x2026;}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">receiveGetMergedAclAsync</span><span class="hljs-params">(QStatus unmarshalStatus,GatewayMergedAcl* response)</span> </span>{&#x2026;}
+</code></pre>
+</blockquote>
+<p>&#x57FA;&#x672C;&#x4E0A;&#x5230;&#x76EE;&#x524D;&#x70BA;&#x6B62;&#xFF0C;&#x5C31;&#x5DF2;&#x7D93;&#x5B8C;&#x6210;&#x4E00;&#x500B;Connector&#x4E86;&#x3002;&#x63A5;&#x8457;&#x53EA;&#x9700;&#x8981;&#x8DDF;Cloud&#x4E92;&#x52D5;&#xFF0C;&#x4E26;&#x5728;&#x4E92;&#x52D5;&#x904E;&#x7A0B;&#x4E2D;&#x9069;&#x6642;&#x7684;&#x547C;&#x53EB;<code>myApp.updateConnectionStatus(...)</code>&#x56DE;&#x5831;&#x7D66;<code>GM App</code>&#x76EE;&#x524D;&#x8207;&#x96F2;&#x7AEF;&#x7684;&#x9023;&#x63A5;&#x72C0;&#x614B;&#x3002;<code>GM App</code>&#x6536;&#x5230;&#x5F8C;&#xFF0C;&#x6703;&#x767C;Signal&#x7D66;<code>Controler</code>&#xFF0C;<code>Controler</code>&#x6536;&#x5230;&#x5F8C;&#x6703;&#x547C;&#x53EB;<code>GM App</code>Interface&#x7684;Method&#x53D6;&#x5F97;&#x72C0;&#x614B;&#x3002;</p>
+<blockquote>
+<p><code>GatewayConnector</code>&#x9019;&#x500B;Class&#x900F;&#x904E;WKN&#x53D6;&#x5F97;<code>GM App</code>&#x7684;ProxyBusObject&#xFF0C;&#x5176;&#x5167;&#x90E8;&#x6709;2&#x500B;Method&#x8207;3&#x500B;Signal&#xFF0C;&#x9700;&#x8981;<code>RegisterSignalHandler</code>&#x3002;</p>
+<pre><code class="lang-c++"> ifc-&gt;AddMethod(<span class="hljs-string">&quot;GetMergedAcl&quot;</span>, <span class="hljs-literal">NULL</span>,  <span class="hljs-string">&quot;a(obas)a(saya(obas))&quot;</span>, <span class="hljs-string">&quot;exposedServices,remotedApps&quot;</span>);
+ifc-&gt;AddMethod(<span class="hljs-string">&quot;UpdateConnectionStatus&quot;</span>, <span class="hljs-string">&quot;q&quot;</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-string">&quot;connectionStatus&quot;</span>, MEMBER_ANNOTATE_NO_REPLY);
+ifc-&gt;AddSignal(<span class="hljs-string">&quot;MergedAclUpdated&quot;</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
+ifc-&gt;AddSignal(<span class="hljs-string">&quot;ShutdownApp&quot;</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
+</code></pre>
+</blockquote>
+</div></div></div></sec>
+<sec data-title="Manifest.xml" data-id="2" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="manifestxml"><a name="manifestxml" class="anchor-navigation-ex-anchor" href="#manifestxml"><i class="fa fa-link" aria-hidden="true"></i></a>3. Manifest.xml</h2></div><div class="panel-collapse in" id="2"><div class="panel-body">
+<p>Build&#x597D;<code>Connector</code>&#x5F8C;&#x7684;&#x4E0B;&#x4E00;&#x500B;&#x5DE5;&#x4F5C;&#xFF0C;&#x5C31;&#x662F;&#x5EFA;&#x7F6E;Manifest.xml&#x4E86;&#x3002;Manifest.xml&#x63CF;&#x8FF0;<code>Connector</code>&#x7684;Service&#x3001;&#x611F;&#x8208;&#x8DA3;&#x7684;Interface&#x3001;<code>Connector</code>&#x57F7;&#x884C;&#x6642;&#x7684;&#x53C3;&#x6578;&#x50B3;&#x5165;&#x3002;</p>
+<p>&#x662F;&#x4E4B;&#x5F8C;<code>Control App</code>&#x7528;&#x4EE5;&#x5EFA;&#x7ACB;ACL&#x7684;&#x4F9D;&#x64DA;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x70BA;Manifest.xml&#x7BC4;&#x4F8B;&#x7D50;&#x69CB;&#x3002;</p>
+<blockquote>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">manifest</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.alljoyn.org/gateway/manifest&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">connectorId</span>&gt;</span>dummyapp1<span class="hljs-tag">&lt;/<span class="hljs-name">connectorId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">friendlyName</span>&gt;</span>dummyAppOne<span class="hljs-tag">&lt;/<span class="hljs-name">friendlyName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">packageName</span>&gt;</span>dummyAppOne_0.0.1-1_ar71xx.ipk<span class="hljs-tag">&lt;/<span class="hljs-name">packageName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.0.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">minAjSdkVersion</span>&gt;</span>3.4.0<span class="hljs-tag">&lt;/<span class="hljs-name">minAjSdkVersion</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">exposedServices</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;EmergencyNotifications&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span>/emergency<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">isPrefix</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">isPrefix</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">interfaces</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;NotificationInterface&quot;</span>&gt;</span>org.alljoyn.Notification<span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">interfaces</span>&gt;</span>                    
+        <span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;WarningNotifications&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span>/warning<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">isPrefix</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">isPrefix</span>&gt;</span>            
+            <span class="hljs-tag">&lt;<span class="hljs-name">interfaces</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;NotificationInterface&quot;</span>&gt;</span>org.alljoyn.Notification<span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">interfaces</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">exposedServices</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">remotedServices</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">object</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;AllObjectPaths&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span>/<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">isPrefix</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">isPrefix</span>&gt;</span>            
+            <span class="hljs-tag">&lt;<span class="hljs-name">interfaces</span>&gt;</span>            
+                <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;NotificationInterface&quot;</span>&gt;</span>org.alljoyn.Notification<span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;AboutInterface&quot;</span>&gt;</span>org.alljoyn.About<span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;AboutIcon&quot;</span>&gt;</span>org.alljoyn.Icon<span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;NotificationSuperInterface&quot;</span>&gt;</span>org.alljoyn.NotificationSuper<span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">interface</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ConfigInterface&quot;</span>&gt;</span>org.alljoyn.Config<span class="hljs-tag">&lt;/<span class="hljs-name">interface</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">interfaces</span>&gt;</span>                
+        <span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">remotedServices</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">executionInfo</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">executable</span>&gt;</span>alljoyn-gwconnectorsample<span class="hljs-tag">&lt;/<span class="hljs-name">executable</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">env_variables</span>&gt;</span>            
+            <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;LD_LIBRARY_PATH&quot;</span>&gt;</span>/opt/alljoyn/apps/dummyapp1/lib<span class="hljs-tag">&lt;/<span class="hljs-name">variable</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ER_DEBUG&quot;</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">variable</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;INTERACTIVE_OFF&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">variable</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;TWITTER_SCRIPT&quot;</span>&gt;</span>postTweet.sh<span class="hljs-tag">&lt;/<span class="hljs-name">variable</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">env_variables</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arguments</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">arguments</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">executionInfo</span>&gt;</span>    
+<span class="hljs-tag">&lt;/<span class="hljs-name">manifest</span>&gt;</span>
+</code></pre>
+</blockquote>
+</div></div></div></sec>
+<sec data-title="&#x5B89;&#x88DD;Connector" data-id="3" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x5B89;&#x88DD;connector"><a name="&#x5B89;&#x88DD;connector" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88DD;connector"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5B89;&#x88DD;Connector</h2></div><div class="panel-collapse in" id="3"><div class="panel-body">
+<p>&#x6709;&#x4E86;Build&#x597D;&#x7684;<code>Connector</code>&#x8207;<code>Manifest.xml</code>&#x4EE5;&#x5F8C;&#xFF0C;&#x63A5;&#x8457;&#x5C31;&#x662F;<code>&#x5B89;&#x88DD;</code>/<code>&#x79FB;&#x9664;Connector</code>&#x4E86;&#x3002;</p>
+<p>&#x5B89;&#x88DD;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x5C07;lib&#x3001;bin&#x3001;Manifest.xml&#x4F9D;&#x7167;&#x4E0B;&#x5217;&#x683C;&#x5F0F;&#x64FA;&#x653E;&#x3002;
+<img src="1452233139038.png" alt="Alt text"></p>
+<p>&#x4E4B;&#x5F8C;&#x5C07;&#x6574;&#x5305;&#x58D3;&#x7E2E;&#x6210;&#x4E00;&#x500B;tar&#x6A94;&#x6848;&#x3002;</p>
+<pre><code>tar czf dummyApp1.tar.gz -C gatewayConnector/tar
+</code></pre><figure id="fig2.2.2.1"><img src="1452233532472.png" alt="Alt text"><figcaption>Image 1 - Alt text</figcaption></figure>
+<p>&#x63A5;&#x8457;&#x900F;&#x904E;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;<code>installPackage.sh</code>/<code>removePackage.sh</code>&#x9032;&#x884C;<code>&#x5B89;&#x88DD;</code>/<code>&#x79FB;&#x9664;</code></p>
+<pre><code>./installPackage.sh dummyApp1.tar.gz
+</code></pre><blockquote>
+<p><code>installPackage.sh</code>&#x6240;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x5F88;&#x55AE;&#x7D14;&#xFF0C;
+&#x53EA;&#x662F;&#x5C07;tar&#x6A94;&#x88E1;&#x7684;&#x6771;&#x897F;&#x8F49;&#x79FB;&#x5230;<code>/opt/alljoyn/apps/$connectorId</code>&#x4E4B;&#x4E2D;&#xFF0C;&#x7136;&#x5F8C;&#x5275;&#x9020;&#x4E00;&#x500B;Linux User&#xFF0C;&#x4E26;&#x5C07;store&#x9019;&#x500B;Folder&#x7684;&#x64C1;&#x6709;&#x8005;&#xFF0C;&#x8F49;&#x79FB;&#x5230;&#x65B0;&#x5275;&#x7684;Linux User&#x4E0B;</p>
+<pre><code>baseDir=/opt/alljoyn
+manifestFile=$tmpDir/Manifest.xml
+appBinDir=$tmpDir/bin
+connectorId=$(grep &quot;&lt;connectorId&gt;&quot; $manifestFile | sed -e &quot;s/ *&lt;connectorId&gt;//&quot; | sed -e &quot;s/&lt;\/connectorId *&gt;//&quot;)
+connectorAppDir=$baseDir/apps/$connectorId
+
+if [ $? -ne 0 ]; then
+    useradd $connectorId || exit 22
+    createdUser=1
+fi
+
+chown -R &quot;$connectorId&quot; &quot;$pkgInstallDir/store&quot; || exit 23
+chmod -R a+rx &quot;$pkgInstallDir/bin&quot; || exit 24
+chmod -R a+rx &quot;$pkgInstallDir/lib&quot; || exit 25
+</code></pre></blockquote>
+<p>&#x7D93;&#x904E;&#x4E0A;&#x9762;&#x5B89;&#x88DD;&#x5F8C;&#xFF0C;&#x5C31;&#x6703;&#x770B;&#x5230;<code>/opt/alljoyn/apps/$connectorId</code>&#x76EE;&#x9304;&#xFF0C;&#x7D50;&#x69CB;&#x5982;&#x4E0B;&#x3002;</p>
+<blockquote>
+<p>&#x6B64;&#x6642;acls Folder&#x5167;&#x7121;&#x6771;&#x897F;&#x3002;&#x53EF;&#x4EE5;&#x900F;&#x904E;shell&#x81EA;&#x884C;&#x5275;&#x9020;&#xFF0C;&#x6216;&#x662F;&#x555F;&#x52D5;<code>GM App</code>&#x8207;<code>Controller App</code>&#x5F8C;&#xFF0C;&#x900F;&#x904E;<code>Contorller App</code>&#x5EFA;&#x7ACB;&#x3002;</p>
+</blockquote>
+<p><img src="1452234729752.png" alt="Alt text">
+</p></div></div></div></sec><p></p>
+<sec data-title="&#x555F;&#x52D5;" data-id="4" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x555F;&#x52D5;"><a name="&#x555F;&#x52D5;" class="anchor-navigation-ex-anchor" href="#&#x555F;&#x52D5;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x555F;&#x52D5;</h2></div><div class="panel-collapse in" id="4"><div class="panel-body">
+<h3 id="&#x555F;&#x52D5;router"><a name="&#x555F;&#x52D5;router" class="anchor-navigation-ex-anchor" href="#&#x555F;&#x52D5;router"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. &#x555F;&#x52D5;Router</h3>
+<p>&#x5728;&#x555F;&#x52D5;<code>GM App</code>&#x8207;<code>Connectors</code>&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x78BA;&#x5B9A;<code>alljoyn-daemon</code>&#x662F;&#x5426;&#x5DF2;&#x7D93;&#x5B89;&#x88DD;&#x4E26;&#x555F;&#x52D5;&#x3002;</p>
+<p>&#x5148;&#x78BA;&#x8A8D;&#x662F;&#x5426;Build&#x597D;&#x7684;<code>alljoyn-daemon</code>&#x653E;&#x5728;<code>/usr/bin/</code>&#x4E2D;&#xFF0C;&#x4E26;&#x5BEB;&#x597D;<code>alljoyn.init</code>&#x653E;&#x5728;<code>/etc/init.d/alljoyn</code>&#x4E4B;&#x4E2D;&#x3002;&#x4E4B;&#x5F8C;&#x57F7;&#x884C;<code>service alljoyn start</code></p>
+<blockquote>
+<p>&#x4EE5;&#x4E0B;&#x70BA;<code>alljoyn.init</code>&#x7684;start script</p>
+<pre><code>start() {
+  if [ -f $PIDFILE ] &amp;&amp; kill -0 $(cat $PIDFILE); then
+    echo &apos;Service already running&apos; &gt;&amp;2
+    return 1
+  fi
+  echo &apos;Starting service&#x2026;&apos; &gt;&amp;2
+  local CMD=&quot;$SCRIPT --config-file=/opt/alljoyn/alljoyn-daemon.d/config.xml &amp;&gt; \&quot;$LOGFILE\&quot; &amp; echo \$!&quot;
+  su -c &quot;$CMD&quot; $RUNAS &gt; &quot;$PIDFILE&quot;
+  echo &apos;Service started&apos; &gt;&amp;2
+}
+</code></pre><p>&#x57F7;&#x884C;&#x6642;&#x6240;&#x5E36;&#x7684;&#x53C3;&#x6578;<code>--config-file</code>&#x6307;&#x51FA;Router Config Policy&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6B64;&#x4F8B;&#x70BA;<code>/opt/alljoyn/alljoyn-daemon.d/config.xml</code></p>
+</blockquote>
+<p>&#x6CE8;&#x610F;Config File&#x5167;&#xFF0C;&#x8981;include <code>GM App</code>&#x57F7;&#x884C;&#x6642;&#x52D5;&#x614B;&#x6539;&#x8B8A;&#x7684;Policy File&#xFF0C;<code>&#x6B64;&#x4F8B;&#x70BA;gwagent-config.xml</code></p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">busconfig</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>alljoyn<span class="hljs-tag">&lt;/<span class="hljs-name">type</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;router_advertisement_prefix&quot;</span>&gt;</span>org.alljoyn.BusNode<span class="hljs-tag">&lt;/<span class="hljs-name">property</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">listen</span>&gt;</span>unix:abstract=alljoyn<span class="hljs-tag">&lt;/<span class="hljs-name">listen</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">listen</span>&gt;</span>tcp:r4addr=0.0.0.0,r4port=0<span class="hljs-tag">&lt;/<span class="hljs-name">listen</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">limit</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;auth_timeout&quot;</span>&gt;</span>5000<span class="hljs-tag">&lt;/<span class="hljs-name">limit</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">limit</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;max_incomplete_connections&quot;</span>&gt;</span>16<span class="hljs-tag">&lt;/<span class="hljs-name">limit</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">limit</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;max_completed_connections&quot;</span>&gt;</span>100<span class="hljs-tag">&lt;/<span class="hljs-name">limit</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">limit</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;max_untrusted_clients&quot;</span>&gt;</span>100<span class="hljs-tag">&lt;/<span class="hljs-name">limit</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">flag</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;restrict_untrusted_clients&quot;</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">flag</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ip_name_service</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">interfaces</span>=<span class="hljs-string">&quot;*&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">disable_directed_broadcast</span>=<span class="hljs-string">&quot;false&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">enable_ipv4</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">enable_ipv6</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ip_name_service</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">include</span>&gt;</span>/opt/alljoyn/alljoyn-daemon.d/gwagent-config.xml<span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">busconfig</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>Config File&#x5167;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x7684;Tag&#xFF0C;&#x8207;&#x6BCF;&#x500B;Tag&#x7684;&#x8AAA;&#x660E;&#xFF0C;&#x8ACB;&#x53C3;&#x95B1;&#x4EE5;&#x4E0B;&#x7DB2;&#x5740;&#x3002;
+<a href="https://allseenalliance.org/schemas/busconfig.xsd" target="_blank">XML Schema</a>
+<a href="https://allseenalliance.org/framework/documentation/learn/core/rn_config" target="_blank">Routing Node Configuration File</a></p>
+</blockquote>
+<p>&#x78BA;&#x8A8D;&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;&#x57F7;&#x884C;Router&#xFF1A;<code>service alljoyn start</code></p>
+<h3 id="&#x555F;&#x52D5;gm-app"><a name="&#x555F;&#x52D5;gm-app" class="anchor-navigation-ex-anchor" href="#&#x555F;&#x52D5;gm-app"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. &#x555F;&#x52D5;GM App</h3>
+<p>&#x78BA;&#x8A8D;Config File &#x8207;<code>start alljoyn-daemon</code>&#x4EE5;&#x5F8C;&#xFF0C;&#x5C0D;&#x65BC;<code>GM App</code>&#x6211;&#x5011;&#x4E5F;&#x4F9D;&#x6CD5;&#x7167;&#x505A;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x5C07;Build&#x597D;&#x7684;<code>alljoyn-gwagent</code>&#x653E;&#x5728;<code>/usr/bin/</code>&#x4E2D;&#xFF0C;&#x4E26;&#x5BEB;&#x597D;<code>alljoyn-gwagent.init</code>&#x653E;&#x5728;<code>/etc/init.d/alljoyn-gwagent</code>&#x4E4B;&#x4E2D;&#x3002;&#x4E4B;&#x5F8C;&#x57F7;&#x884C;<code>service alljoyn-gwagent start</code></p>
+<blockquote>
+<p>&#x4EE5;&#x4E0B;&#x70BA;<code>alljoyn-gwagent.init</code>&#x7684;start script</p>
+<pre><code>start() {
+  if [ -f $PIDFILE ] &amp;&amp; kill -0 $(cat $PIDFILE); then
+    echo &apos;Service already running&apos; &gt;&amp;2
+    return 1
+  fi
+  echo &apos;Starting service&#x2026;&apos; &gt;&amp;2
+  local CMD=&quot;$SCRIPT &amp;&gt; \&quot;$LOGFILE\&quot; &amp; echo \$!&quot;
+  su -c &quot;$CMD&quot; $RUNAS &gt; &quot;$PIDFILE&quot;
+  echo &apos;Service started&apos; &gt;&amp;2
+}
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x96D6;&#x7136;&#x6B64;&#x4F8B;&#x6C92;&#x6709;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x4E8B;&#x5BE6;&#x4E0A;&#x53EF;&#x4EE5;&#x5E36;&#x5165;&#x53C3;&#x6578;<code>--gwagent-policy-file</code>&#x6307;&#x51FA;<code>GM App</code>&#x57F7;&#x884C;&#x6642;&#x52D5;&#x614B;&#x7522;&#x751F;&#x7684;Config File&#xFF0C;&#x4EE5;&#x53CA;<code>--apps-policy-dir</code>&#x6307;&#x51FA;&#x6839;&#x64DA;ACL&#x7522;&#x751F;&#x7684;Config File Folder</p>
+<p>&#x4EE5;&#x4E0B;&#x70BA;<code>GM App</code>&#x7A0B;&#x5F0F;&#x78BC;&#x7247;&#x6BB5;</p>
+<pre><code class="lang-c++">String policyFileOption = <span class="hljs-string">&quot;--gwagent-policy-file=&quot;</span>;
+String appsPolicyDirOption = <span class="hljs-string">&quot;--apps-policy-dir=&quot;</span>;
+
+   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; argc; i++) {
+        <span class="hljs-function">String <span class="hljs-title">arg</span><span class="hljs-params">(argv[i])</span></span>;
+        <span class="hljs-keyword">if</span> (arg.compare(<span class="hljs-number">0</span>, policyFileOption.size(), policyFileOption) == <span class="hljs-number">0</span>) {
+            String policyFile = arg.substr(policyFileOption.size());
+            QCC_DbgPrintf((<span class="hljs-string">&quot;Setting gatewayPolicyFile to: %s&quot;</span>, policyFile.c_str()));
+            gatewayMgmt-&gt;setGatewayPolicyFile(policyFile.c_str());
+        }
+        <span class="hljs-keyword">if</span> (arg.compare(<span class="hljs-number">0</span>, appsPolicyDirOption.size(), appsPolicyDirOption) == <span class="hljs-number">0</span>) {
+            String policyDir = arg.substr(appsPolicyDirOption.size());
+            QCC_DbgPrintf((<span class="hljs-string">&quot;Setting appsPolicyDir to: %s&quot;</span>, policyDir.c_str()));
+            gatewayMgmt-&gt;setAppPolicyDir(policyDir.c_str());
+        }
+    }
+</code></pre>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>start() {
+service_start /usr/bin/alljoyn-gwagent `--gwagent-policy-file`=/etc/alljoyn/gwagent/gwagent.conf `--apps-policy-dir`=/etc/alljoyn/gwagent-apps
+}
+</code></pre><p>&#x5982;&#x679C;&#x6C92;&#x6709;&#x7279;&#x5225;&#x6307;&#x660E;&#xFF0C;&#x5247;Default 
+<strong>gwagent-policy-file</strong>&#xFF1A;<code>/opt/alljoyn/alljoyn-daemon.d/gwagent-config.xml</code>
+<strong>apps-policy-dir</strong>&#xFF1A;<code>/opt/alljoyn/alljoyn-daemon.d/apps</code></p>
+<pre><code class="lang-c++"><span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> qcc::String GATEWAY_POLICIES_DIRECTORY = <span class="hljs-string">&quot;/opt/alljoyn/alljoyn-daemon.d&quot;</span>;
+
+GatewayRouterPolicyManager::GatewayRouterPolicyManager() : m_AboutListenerRegistered(<span class="hljs-literal">false</span>), m_AutoCommit(<span class="hljs-literal">false</span>),
+    m_gatewayPolicyFile(GATEWAY_POLICIES_DIRECTORY + <span class="hljs-string">&quot;/gwagent-config.xml&quot;</span>), m_appPolicyDirectory(GATEWAY_POLICIES_DIRECTORY + <span class="hljs-string">&quot;/apps&quot;</span>)
+{
+}
+</code></pre>
+<p>&#x4E0B;&#x5716;&#x70BA;&#x6B64;&#x7BC4;&#x4F8B;&#x7684;&#x76EE;&#x9304;&#x7D50;&#x69CB;&#xFF1A;
+<img src="1452481022686.png" alt="Alt text">
+<strong>config.xml</strong>&#xFF1A;
+<img src="1452481349837.png" alt="Alt text">
+<strong>gwagent-config.xml</strong>&#xFF1A;
+<img src="1452481113387.png" alt="Alt text">
+apps-policy-dir&#x5167;&#x7684;<strong>dummyapp1.xml</strong>&#xFF1A;
+<img src="1452481183953.png" alt="Alt text"></p>
+</blockquote>
+<p>&#x78BA;&#x8A8D;&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;&#x57F7;&#x884C;GM App&#xFF1A;<code>service alljoyn-gwagent start</code></p>
+<h3 id="&#x9A57;&#x8B49;"><a name="&#x9A57;&#x8B49;" class="anchor-navigation-ex-anchor" href="#&#x9A57;&#x8B49;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. &#x9A57;&#x8B49;</h3>
+<p>&#x900F;&#x904E;<code>ps -ef | grep alljoyn</code>&#x6307;&#x4EE4;&#x9A57;&#x8B49;
+<img src="1452481744197.png" alt="Alt text"></p>
+<h3 id="&#x76EE;&#x9304;&#x7D50;&#x69CB;"><a name="&#x76EE;&#x9304;&#x7D50;&#x69CB;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x9304;&#x7D50;&#x69CB;"><i class="fa fa-link" aria-hidden="true"></i></a>5.4. &#x76EE;&#x9304;&#x7D50;&#x69CB;</h3>
+<p><code>/opt/alljoyn</code>&#x4E0B;&#x7684;&#x6A39;&#x72C0;&#x7D50;&#x69CB;&#xFF1A;
+<img src="1452481776501.png" alt="Alt text"></p>
+<h3 id="controller-app&#x756B;&#x9762;"><a name="controller-app&#x756B;&#x9762;" class="anchor-navigation-ex-anchor" href="#controller-app&#x756B;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>5.5. Controller App&#x756B;&#x9762;</h3>
+<p>&#x9032;&#x5165;&#x641C;&#x5C0B;&#x5230;&#x7684;<code>GM App</code>&#xFF1A;
+<img src="1452481905094.png" alt="Alt text"></p>
+<p>&#x9032;&#x5165;<code>Connector&apos;s acl</code>&#x5217;&#x8868;
+<img src="1452481970878.png" alt="Alt text"></p>
+<p>&#x5141;&#x8A31;<code>Connector</code>&#x7684;&#x670D;&#x52D9;&#xFF1A;
+<img src="1452482020403.png" alt="Alt text"></p>
+<p>&#x542B;&#x6709;&#x6B64;<strong><code>Connector</code>&#x611F;&#x8208;&#x8DA3;&#x7684;Interface</strong>&#x7684;Device&#xFF1A;
+<img src="1452482056531.png" alt="Alt text"></p>
+<p>&#x5141;&#x8A31;<code>Connector</code>&#x5B58;&#x53D6;&#x6B64;Device&#xFF1A;
+<img src="1452482128497.png" alt="Alt text"></p>
+<p>ACL&#x7522;&#x751F;&#xFF1A;
+<img src="1452482194310.png" alt="Alt text"></p>
+<p>&#x540C;&#x6642;&#x7522;&#x751F;Config Policy&#xFF1A;
+<img src="1452482227846.png" alt="Alt text"></p>
+</div></div></div></sec> 
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2017-09-04 02:07:58
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1-架構說明.html" class="navigation navigation-prev " aria-label="Previous page: 架構說明">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../3-Allplay/Readme.html" class="navigation navigation-next " aria-label="Next page: Allplay">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"啟動流程 & 程式碼","level":"2.2.2","depth":2,"next":{"title":"Allplay","level":"2.3","depth":1,"path":"md/4-Alljoyn/3-Allplay/Readme.md","ref":"md/4-Alljoyn/3-Allplay/Readme.md","articles":[]},"previous":{"title":"架構說明","level":"2.2.1","depth":2,"path":"md/4-Alljoyn/2-Gateway/1-架構說明.md","ref":"md/4-Alljoyn/2-Gateway/1-架構說明.md","articles":[]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","mermaid","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","flow","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex"],"root":"./books/Framework","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"修訂時間：","copyright":"© 2017 Trashman"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/Framework"},"puml":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"className":"atoc","addClass":true},"splitter":{},"search-pro":{},"mermaid":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"mojombo":{"text":"#000","balloon":"#ddd","even":false},"claylo":{"text":"#fff","balloon":"#08f","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"flow":{"line-color":"#cd4545","fill":"#2d3143","font-color":"#3EB1D0"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"url":"https://plus.google.com/106302595834859374854/","icon":"fa fa-google-plus","label":"Google+"},{"url":"https://www.facebook.com/zhenkunhe/","icon":"fa fa-facebook","label":"Facebook"},{"url":"https://twitter.com/zhenkunhe/","icon":"fa fa-twitter","label":"Twitter"},{"url":"https://www.pinterest.com/zhenkunhe/","icon":"fa fa-pinterest","label":"Pinterest"},{"url":"http://stackoverflow.com/users/6819791/trashman/","icon":"fa fa-stack-overflow","label":"StackOverflow"},{"url":"https://github.com/zhenkunhe/","icon":"fa fa-github","label":"GitHub"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.1","level":"2.2.1","list_caption":"Figure: ACL - Access Control List","alt":"ACL - Access Control List","nro":1,"url":"../images/acl.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"ACL - Access Control List","attributes":{},"skip":false,"key":"2.2.1.1"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.2","level":"2.2.1","list_caption":"Figure: Configure file","alt":"Configure file","nro":2,"url":"../images/config.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Configure file","attributes":{},"skip":false,"key":"2.2.1.2"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.3","level":"2.2.1","list_caption":"Figure: 架構","alt":"架構","nro":3,"url":"../images/Gateway_1.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"架構","attributes":{},"skip":false,"key":"2.2.1.3"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.4","level":"2.2.1","list_caption":"Figure: 流程","alt":"流程","nro":4,"url":"../images/Gateway_3.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"流程","attributes":{},"skip":false,"key":"2.2.1.4"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.5","level":"2.2.1","list_caption":"Figure: 對應關係","alt":"對應關係","nro":5,"url":"../images/Gateway_2.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"對應關係","attributes":{},"skip":false,"key":"2.2.1.5"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.6","level":"2.2.1","list_caption":"Figure: Secure","alt":"Secure","nro":6,"url":"../images/secure.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Secure","attributes":{},"skip":false,"key":"2.2.1.6"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.7","level":"2.2.1","list_caption":"Figure: Gateway Discover","alt":"Gateway Discover","nro":7,"url":"../images/discover.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Gateway Discover","attributes":{},"skip":false,"key":"2.2.1.7"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.8","level":"2.2.1","list_caption":"Figure: Create ACL","alt":"Create ACL","nro":8,"url":"../images/create_acl.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Create ACL","attributes":{},"skip":false,"key":"2.2.1.8"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.9","level":"2.2.1","list_caption":"Figure: Activate ACL","alt":"Activate ACL","nro":9,"url":"../images/activate_acl.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Activate ACL","attributes":{},"skip":false,"key":"2.2.1.9"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.10","level":"2.2.1","list_caption":"Figure: Connector startup","alt":"Connector startup","nro":10,"url":"../images/connector_startup.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Connector startup","attributes":{},"skip":false,"key":"2.2.1.10"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.11","level":"2.2.1","list_caption":"Figure: Update ACL","alt":"Update ACL","nro":11,"url":"../images/update_acl.png","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Update ACL","attributes":{},"skip":false,"key":"2.2.1.11"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.12","level":"2.2.1","list_caption":"Figure: Delete ACL","alt":"Delete ACL","nro":12,"url":"../images/delete_acl.png","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Delete ACL","attributes":{},"skip":false,"key":"2.2.1.12"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.13","level":"2.2.1","list_caption":"Figure: Disable ACL","alt":"Disable ACL","nro":13,"url":"../images/disable_acl.png","index":13,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Disable ACL","attributes":{},"skip":false,"key":"2.2.1.13"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.14","level":"2.2.1","list_caption":"Figure: 送出 Notification","alt":"送出 Notification","nro":14,"url":"../images/send_notify.png","index":14,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"送出 Notification","attributes":{},"skip":false,"key":"2.2.1.14"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.15","level":"2.2.1","list_caption":"Figure: 接收 Notification","alt":"接收 Notification","nro":15,"url":"../images/recv_notify.png","index":15,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"接收 Notification","attributes":{},"skip":false,"key":"2.2.1.15"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.16","level":"2.2.1","list_caption":"Figure: 呼叫Method","alt":"呼叫Method","nro":16,"url":"../images/method.png","index":16,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"呼叫Method","attributes":{},"skip":false,"key":"2.2.1.16"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.17","level":"2.2.1","list_caption":"Figure: Get property","alt":"Get property","nro":17,"url":"../images/get_property.png","index":17,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Get property","attributes":{},"skip":false,"key":"2.2.1.17"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.18","level":"2.2.1","list_caption":"Figure: Set property","alt":"Set property","nro":18,"url":"../images/set_property.png","index":18,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Set property","attributes":{},"skip":false,"key":"2.2.1.18"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.19","level":"2.2.1","list_caption":"Figure: session-based signal","alt":"session-based signal","nro":19,"url":"../images/session_signal.png","index":19,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"session-based signal","attributes":{},"skip":false,"key":"2.2.1.19"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig2.2.1.20","level":"2.2.1","list_caption":"Figure: Cloud & Connector","alt":"Cloud & Connector","nro":20,"url":"../images/cloud_connector.png","index":20,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Cloud & Connector","attributes":{},"skip":false,"key":"2.2.1.20"},{"backlink":"md/4-Alljoyn/2-Gateway/2-啟動流程 & 程式碼.html#fig2.2.2.1","level":"2.2.2","list_caption":"Figure: Alt text","alt":"Alt text","nro":21,"url":"1452233532472.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Alt text","attributes":{},"skip":false,"key":"2.2.2.1"}]},"title":"Trashman's Program Note","language":"zh-tw","gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"md/4-Alljoyn/2-Gateway/2-啟動流程 & 程式碼.md","mtime":"2017-09-03T18:07:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-03T19:51:42.983Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

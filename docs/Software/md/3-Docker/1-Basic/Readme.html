@@ -1,0 +1,798 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basic · Trashman's Program Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-maxiang/maxiang.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chatlog/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../9-IDE/1-Xcode/Readme.html" />
+    
+    
+    <link rel="prev" href="../../2-Mininet/4-運作原理/4-Interface.html" />
+    
+
+    
+    <script src="../../../gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mininet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../2-Mininet/1-什麼是 mininet/">
+            
+                <a href="../../2-Mininet/1-什麼是 mininet/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    什麼是 mininet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../2-Mininet/2-什麼是 SDN/">
+            
+                <a href="../../2-Mininet/2-什麼是 SDN/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    什麼是 SDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../2-Mininet/3-mininet 實戰/">
+            
+                <a href="../../2-Mininet/3-mininet 實戰/">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    mininet 實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                        <b>2.4.</b>
+                    
+                    運作原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../2-Mininet/4-運作原理/1-Network Namespace.html">
+            
+                <a href="../../2-Mininet/4-運作原理/1-Network Namespace.html">
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    Network Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../2-Mininet/4-運作原理/2-Node.html">
+            
+                <a href="../../2-Mininet/4-運作原理/2-Node.html">
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../2-Mininet/4-運作原理/3-Link.html">
+            
+                <a href="../../2-Mininet/4-運作原理/3-Link.html">
+            
+                    
+                        <b>2.4.3.</b>
+                    
+                    Link
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../../2-Mininet/4-運作原理/4-Interface.html">
+            
+                <a href="../../2-Mininet/4-運作原理/4-Interface.html">
+            
+                    
+                        <b>2.4.4.</b>
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="Readme.html">
+            
+                <a href="Readme.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">IDE</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../9-IDE/1-Xcode/Readme.html">
+            
+                <a href="../../9-IDE/1-Xcode/Readme.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../9-IDE/2-Eclipse/Readme.html">
+            
+                <a href="../../9-IDE/2-Eclipse/Readme.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Eclipse
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Gstreamer</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../93-Gstreamer/1-Basic/Readme.html">
+            
+                <a href="../../93-Gstreamer/1-Basic/Readme.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../95-Git/1-Basic/Readme.html">
+            
+                <a href="../../95-Git/1-Basic/Readme.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Basic</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#basic"><b> </b>Basic</a></li><ul><li><span class="title-icon "></span><a href="#introduction"><b>1. </b>Introduction</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x9EBC;&#x662F;-docker"><b>1.1. </b>&#x4EC0;&#x9EBC;&#x662F; Docker</a></li></ul><li><span class="title-icon "></span><a href="#how-to-install-and-use-docker-on-ubuntu-1604"><b>2. </b>How To Install and Use Docker on Ubuntu 16.04</a></li><li><span class="title-icon "></span><a href="#install-ubuntu"><b>3. </b>Install ubuntu</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x51FA;&#x672C;&#x6A5F;&#x6620;&#x50CF;&#x6A94;"><b>4. </b>&#x5217;&#x51FA;&#x672C;&#x6A5F;&#x6620;&#x50CF;&#x6A94;</a></li></ul></ul></div><a href="#basic" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="basic"><a name="basic" class="anchor-navigation-ex-anchor" href="#basic"><i class="fa fa-link" aria-hidden="true"></i></a> Basic</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../../../tags.html#docker">Docker</a></p></div><!-- tagsstop --><sec data-title="Introduction" data-id="1" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="introduction"><a name="introduction" class="anchor-navigation-ex-anchor" href="#introduction"><i class="fa fa-link" aria-hidden="true"></i></a>1. Introduction</h2></div><div class="panel-collapse in" id="1"><div class="panel-body">
+<p>sudo docker run -it --privileged -v /dev/bus/usb:/dev/bus/usb ubuntu:14.04 /bin/bash
+sudo docker exec -u root -it compassionate_snyder bash</p>
+<p>&apos;su&apos; command in Docker returns &apos;must be run from terminal&apos;</p>
+<p>When you are ssh-ing in or going in via php your session is not being allocated a pty. I have used each of the following solutions:</p>
+<p>ANSWER 3: use python to spawn a pty in your shell</p>
+<p>Quite a cute hack :)</p>
+<p>jenkins@e9fbe94d4c89:~$ su -
+su: must be run from a terminal</p>
+<p>$ echo &quot;import pty; pty.spawn(&apos;/bin/bash&apos;)&quot; &gt; /tmp/asdf.py
+$ python /tmp/asdf.py</p>
+<p>$ su -
+Password:</p>
+<p>root@e9fbe94d4c89:~#</p>
+<h3 id="&#x4EC0;&#x9EBC;&#x662F;-docker"><a name="&#x4EC0;&#x9EBC;&#x662F;-docker" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x9EBC;&#x662F;-docker"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4EC0;&#x9EBC;&#x662F; Docker</h3>
+<ul>
+<li><p>Docker &#x662F;&#x4E00;&#x500B;&#x958B;&#x6E90;&#x5C08;&#x6848;&#xFF0C;&#x8A95;&#x751F;&#x65BC; 2013 &#x5E74;&#x521D;&#xFF0C;&#x6700;&#x521D;&#x662F; dotCloud &#x516C;&#x53F8;&#x5167;&#x90E8;&#x7684;&#x4E00;&#x500B;&#x696D;&#x9918;&#x5C08;&#x6848;&#x3002;&#x5B83;&#x57FA;&#x65BC; Google &#x516C;&#x53F8;&#x63A8;&#x51FA;&#x7684; Go &#x8A9E;&#x8A00;&#x5BE6;&#x4F5C;&#x3002; &#x5C08;&#x6848;&#x5F8C;&#x4F86;&#x52A0;&#x5165;&#x4E86; Linux &#x57FA;&#x91D1;&#x6703;&#xFF0C;&#x9075;&#x5F9E;&#x4E86; Apache 2.0 &#x5354;&#x8B70;&#xFF0C;&#x539F;&#x59CB;&#x78BC;&#x5728; GitHub &#x4E0A;&#x9032;&#x884C;&#x7DAD;&#x8B77;&#x3002;</p>
+</li>
+<li><p>Docker &#x81EA;&#x958B;&#x6E90;&#x5F8C;&#x53D7;&#x5230;&#x5EE3;&#x6CDB;&#x7684;&#x95DC;&#x6CE8;&#x548C;&#x8A0E;&#x8AD6;&#xFF0C;&#x4EE5;&#x81F3;&#x65BC; dotCloud &#x516C;&#x53F8;&#x5F8C;&#x4F86;&#x90FD;&#x6539;&#x540D;&#x70BA; Docker Inc&#x3002;Redhat &#x5DF2;&#x7D93;&#x5728;&#x5176; RHEL6.5 &#x4E2D;&#x96C6;&#x4E2D;&#x652F;&#x63F4; Docker&#xFF1B;Google &#x4E5F;&#x5728;&#x5176; PaaS &#x7522;&#x54C1;&#x4E2D;&#x5EE3;&#x6CDB;&#x61C9;&#x7528;&#x3002;</p>
+</li>
+<li><p>Docker &#x5C08;&#x6848;&#x7684;&#x76EE;&#x6A19;&#x662F;&#x5BE6;&#x4F5C;&#x8F15;&#x91CF;&#x7D1A;&#x7684;&#x4F5C;&#x696D;&#x7CFB;&#x7D71;&#x865B;&#x64EC;&#x5316;&#x89E3;&#x6C7A;&#x65B9;&#x6848;&#x3002; Docker &#x7684;&#x57FA;&#x790E;&#x662F; Linux &#x5BB9;&#x5668;&#xFF08;LXC&#xFF09;&#x7B49;&#x6280;&#x8853;&#x3002;</p>
+</li>
+<li><p>&#x5728; LXC &#x7684;&#x57FA;&#x790E;&#x4E0A; Docker &#x9032;&#x884C;&#x4E86;&#x9032;&#x4E00;&#x6B65;&#x7684;&#x5C01;&#x88DD;&#xFF0C;&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x95DC;&#x5FC3;&#x5BB9;&#x5668;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x4F7F;&#x5F97;&#x64CD;&#x4F5C;&#x66F4;&#x70BA;&#x7C21;&#x4FBF;&#x3002;&#x4F7F;&#x7528;&#x8005;&#x64CD;&#x4F5C; Docker &#x7684;&#x5BB9;&#x5668;&#x5C31;&#x50CF;&#x64CD;&#x4F5C;&#x4E00;&#x500B;&#x5FEB;&#x901F;&#x8F15;&#x91CF;&#x7D1A;&#x7684;&#x865B;&#x64EC;&#x6A5F;&#x4E00;&#x6A23;&#x7C21;&#x55AE;&#x3002;</p>
+</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x7684;&#x5716;&#x7247;&#x6BD4;&#x8F03;&#x4E86; Docker &#x548C;&#x50B3;&#x7D71;&#x865B;&#x64EC;&#x5316;&#x65B9;&#x5F0F;&#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x8655;&#xFF0C;&#x53EF;&#x898B;&#x5BB9;&#x5668;&#x662F;&#x5728;&#x4F5C;&#x696D;&#x7CFB;&#x7D71;&#x5C64;&#x9762;&#x4E0A;&#x5BE6;&#x4F5C;&#x865B;&#x64EC;&#x5316;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x4E3B;&#x6A5F;&#x7684;&#x4F5C;&#x696D;&#x7CFB;&#x7D71;&#xFF0C;&#x800C;&#x50B3;&#x7D71;&#x65B9;&#x5F0F;&#x5247;&#x662F;&#x5728;&#x786C;&#x9AD4;&#x5C64;&#x9762;&#x5BE6;&#x4F5C;&#x3002;</p>
+<figure id="fig3.1.1"><img src="../images/1.png" alt="1"><figcaption>Image 1 - 1</figcaption></figure>
+<figure id="fig3.1.2"><img src="../images/2.png" alt="2"><figcaption>Image 2 - 2</figcaption></figure>
+</div></div></div></sec>
+<sec data-title="How To Install and Use Docker on Ubuntu 16.04" data-id="2" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="how-to-install-and-use-docker-on-ubuntu-1604"><a name="how-to-install-and-use-docker-on-ubuntu-1604" class="anchor-navigation-ex-anchor" href="#how-to-install-and-use-docker-on-ubuntu-1604"><i class="fa fa-link" aria-hidden="true"></i></a>2. How To Install and Use Docker on Ubuntu 16.04</h2></div><div class="panel-collapse in" id="2"><div class="panel-body">
+<pre><code class="lang-bash">sudo apt-get update
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb https://apt.dockerproject.org/repo ubuntu-xenial main&quot;</span> | sudo tee /etc/apt/sources.list.d/docker.list
+sudo apt-get update
+apt-cache policy docker-engine
+</code></pre>
+<blockquote>
+<p>docker-engine:
+  Installed: (none)
+  Candidate: 1.11.1-0~xenial
+  Version table:
+     1.11.1-0~xenial 500
+        500 <a href="https://apt.dockerproject.org/repo" target="_blank">https://apt.dockerproject.org/repo</a> ubuntu-xenial/main amd64 Packages
+     1.11.0-0~xenial 500
+        500 <a href="https://apt.dockerproject.org/repo" target="_blank">https://apt.dockerproject.org/repo</a> ubuntu-xenial/main amd64 Packages</p>
+</blockquote>
+<pre><code class="lang-bash">sudo apt-get install -y docker-engine
+sudo systemctl status docker
+</code></pre>
+<blockquote>
+<p>&#x25CF; docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sun 2016-05-01 06:53:52 CDT; 1 weeks 3 days ago
+     Docs: <a href="https://docs.docker.com" target="_blank">https://docs.docker.com</a>
+ Main PID: 749 (docker)</p>
+</blockquote>
+</div></div></div></sec>
+<sec data-title="Install ubuntu" data-id="3" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="install-ubuntu"><a name="install-ubuntu" class="anchor-navigation-ex-anchor" href="#install-ubuntu"><i class="fa fa-link" aria-hidden="true"></i></a>3. Install ubuntu</h2></div><div class="panel-collapse in" id="3"><div class="panel-body">
+<pre><code class="lang-bash">oem@Alex:~$ sudo docker pull ubuntu
+[sudo] password <span class="hljs-keyword">for</span> oem: 
+Using default tag: latest
+latest: Pulling from library/ubuntu
+
+f069f1d21059: Pull complete 
+ecbeec5633cf: Pull complete 
+ea6f18256d63: Pull complete 
+54bde7b02897: Pull complete 
+Digest: sha256:bbfd93a02a8487edb60f20316ebc966ddc7aa123c2e609185450b96971020097
+Status: Downloaded newer image <span class="hljs-keyword">for</span> ubuntu:latest
+</code></pre>
+</div></div></div></sec>
+<sec data-title="&#x5217;&#x51FA;&#x672C;&#x6A5F;&#x6620;&#x50CF;&#x6A94;" data-id="4" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x5217;&#x51FA;&#x672C;&#x6A5F;&#x6620;&#x50CF;&#x6A94;"><a name="&#x5217;&#x51FA;&#x672C;&#x6A5F;&#x6620;&#x50CF;&#x6A94;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x51FA;&#x672C;&#x6A5F;&#x6620;&#x50CF;&#x6A94;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5217;&#x51FA;&#x672C;&#x6A5F;&#x6620;&#x50CF;&#x6A94;</h2></div><div class="panel-collapse in" id="4"><div class="panel-body">
+<pre><code class="lang-bash">$ sudo docker images
+REPOSITORY       TAG      IMAGE ID      CREATED      VIRTUAL SIZE
+ubuntu           12.04    74fe38d11401  4 weeks ago  209.6 MB
+ubuntu           precise  74fe38d11401  4 weeks ago  209.6 MB
+ubuntu           14.04    99ec81b80c55  4 weeks ago  266 MB
+ubuntu           latest   99ec81b80c55  4 weeks ago  266 MB
+ubuntu           trusty   99ec81b80c55  4 weeks ago  266 MB
+</code></pre>
+<p>&#x5275;&#x9020;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">sudo docker run -ti utuntu:14.04 bash
+</code></pre>
+<p>&#x555F;&#x52D5;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">sudo docker start nostalgic_hypatia
+</code></pre>
+<p>&#x9032;&#x5165;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">sudo docker <span class="hljs-built_in">exec</span> -ti nostalgic_hypatia bash
+sudo docker attach nostalgic_hypatia
+</code></pre>
+<p>&#x67E5;&#x770B;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">oem@Alex:~$ sudo docker ps <span class="hljs-_">-a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                          PORTS               NAMES
+8dd510<span class="hljs-built_in">fc</span>3be5        ubuntu:14.04        <span class="hljs-string">&quot;/bin/bash&quot;</span>         About a minute ago   Exited (0) About a minute ago                       happy_fermat
+091a9c73d24e        ubuntu:14.04        <span class="hljs-string">&quot;/bin/bash&quot;</span>         57 minutes ago       Up 57 minutes                                       gigantic_knuth
+</code></pre>
+<p>&#x522A;&#x9664;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">oem@Alex:~$ sudo docker rm happy_fermat
+happy_fermat
+</code></pre>
+<p>cp&#x5230;&#x5BB9;&#x5668;&#x5167;</p>
+<pre><code class="lang-bash">sudo docker cp gstreamer_example/ gigantic_knuth:/
+</code></pre>
+<p>rename&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">sudo docker rename OLD_NAME NEW_NAME
+</code></pre>
+<p>scratch -&gt; debian -&gt; busybox</p>
+<p>&#x5982;&#x4F55;&#x9032;&#x5230;docker container file system:</p>
+<ol>
+<li>start container</li>
+<li>get root </li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> ] ; <span class="hljs-keyword">then</span>
+ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;docker-find-root $container_id_or_name &apos;</span>
+ <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+CID=$(docker inspect   --format {{.Id}} <span class="hljs-variable">$1</span>)
+<span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$CID</span>&quot;</span> ] ; <span class="hljs-keyword">then</span>
+    <span class="hljs-keyword">if</span> [ <span class="hljs-_">-f</span>  /var/lib/docker/image/aufs/layerdb/mounts/<span class="hljs-variable">$CID</span>/mount-id ] ; <span class="hljs-keyword">then</span>
+        F1=$(cat /var/lib/docker/image/aufs/layerdb/mounts/<span class="hljs-variable">$CID</span>/mount-id)
+       d1=/var/lib/docker/aufs/mnt/<span class="hljs-variable">$F1</span>
+    <span class="hljs-keyword">fi</span>
+    <span class="hljs-keyword">if</span> [ ! <span class="hljs-_">-d</span> <span class="hljs-string">&quot;<span class="hljs-variable">$d1</span>&quot;</span> ] ; <span class="hljs-keyword">then</span>
+        d1=/var/lib/docker/aufs/diff/<span class="hljs-variable">$CID</span>
+    <span class="hljs-keyword">fi</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-variable">$d1</span>
+</code></pre>
+<p>3, cd <code>root path</code></p>
+</div></div></div></sec> 
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2017-09-04 02:07:58
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../2-Mininet/4-運作原理/4-Interface.html" class="navigation navigation-prev " aria-label="Previous page: Interface">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../9-IDE/1-Xcode/Readme.html" class="navigation navigation-next " aria-label="Next page: Xcode">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basic","level":"3.1","depth":1,"next":{"title":"Xcode","level":"4.1","depth":1,"path":"md/9-IDE/1-Xcode/Readme.md","ref":"md/9-IDE/1-Xcode/Readme.md","articles":[]},"previous":{"title":"Interface","level":"2.4.4","depth":2,"path":"md/2-Mininet/4-運作原理/4-Interface.md","ref":"md/2-Mininet/4-運作原理/4-Interface.md","articles":[]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","mermaid","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","flow","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex"],"root":"./books/Software","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"修訂時間：","copyright":"© 2017 Trashman"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/Software"},"puml":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"className":"atoc","addClass":true},"splitter":{},"search-pro":{},"mermaid":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"mojombo":{"text":"#000","balloon":"#ddd","even":false},"claylo":{"text":"#fff","balloon":"#08f","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"flow":{"line-color":"#cd4545","fill":"#2d3143","font-color":"#3EB1D0"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"url":"https://plus.google.com/106302595834859374854/","icon":"fa fa-google-plus","label":"Google+"},{"url":"https://www.facebook.com/zhenkunhe/","icon":"fa fa-facebook","label":"Facebook"},{"url":"https://twitter.com/zhenkunhe/","icon":"fa fa-twitter","label":"Twitter"},{"url":"https://www.pinterest.com/zhenkunhe/","icon":"fa fa-pinterest","label":"Pinterest"},{"url":"http://stackoverflow.com/users/6819791/trashman/","icon":"fa fa-stack-overflow","label":"StackOverflow"},{"url":"https://github.com/zhenkunhe/","icon":"fa fa-github","label":"GitHub"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"md/2-Mininet/2-什麼是 SDN/index.html#fig2.2.1","level":"2.2","list_caption":"Figure: SDN","alt":"SDN","nro":1,"url":"../image/SDN.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"SDN","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"md/2-Mininet/2-什麼是 SDN/index.html#fig2.2.2","level":"2.2","list_caption":"Figure: OpenFlow","alt":"OpenFlow","nro":2,"url":"../image/Openflow.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"OpenFlow","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.1","level":"2.3","list_caption":"Figure: Topology","alt":"Topology","nro":3,"url":"../image/topo.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Topology","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.2","level":"2.3","list_caption":"Figure: mn","alt":"mn","nro":4,"url":"../image/mn.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"mn","attributes":{},"skip":false,"key":"2.3.2"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.3","level":"2.3","list_caption":"Figure: nodes","alt":"nodes","nro":5,"url":"../image/nodes.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"nodes","attributes":{},"skip":false,"key":"2.3.3"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.4","level":"2.3","list_caption":"Figure: net","alt":"net","nro":6,"url":"../image/net.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"net","attributes":{},"skip":false,"key":"2.3.4"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.5","level":"2.3","list_caption":"Figure: dump","alt":"dump","nro":7,"url":"../image/dump.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"dump","attributes":{},"skip":false,"key":"2.3.5"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.6","level":"2.3","list_caption":"Figure: ping","alt":"ping","nro":8,"url":"../image/ping.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"ping","attributes":{},"skip":false,"key":"2.3.6"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.7","level":"2.3","list_caption":"Figure: xterm","alt":"xterm","nro":9,"url":"../image/xterm.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"xterm","attributes":{},"skip":false,"key":"2.3.7"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.8","level":"2.3","list_caption":"Figure: Server Farm","alt":"Server Farm","nro":10,"url":"../image/server_farm.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Server Farm","attributes":{},"skip":false,"key":"2.3.8"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.9","level":"2.3","list_caption":"Figure: example","alt":"example","nro":11,"url":"../image/example.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"example","attributes":{},"skip":false,"key":"2.3.9"},{"backlink":"md/2-Mininet/4-運作原理/1-Network Namespace.html#fig2.4.1.1","level":"2.4.1","list_caption":"Figure: Example1","alt":"Example1","nro":12,"url":"../image/Example1.jpeg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Example1","attributes":{},"skip":false,"key":"2.4.1.1"},{"backlink":"md/2-Mininet/4-運作原理/3-Link.html#fig2.4.3.1","level":"2.4.3","list_caption":"Figure: 拓墣","alt":"拓墣","nro":13,"url":"../image/topo_pre.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"拓墣","attributes":{},"skip":false,"key":"2.4.3.1"},{"backlink":"md/2-Mininet/4-運作原理/4-Interface.html#fig2.4.4.1","level":"2.4.4","list_caption":"Figure: 拓墣","alt":"拓墣","nro":14,"url":"../image/topo.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"拓墣","attributes":{},"skip":false,"key":"2.4.4.1"},{"backlink":"md/3-Docker/1-Basic/index.html#fig3.1.1","level":"3.1","list_caption":"Figure: 1","alt":"1","nro":15,"url":"../images/1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1","attributes":{},"skip":false,"key":"3.1.1"},{"backlink":"md/3-Docker/1-Basic/index.html#fig3.1.2","level":"3.1","list_caption":"Figure: 2","alt":"2","nro":16,"url":"../images/2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2","attributes":{},"skip":false,"key":"3.1.2"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig5.1.1","level":"5.1","list_caption":"Figure: 1","alt":"1","nro":17,"url":"../images/1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1","attributes":{},"skip":false,"key":"5.1.1"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig5.1.2","level":"5.1","list_caption":"Figure: 2","alt":"2","nro":18,"url":"../images/2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2","attributes":{},"skip":false,"key":"5.1.2"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig5.1.3","level":"5.1","list_caption":"Figure: 3","alt":"3","nro":19,"url":"../images/3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3","attributes":{},"skip":false,"key":"5.1.3"}]},"title":"Trashman's Program Note","language":"zh-tw","gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"md/3-Docker/1-Basic/Readme.md","mtime":"2017-09-03T18:07:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-03T19:52:36.498Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

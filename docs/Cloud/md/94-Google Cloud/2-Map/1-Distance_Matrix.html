@@ -1,0 +1,692 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Distance Matrix · Trashman's Program Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-maxiang/maxiang.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chatlog/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2-Places.html" />
+    
+    
+
+    
+    <script src="../../../gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Google Cloud</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1-Speech/Readme.html">
+            
+                <a href="../1-Speech/Readme.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Speech
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Map
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.2.1" data-path="1-Distance_Matrix.html">
+            
+                <a href="1-Distance_Matrix.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    Distance Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="2-Places.html">
+            
+                <a href="2-Places.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    Places
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Distance Matrix</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#distance-matrix"><b> </b>Distance Matrix</a></li><ul><li><span class="title-icon "></span><a href="#&#x8A08;&#x50F9;"><b>1. </b>&#x8A08;&#x50F9;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6A19;&#x6E96;&#x4F7F;&#x7528;&#x8005;"><b>1.1. </b>&#x6A19;&#x6E96;&#x4F7F;&#x7528;&#x8005;</a></li><li><span class="title-icon "></span><a href="#&#x9032;&#x968E;&#x4F7F;&#x7528;&#x8005;"><b>1.2. </b>&#x9032;&#x968E;&#x4F7F;&#x7528;&#x8005;</a></li></ul><li><span class="title-icon "></span><a href="#&#x591A;&#x9EDE;&#x8DDD;&#x96E2;--&#x6642;&#x9593;"><b>2. </b>&#x591A;&#x9EDE;&#x8DDD;&#x96E2; &amp; &#x6642;&#x9593;</a></li></ul></ul></div><a href="#distance-matrix" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="distance-matrix"><a name="distance-matrix" class="anchor-navigation-ex-anchor" href="#distance-matrix"><i class="fa fa-link" aria-hidden="true"></i></a> Distance Matrix</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../../../tags.html#google-cloud">Google Cloud</a> <a href="../../../tags.html#map">Map</a> <a href="../../../tags.html#api">API</a> <a href="../../../tags.html#distance-matrix">Distance Matrix</a></p></div><!-- tagsstop --><sec data-title="&#x8A08;&#x50F9;" data-id="1" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x8A08;&#x50F9;"><a name="&#x8A08;&#x50F9;" class="anchor-navigation-ex-anchor" href="#&#x8A08;&#x50F9;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x8A08;&#x50F9;</h2></div><div class="panel-collapse in" id="1"><div class="panel-body">
+<h3 id="&#x6A19;&#x6E96;&#x4F7F;&#x7528;&#x8005;"><a name="&#x6A19;&#x6E96;&#x4F7F;&#x7528;&#x8005;" class="anchor-navigation-ex-anchor" href="#&#x6A19;&#x6E96;&#x4F7F;&#x7528;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6A19;&#x6E96;&#x4F7F;&#x7528;&#x8005;</h3>
+<ul>
+<li>&#x6BCF;&#x5929;&#x53EF;&#x4EE5;&#x6709; 2,500 &#x500B;&#x514D;&#x8CBB;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x6BCF;&#x500B;&#x67E5;&#x8A62;&#x53EF;&#x4EE5;&#x6709; 100 &#x500B;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x6BCF; 10 &#x79D2;&#x53EF;&#x4EE5;&#x6709; 100 &#x500B;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x6BCF; 1000 &#x500B;&#x984D;&#x5916;&#x5143;&#x7D20;&#x70BA; $0.50 &#x7F8E;&#x5143;&#xFF0C;&#x6BCF;&#x5929;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x6709; 100,000 &#x500B;&#x5143;&#x7D20;&#x3002;</li>
+</ul>
+<h3 id="&#x9032;&#x968E;&#x4F7F;&#x7528;&#x8005;"><a name="&#x9032;&#x968E;&#x4F7F;&#x7528;&#x8005;" class="anchor-navigation-ex-anchor" href="#&#x9032;&#x968E;&#x4F7F;&#x7528;&#x8005;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x9032;&#x968E;&#x4F7F;&#x7528;&#x8005;</h3>
+<ul>
+<li>&#x6BCF;&#x65E5;&#x914D;&#x984D;&#x6BCF; 24 &#x5C0F;&#x6642;&#x53EF;&#x6709; 100,000 &#x500B;&#x5143;&#x7D20;&#x4EE5;&#x4E0A;&#xFF0C;&#x8996;&#x5E74;&#x5EA6;&#x5408;&#x7D04;&#x8CFC;&#x8CB7;&#x91CF;&#x800C;&#x5B9A;&#x3002;</li>
+<li>&#x6BCF;&#x500B;&#x67E5;&#x8A62;&#x53EF;&#x4EE5;&#x6709; 625 &#x500B;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x6BCF; 10 &#x79D2;&#x53EF;&#x4EE5;&#x6709; 1,000 &#x500B;&#x5143;&#x7D20;&#x3002;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="&#x591A;&#x9EDE;&#x8DDD;&#x96E2; &amp; &#x6642;&#x9593;" data-id="2" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x591A;&#x9EDE;&#x8DDD;&#x96E2;--&#x6642;&#x9593;"><a name="&#x591A;&#x9EDE;&#x8DDD;&#x96E2;--&#x6642;&#x9593;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x9EDE;&#x8DDD;&#x96E2;--&#x6642;&#x9593;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x591A;&#x9EDE;&#x8DDD;&#x96E2; &amp; &#x6642;&#x9593;</h2></div><div class="panel-collapse in" id="2"><div class="panel-body">
+<ul>
+<li><strong>URL</strong>&#xFF1A;<code>https://maps.googleapis.com/maps/api/distancematrix/output?input=value</code></li>
+<li><strong>Python</strong>&#xFF1A;API - <code>Client.distance_matrix</code></li>
+<li><strong>Python</strong>&#xFF1A;Source Code - <code>distance_matrix.py</code></li>
+<li><strong>&#x8D77;&#x9EDE;</strong>&#x8207;<strong>&#x76EE;&#x7684;&#x5730;</strong>&#x77E9;&#x9663;&#x7684;<strong>&#x65C5;&#x884C;&#x8DDD;&#x96E2;</strong>&#x8207;<strong>&#x6642;&#x9593;</strong>&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Key Input</th>
+<th style="text-align:center">Option Input</th>
+<th style="text-align:center">Output Type</th>
+<th style="text-align:center">Output</th>
+<th>Rows</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">key<sup><a href="#fn_key" id="reffn_key">key</a></sup></td>
+<td style="text-align:center">mode<sup><a href="#fn_mode" id="reffn_mode">mode</a></sup></td>
+<td style="text-align:center">xml<sup><a href="#fn_xml" id="reffn_xml">xml</a></sup></td>
+<td style="text-align:center">status<sup><a href="#fn_Top%20status" id="reffn_Top status">Top status</a></sup></td>
+<td>element<sup><a href="#fn_element" id="reffn_element">element</a></sup></td>
+<td>status<sup><a href="#fn_Element%20status" id="reffn_Element status">Element status</a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center">origins<sup><a href="#fn_origins" id="reffn_origins">origins</a></sup></td>
+<td style="text-align:center">language<sup><a href="#fn_language" id="reffn_language">language</a></sup></td>
+<td style="text-align:center">json<sup><a href="#fn_json" id="reffn_json">json</a></sup></td>
+<td style="text-align:center">origin_addresses<sup><a href="#fn_origin_addresses" id="reffn_origin_addresses">origin_addresses</a></sup></td>
+<td></td>
+<td>duration<sup><a href="#fn_duration" id="reffn_duration">duration</a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center">destinations<sup><a href="#fn_destinations" id="reffn_destinations">destinations</a></sup></td>
+<td style="text-align:center">avoid<sup><a href="#fn_avoid" id="reffn_avoid">avoid</a></sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">destination_addresses<sup><a href="#fn_destination_addresses" id="reffn_destination_addresses">destination_addresses</a></sup></td>
+<td></td>
+<td>duration_in_traffic<sup><a href="#fn_duration_in_traffic" id="reffn_duration_in_traffic">duration_in_traffic</a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">units<sup><a href="#fn_units" id="reffn_units">units</a></sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">rows<sup><a href="#fn_rows" id="reffn_rows">rows</a></sup></td>
+<td></td>
+<td>distance<sup><a href="#fn_distance" id="reffn_distance">distance</a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">arrival_time<sup><a href="#fn_arrival_time" id="reffn_arrival_time">arrival_time</a></sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td>fare<sup><a href="#fn_fare" id="reffn_fare">fare</a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">departure_time<sup><a href="#fn_departure_time" id="reffn_departure_time">departure_time</a></sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">traffic_model<sup><a href="#fn_traffic_model" id="reffn_traffic_model">traffic_model</a></sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">transit_mode<sup><a href="#fn_transit_mode" id="reffn_transit_mode">transit_mode</a></sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">transit_routing_preference<sup><a href="#fn_transit_routing_preference" id="reffn_transit_routing_preference">transit_routing_preference</a></sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Python Library</strong></p>
+<pre><code class="lang-python">def distance_matrix(client, origins, destinations,mode=None, language=None, avoid=None, units=None,departure_time=None, arrival_time=None,transit_mode=None,transit_routing_preference=None, traffic_model=None)
+</code></pre>
+</blockquote>
+<p><strong>Sample code</strong></p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> googlemaps
+
+client  = googlemaps.Client(key=<span class="hljs-string">&apos;AIzaSyAz1hWEiamCgwsceUYG_dQkvTmfwTBoFT4&apos;</span>)
+origins = [<span class="hljs-string">&apos;Vancouver BC&apos;</span>,<span class="hljs-string">&apos;Seattle&apos;</span>]
+destinations = [<span class="hljs-string">&apos;San Francisco&apos;</span>,<span class="hljs-string">&apos;Victoria BC&apos;</span>]
+
+directions_result = client.distance_matrix(origins,destinations)
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> directions_result.get(<span class="hljs-string">&apos;rows&apos;</span>):
+    <span class="hljs-keyword">print</span> i
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;------------------------------&apos;</span>
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code class="lang-json">{
+   <span class="hljs-string">&quot;destination_addresses&quot;</span> : [
+      <span class="hljs-string">&quot;&#x7F8E;&#x570B;&#x52A0;&#x5229;&#x798F;&#x5C3C;&#x4E9E;&#x5DDE;&#x820A;&#x91D1;&#x5C71;&quot;</span>,
+      <span class="hljs-string">&quot;&#x52A0;&#x62FF;&#x5927;&#x82F1;&#x5C6C;&#x54E5;&#x502B;&#x6BD4;&#x4E9E;&#x7DAD;&#x591A;&#x5229;&#x4E9E;&quot;</span>
+   ],
+   <span class="hljs-string">&quot;origin_addresses&quot;</span> : [ <span class="hljs-string">&quot;&#x52A0;&#x62FF;&#x5927;&#x82F1;&#x5C6C;&#x54E5;&#x502B;&#x6BD4;&#x4E9E;&#x6EAB;&#x54E5;&#x83EF;&quot;</span>, <span class="hljs-string">&quot;&#x7F8E;&#x570B;&#x83EF;&#x76DB;&#x9813;&#x897F;&#x96C5;&#x5716;&quot;</span> ],
+   <span class="hljs-string">&quot;rows&quot;</span> : [
+      {
+         <span class="hljs-string">&quot;elements&quot;</span> : [
+            {
+               <span class="hljs-string">&quot;distance&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;1,528 &#x516C;&#x91CC;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">1528399</span>
+               },
+               <span class="hljs-string">&quot;duration&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;15 &#x5C0F;&#x6642; 6 &#x5206;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">54365</span>
+               },
+               <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;OK&quot;</span>
+            },
+            {
+               <span class="hljs-string">&quot;distance&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;114 &#x516C;&#x91CC;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">114161</span>
+               },
+               <span class="hljs-string">&quot;duration&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;3 &#x5C0F;&#x6642; 10 &#x5206;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">11403</span>
+               },
+               <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;OK&quot;</span>
+            }
+         ]
+      },
+      {
+         <span class="hljs-string">&quot;elements&quot;</span> : [
+            {
+               <span class="hljs-string">&quot;distance&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;1,300 &#x516C;&#x91CC;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">1299971</span>
+               },
+               <span class="hljs-string">&quot;duration&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;12 &#x5C0F;&#x6642; 36 &#x5206;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">45340</span>
+               },
+               <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;OK&quot;</span>
+            },
+            {
+               <span class="hljs-string">&quot;distance&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;172 &#x516C;&#x91CC;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">171688</span>
+               },
+               <span class="hljs-string">&quot;duration&quot;</span> : {
+                  <span class="hljs-string">&quot;text&quot;</span> : <span class="hljs-string">&quot;4 &#x5C0F;&#x6642; 35 &#x5206;&quot;</span>,
+                  <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">16479</span>
+               },
+               <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;OK&quot;</span>
+            }
+         ]
+      }
+   ],
+   <span class="hljs-string">&quot;status&quot;</span> : <span class="hljs-string">&quot;OK&quot;</span>
+}
+</code></pre>
+<p><sup><a href="#fn_key" id="reffn_key">key</a></sup>:<code>Key</code>&#xFF1A;&#x60A8;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x7684;<strong>API &#x91D1;&#x9470;</strong>&#x3002;</p>
+<p><sup><a href="#fn_language" id="reffn_language">language</a></sup>:<code>Language</code>&#xFF1A;&#x8A9E;&#x8A00;&#x8A2D;&#x5B9A;&#xFF0C;&#x8ACB;&#x53C3;&#x95B1;<a href="https://developers.google.com/maps/faq#languagesupport" target="_blank">&#x652F;&#x63F4;&#x7684;&#x8A9E;&#x8A00;&#x6E05;&#x55AE;&#x3002;</a></p>
+<p><sup><a href="#fn_arrival_time" id="reffn_arrival_time">arrival_time</a></sup>:<code>arrival_time</code>&#xFF1A;&#x91DD;&#x5C0D;&#x5927;&#x773E;&#x904B;&#x8F38;&#x8981;&#x6C42;&#x6307;&#x5B9A;&#x62B5;&#x9054;&#x6642;&#x9593;(&#x79D2;)&#xFF0C;&#x81EA; 1970 &#x5E74; 1 &#x6708; 1 &#x65E5;&#x5348;&#x591C; (UTC) &#x8D77;&#x7B97;&#xFF0C;&#x4E0D;&#x53EF;&#x8207;<code>departure_time</code>&#x4E26;&#x5B58;&#x3002;</p>
+<p><sup><a href="#fn_departure_time" id="reffn_departure_time">departure_time</a></sup>:<code>departure_time</code>&#xFF1A;&#x51FA;&#x767C;&#x6642;&#x9593;(&#x79D2;)&#xFF0C;&#x81EA; 1970 &#x5E74; 1 &#x6708; 1 &#x65E5;&#x5348;&#x591C; (UTC) &#x8D77;&#x7B97;&#xFF0C;&#x503C;&#x53EF;&#x4EE5;&#x662F;<code>now</code>&#x3002;&#x5982;&#x679C;<code>mode=driving</code>&#x6642;&#xFF0C;&#x8A2D;&#x5B9A;&#x6B64;&#x503C;&#x624D;&#x6703;&#x56DE;&#x50B3;<code>duration_in_traffic</code>&#x3002;</p>
+<p><sup><a href="#fn_transit_mode" id="reffn_transit_mode">transit_mode</a></sup>:<code>transit_mode</code>&#xFF1A;&#x9078;&#x64C7;&#x5927;&#x773E;&#x904B;&#x8F38;&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x6709;&#x7576;<code>mode</code>&#x70BA; <code>transit</code> &#x6642;&#xFF0C;&#x624D;&#x80FD;&#x70BA;&#x8981;&#x6C42;&#x6307;&#x5B9A;&#x6B64;&#x53C3;&#x6578;&#x3002;(<code>bus|subway|train|tram|rail(=train+tram+subway)</code>)</p>
+<p><sup><a href="#fn_transit_routing_preference" id="reffn_transit_routing_preference">transit_routing_preference</a></sup>:<code>transit_routing_preference</code>&#xFF1A;&#x9078;&#x64C7;&#x5927;&#x773E;&#x904B;&#x8F38;&#x7684;&#x504F;&#x597D;&#xFF0C;&#x53EA;&#x6709;&#x7576;<code>mode</code>&#x70BA; <code>transit</code> &#x6642;&#xFF0C;&#x624D;&#x80FD;&#x70BA;&#x8981;&#x6C42;&#x6307;&#x5B9A;&#x6B64;&#x53C3;&#x6578;&#x3002;(<code>less_walking|fewer_transfers</code>)</p>
+</div></div></div></sec>
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2017-09-04 02:07:58
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="2-Places.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Places">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Distance Matrix","level":"2.2.1","depth":2,"next":{"title":"Places","level":"2.2.2","depth":2,"path":"md/94-Google Cloud/2-Map/2-Places.md","ref":"md/94-Google Cloud/2-Map/2-Places.md","articles":[]},"previous":{"title":"Map","level":"2.2","depth":1,"ref":"","articles":[{"title":"Distance Matrix","level":"2.2.1","depth":2,"path":"md/94-Google Cloud/2-Map/1-Distance_Matrix.md","ref":"md/94-Google Cloud/2-Map/1-Distance_Matrix.md","articles":[]},{"title":"Places","level":"2.2.2","depth":2,"path":"md/94-Google Cloud/2-Map/2-Places.md","ref":"md/94-Google Cloud/2-Map/2-Places.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","mermaid","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","flow","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex"],"root":"./books/Cloud","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"修訂時間：","copyright":"© 2017 Trashman"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/Cloud"},"puml":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"className":"atoc","addClass":true},"splitter":{},"search-pro":{},"mermaid":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"mojombo":{"text":"#000","balloon":"#ddd","even":false},"claylo":{"text":"#fff","balloon":"#08f","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"flow":{"line-color":"#cd4545","fill":"#2d3143","font-color":"#3EB1D0"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"url":"https://plus.google.com/106302595834859374854/","icon":"fa fa-google-plus","label":"Google+"},{"url":"https://www.facebook.com/zhenkunhe/","icon":"fa fa-facebook","label":"Facebook"},{"url":"https://twitter.com/zhenkunhe/","icon":"fa fa-twitter","label":"Twitter"},{"url":"https://www.pinterest.com/zhenkunhe/","icon":"fa fa-pinterest","label":"Pinterest"},{"url":"http://stackoverflow.com/users/6819791/trashman/","icon":"fa fa-stack-overflow","label":"StackOverflow"},{"url":"https://github.com/zhenkunhe/","icon":"fa fa-github","label":"GitHub"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Trashman's Program Note","language":"zh-tw","gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"md/94-Google Cloud/2-Map/1-Distance_Matrix.md","mtime":"2017-09-03T18:07:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-03T19:51:31.006Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

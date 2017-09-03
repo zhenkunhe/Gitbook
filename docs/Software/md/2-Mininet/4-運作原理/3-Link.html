@@ -1,0 +1,777 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Link · Trashman's Program Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-maxiang/maxiang.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chatlog/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4-Interface.html" />
+    
+    
+    <link rel="prev" href="2-Node.html" />
+    
+
+    
+    <script src="../../../gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mininet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1-什麼是 mininet/">
+            
+                <a href="../1-什麼是 mininet/">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    什麼是 mininet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2-什麼是 SDN/">
+            
+                <a href="../2-什麼是 SDN/">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    什麼是 SDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../3-mininet 實戰/">
+            
+                <a href="../3-mininet 實戰/">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    mininet 實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                        <b>2.4.</b>
+                    
+                    運作原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="1-Network Namespace.html">
+            
+                <a href="1-Network Namespace.html">
+            
+                    
+                        <b>2.4.1.</b>
+                    
+                    Network Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="2-Node.html">
+            
+                <a href="2-Node.html">
+            
+                    
+                        <b>2.4.2.</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.3" data-path="3-Link.html">
+            
+                <a href="3-Link.html">
+            
+                    
+                        <b>2.4.3.</b>
+                    
+                    Link
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="4-Interface.html">
+            
+                <a href="4-Interface.html">
+            
+                    
+                        <b>2.4.4.</b>
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../3-Docker/1-Basic/Readme.html">
+            
+                <a href="../../3-Docker/1-Basic/Readme.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">IDE</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../9-IDE/1-Xcode/Readme.html">
+            
+                <a href="../../9-IDE/1-Xcode/Readme.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../9-IDE/2-Eclipse/Readme.html">
+            
+                <a href="../../9-IDE/2-Eclipse/Readme.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Eclipse
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Gstreamer</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../93-Gstreamer/1-Basic/Readme.html">
+            
+                <a href="../../93-Gstreamer/1-Basic/Readme.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../95-Git/1-Basic/Readme.html">
+            
+                <a href="../../95-Git/1-Basic/Readme.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Link</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#link"><b> </b>Link</a></li></ul></div><a href="#link" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="link"><a name="link" class="anchor-navigation-ex-anchor" href="#link"><i class="fa fa-link" aria-hidden="true"></i></a> Link</h1>
+<ul>
+<li><p>&#x63A5;&#x4E0B;&#x4F86;&#x6703;&#x6839;&#x64DA;&#x62D3;&#x58A3;&#x7684;<strong>Link</strong>&#x60C5;&#x6CC1;&#xFF0C;&#x53BB;&#x5275;&#x5EFA;&#x5C0D;&#x61C9;&#x7684;<strong>Interface</strong></p>
+</li>
+<li><p>&#x9996;&#x5148;&#xFF0C;&#x9019;&#x908A;&#x4F7F;&#x7528;&#x5230;<code>Link</code>&#x9019;&#x500B;&#x7269;&#x4EF6;&#x4F86;&#x8868;&#x793A;&#x6BCF;&#x4E00;&#x689D;<strong>Link</strong></p>
+</li>
+<li><p>&#x6BCF;&#x500B;<strong>Link</strong>&#x5BE6;&#x969B;&#x4E0A;&#x5C0D;&#x61C9;&#x5230;&#x7684;&#x662F;&#x5169;&#x500B;<code>Node</code>&#x4E0A;&#x9762;&#x7684;<strong>Interface</strong></p>
+</li>
+</ul>
+<p>link.py</p>
+<pre><code class="lang-Python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Link</span><span class="hljs-params">( object )</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;A basic link is just a veth pair.
+       Other types of links could be tunnels, link emulators, etc..&quot;&quot;&quot;</span>
+
+    <span class="hljs-comment"># pylint: disable=too-many-branches</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self, node1, node2, port1=None, port2=None,
+                  intfName1=None, intfName2=None, addr1=None, addr2=None,
+                  intf=Intf, cls1=None, cls2=None, params1=None,
+                  params2=None, fast=True )</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Create veth link to another node, making two new interfaces.
+           node1: first node
+           node2: second node
+           port1: node1 port number (optional)
+           port2: node2 port number (optional)
+           intf: default interface class/constructor
+           cls1, cls2: optional interface-specific constructors
+           intfName1: node1 interface name (optional)
+           intfName2: node2  interface name (optional)
+           params1: parameters for interface 1
+           params2: parameters for interface 2&quot;&quot;&quot;</span>
+        <span class="hljs-comment"># This is a bit awkward; it seems that having everything in</span>
+        <span class="hljs-comment"># params is more orthogonal, but being able to specify</span>
+        <span class="hljs-comment"># in-line arguments is more convenient! So we support both.</span>
+        <span class="hljs-keyword">if</span> params1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            params1 = {}
+        <span class="hljs-keyword">if</span> params2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            params2 = {}
+        <span class="hljs-comment"># Allow passing in params1=params2</span>
+        <span class="hljs-keyword">if</span> params2 <span class="hljs-keyword">is</span> params1:
+            params2 = dict( params1 )
+        <span class="hljs-keyword">if</span> port1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:
+            params1[ <span class="hljs-string">&apos;port&apos;</span> ] = port1
+        <span class="hljs-keyword">if</span> port2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:
+            params2[ <span class="hljs-string">&apos;port&apos;</span> ] = port2
+        <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;port&apos;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> params1:
+            params1[ <span class="hljs-string">&apos;port&apos;</span> ] = node1.newPort()
+        <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;port&apos;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> params2:
+            params2[ <span class="hljs-string">&apos;port&apos;</span> ] = node2.newPort()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> intfName1:
+            intfName1 = self.intfName( node1, params1[ <span class="hljs-string">&apos;port&apos;</span> ] )
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> intfName2:
+            intfName2 = self.intfName( node2, params2[ <span class="hljs-string">&apos;port&apos;</span> ] )
+
+        self.fast = fast
+        <span class="hljs-keyword">if</span> fast:
+            params1.setdefault( <span class="hljs-string">&apos;moveIntfFn&apos;</span>, self._ignore )
+            params2.setdefault( <span class="hljs-string">&apos;moveIntfFn&apos;</span>, self._ignore )
+            self.makeIntfPair( intfName1, intfName2, addr1, addr2,
+                               node1, node2, deleteIntfs=<span class="hljs-keyword">False</span> )
+</code></pre>
+<ul>
+<li>&#x9019;&#x908A;&#x8981;&#x89C0;&#x5BDF;&#x5230;&#x7684;&#xFF0C;<code>Link</code>&#x7269;&#x4EF6;&#x6703;&#x547C;&#x53EB;<code>makeIntfPair</code>&#x6B64;&#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x5C07;&#x5169;&#x500B;<strong>Interface</strong>&#x7D66;&#x4E32;&#x63A5;&#x8D77;&#x4F86;</li>
+</ul>
+<p>util.py</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">makeIntfPair</span><span class="hljs-params">( intf1, intf2, addr1=None, addr2=None, node1=None, node2=None,
+                  deleteIntfs=True, runCmd=None )</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Make a veth pair connnecting new interfaces intf1 and intf2
+       intf1: name for interface 1
+       intf2: name for interface 2
+       addr1: MAC address for interface 1 (optional)
+       addr2: MAC address for interface 2 (optional)
+       node1: home node for interface 1 (optional)
+       node2: home node for interface 2 (optional)
+       deleteIntfs: delete intfs before creating them
+       runCmd: function to run shell commands (quietRun)
+       raises Exception on failure&quot;&quot;&quot;</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> runCmd:
+        runCmd = quietRun <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> node1 <span class="hljs-keyword">else</span> node1.cmd
+        runCmd2 = quietRun <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> node2 <span class="hljs-keyword">else</span> node2.cmd
+    <span class="hljs-keyword">if</span> deleteIntfs:
+        <span class="hljs-comment"># Delete any old interfaces with the same names</span>
+        runCmd( <span class="hljs-string">&apos;ip link del &apos;</span> + intf1 )
+        runCmd2( <span class="hljs-string">&apos;ip link del &apos;</span> + intf2 )
+    <span class="hljs-comment"># Create new pair</span>
+    netns = <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> node2 <span class="hljs-keyword">else</span> node2.pid
+    <span class="hljs-keyword">if</span> addr1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">and</span> addr2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+        cmdOutput = runCmd( <span class="hljs-string">&apos;ip link add name %s &apos;</span>
+                            <span class="hljs-string">&apos;type veth peer name %s &apos;</span>
+                            <span class="hljs-string">&apos;netns %s&apos;</span> % ( intf1, intf2, netns ) )
+    <span class="hljs-keyword">else</span>:
+        cmdOutput = runCmd( <span class="hljs-string">&apos;ip link add name %s &apos;</span>
+                            <span class="hljs-string">&apos;address %s &apos;</span>
+                            <span class="hljs-string">&apos;type veth peer name %s &apos;</span>
+                            <span class="hljs-string">&apos;address %s &apos;</span>
+                            <span class="hljs-string">&apos;netns %s&apos;</span> %
+                            (  intf1, addr1, intf2, addr2, netns ) )
+    <span class="hljs-keyword">if</span> cmdOutput:
+        <span class="hljs-keyword">raise</span> Exception( <span class="hljs-string">&quot;Error creating interface pair (%s,%s): %s &quot;</span> %
+                         ( intf1, intf2, cmdOutput ) )
+</code></pre>
+<ul>
+<li><p>&#x9019;&#x908A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;<strong>mininet</strong>&#x5BE6;&#x969B;&#x4E0A;&#x662F;&#x900F;&#x904E;&#x7CFB;&#x7D71;&#x4E2D;&#x7684;<code>ip link</code>&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5C07;&#x5169;&#x500B;<strong>interface</strong>&#x5275;&#x9020;&#x4E00;&#x689D;<strong>veth&#x7684;Link</strong></p>
+</li>
+<li><p>&#x6B64;&#x6642;&#xFF0C;&#x6211;&#x5011;&#x7684;&#x7CFB;&#x7D71;&#x5982;&#x4E0B;</p>
+</li>
+</ul>
+<p><img src="../image/topo_pre.png" alt="&#x62D3;&#x58A3;"> </p>
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2017-09-04 02:07:58
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2-Node.html" class="navigation navigation-prev " aria-label="Previous page: Node">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4-Interface.html" class="navigation navigation-next " aria-label="Next page: Interface">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Link","level":"2.4.3","depth":2,"next":{"title":"Interface","level":"2.4.4","depth":2,"path":"md/2-Mininet/4-運作原理/4-Interface.md","ref":"md/2-Mininet/4-運作原理/4-Interface.md","articles":[]},"previous":{"title":"Node","level":"2.4.2","depth":2,"path":"md/2-Mininet/4-運作原理/2-Node.md","ref":"md/2-Mininet/4-運作原理/2-Node.md","articles":[]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","mermaid","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","flow","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex"],"root":"./books/Software","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"修訂時間：","copyright":"© 2017 Trashman"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/Software"},"puml":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"className":"atoc","addClass":true},"splitter":{},"search-pro":{},"mermaid":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"mojombo":{"text":"#000","balloon":"#ddd","even":false},"claylo":{"text":"#fff","balloon":"#08f","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"flow":{"line-color":"#cd4545","fill":"#2d3143","font-color":"#3EB1D0"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"url":"https://plus.google.com/106302595834859374854/","icon":"fa fa-google-plus","label":"Google+"},{"url":"https://www.facebook.com/zhenkunhe/","icon":"fa fa-facebook","label":"Facebook"},{"url":"https://twitter.com/zhenkunhe/","icon":"fa fa-twitter","label":"Twitter"},{"url":"https://www.pinterest.com/zhenkunhe/","icon":"fa fa-pinterest","label":"Pinterest"},{"url":"http://stackoverflow.com/users/6819791/trashman/","icon":"fa fa-stack-overflow","label":"StackOverflow"},{"url":"https://github.com/zhenkunhe/","icon":"fa fa-github","label":"GitHub"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"md/2-Mininet/2-什麼是 SDN/index.html#fig2.2.1","level":"2.2","list_caption":"Figure: SDN","alt":"SDN","nro":1,"url":"../image/SDN.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"SDN","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"md/2-Mininet/2-什麼是 SDN/index.html#fig2.2.2","level":"2.2","list_caption":"Figure: OpenFlow","alt":"OpenFlow","nro":2,"url":"../image/Openflow.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"OpenFlow","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.1","level":"2.3","list_caption":"Figure: Topology","alt":"Topology","nro":3,"url":"../image/topo.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Topology","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.2","level":"2.3","list_caption":"Figure: mn","alt":"mn","nro":4,"url":"../image/mn.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"mn","attributes":{},"skip":false,"key":"2.3.2"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.3","level":"2.3","list_caption":"Figure: nodes","alt":"nodes","nro":5,"url":"../image/nodes.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"nodes","attributes":{},"skip":false,"key":"2.3.3"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.4","level":"2.3","list_caption":"Figure: net","alt":"net","nro":6,"url":"../image/net.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"net","attributes":{},"skip":false,"key":"2.3.4"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.5","level":"2.3","list_caption":"Figure: dump","alt":"dump","nro":7,"url":"../image/dump.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"dump","attributes":{},"skip":false,"key":"2.3.5"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.6","level":"2.3","list_caption":"Figure: ping","alt":"ping","nro":8,"url":"../image/ping.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"ping","attributes":{},"skip":false,"key":"2.3.6"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.7","level":"2.3","list_caption":"Figure: xterm","alt":"xterm","nro":9,"url":"../image/xterm.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"xterm","attributes":{},"skip":false,"key":"2.3.7"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.8","level":"2.3","list_caption":"Figure: Server Farm","alt":"Server Farm","nro":10,"url":"../image/server_farm.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Server Farm","attributes":{},"skip":false,"key":"2.3.8"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig2.3.9","level":"2.3","list_caption":"Figure: example","alt":"example","nro":11,"url":"../image/example.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"example","attributes":{},"skip":false,"key":"2.3.9"},{"backlink":"md/2-Mininet/4-運作原理/1-Network Namespace.html#fig2.4.1.1","level":"2.4.1","list_caption":"Figure: Example1","alt":"Example1","nro":12,"url":"../image/Example1.jpeg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Example1","attributes":{},"skip":false,"key":"2.4.1.1"},{"backlink":"md/2-Mininet/4-運作原理/3-Link.html#fig2.4.3.1","level":"2.4.3","list_caption":"Figure: 拓墣","alt":"拓墣","nro":13,"url":"../image/topo_pre.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"拓墣","attributes":{},"skip":false,"key":"2.4.3.1"},{"backlink":"md/2-Mininet/4-運作原理/4-Interface.html#fig2.4.4.1","level":"2.4.4","list_caption":"Figure: 拓墣","alt":"拓墣","nro":14,"url":"../image/topo.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"拓墣","attributes":{},"skip":false,"key":"2.4.4.1"},{"backlink":"md/3-Docker/1-Basic/index.html#fig3.1.1","level":"3.1","list_caption":"Figure: 1","alt":"1","nro":15,"url":"../images/1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1","attributes":{},"skip":false,"key":"3.1.1"},{"backlink":"md/3-Docker/1-Basic/index.html#fig3.1.2","level":"3.1","list_caption":"Figure: 2","alt":"2","nro":16,"url":"../images/2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2","attributes":{},"skip":false,"key":"3.1.2"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig5.1.1","level":"5.1","list_caption":"Figure: 1","alt":"1","nro":17,"url":"../images/1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1","attributes":{},"skip":false,"key":"5.1.1"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig5.1.2","level":"5.1","list_caption":"Figure: 2","alt":"2","nro":18,"url":"../images/2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2","attributes":{},"skip":false,"key":"5.1.2"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig5.1.3","level":"5.1","list_caption":"Figure: 3","alt":"3","nro":19,"url":"../images/3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3","attributes":{},"skip":false,"key":"5.1.3"}]},"title":"Trashman's Program Note","language":"zh-tw","gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"md/2-Mininet/4-運作原理/3-Link.md","mtime":"2017-09-03T18:07:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-03T19:52:36.498Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
