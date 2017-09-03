@@ -1,0 +1,1943 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basic · Trashman's Program Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-maxiang/maxiang.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chatlog/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../94-Google Cloud/1-Speech/Readme.html" />
+    
+    
+    <link rel="prev" href="../../99-Hardware/3-Interface/Readme.html" />
+    
+
+    
+    <script src="../../../gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../3-Docker/1-Basic/Readme.html">
+            
+                <a href="../../3-Docker/1-Basic/Readme.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Protocol</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../7-Protocol/1-RTP體系.html">
+            
+                <a href="../../7-Protocol/1-RTP體系.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    RTP體系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Memory</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Memory Leak
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../8-Memory/1-Memory_Leak/1-valgrind.html">
+            
+                <a href="../../8-Memory/1-Memory_Leak/1-valgrind.html">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    Valgrind
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../0-Basic/1-Basic/1-Basic.html">
+            
+                <a href="../../0-Basic/1-Basic/1-Basic.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Basic
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../0-Basic/1-Basic/2-Shell.html">
+            
+                <a href="../../0-Basic/1-Basic/2-Shell.html">
+            
+                    
+                        <b>5.2.1.</b>
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../0-Basic/1-Basic/3-Makefile.html">
+            
+                <a href="../../0-Basic/1-Basic/3-Makefile.html">
+            
+                    
+                        <b>5.2.2.</b>
+                    
+                    Makefile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../0-Basic/1-Basic/4-Markdown.html">
+            
+                <a href="../../0-Basic/1-Basic/4-Markdown.html">
+            
+                    
+                        <b>5.2.3.</b>
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../0-Basic/1-Basic/5-GDB.html">
+            
+                <a href="../../0-Basic/1-Basic/5-GDB.html">
+            
+                    
+                        <b>5.2.4.</b>
+                    
+                    GDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mininet</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../2-Mininet/1-什麼是 mininet/">
+            
+                <a href="../../2-Mininet/1-什麼是 mininet/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    什麼是 mininet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../2-Mininet/2-什麼是 SDN/">
+            
+                <a href="../../2-Mininet/2-什麼是 SDN/">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    什麼是 SDN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../2-Mininet/3-mininet 實戰/">
+            
+                <a href="../../2-Mininet/3-mininet 實戰/">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    mininet 實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <span>
+            
+                    
+                        <b>6.4.</b>
+                    
+                    運作原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../../2-Mininet/4-運作原理/1-Network Namespace.html">
+            
+                <a href="../../2-Mininet/4-運作原理/1-Network Namespace.html">
+            
+                    
+                        <b>6.4.1.</b>
+                    
+                    Network Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.2" data-path="../../2-Mininet/4-運作原理/2-Node.html">
+            
+                <a href="../../2-Mininet/4-運作原理/2-Node.html">
+            
+                    
+                        <b>6.4.2.</b>
+                    
+                    Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.3" data-path="../../2-Mininet/4-運作原理/3-Link.html">
+            
+                <a href="../../2-Mininet/4-運作原理/3-Link.html">
+            
+                    
+                        <b>6.4.3.</b>
+                    
+                    Link
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.4" data-path="../../2-Mininet/4-運作原理/4-Interface.html">
+            
+                <a href="../../2-Mininet/4-運作原理/4-Interface.html">
+            
+                    
+                        <b>6.4.4.</b>
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Namespace</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../1-Namespace/1-簡介/">
+            
+                <a href="../../1-Namespace/1-簡介/">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    簡介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" >
+            
+                <span>
+            
+                    
+                        <b>7.2.</b>
+                    
+                    Network Namespaces
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../../1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html">
+            
+                <a href="../../1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html">
+            
+                    
+                        <b>7.2.1.</b>
+                    
+                    什麼是Network Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../../1-Namespace/2-Network namespaces/2-範例.html">
+            
+                <a href="../../1-Namespace/2-Network namespaces/2-範例.html">
+            
+                    
+                        <b>7.2.2.</b>
+                    
+                    範例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alljoyn</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../4-Alljoyn/1-Basic/Readme.html">
+            
+                <a href="../../4-Alljoyn/1-Basic/Readme.html">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" >
+            
+                <span>
+            
+                    
+                        <b>8.2.</b>
+                    
+                    Gateway
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.1" data-path="../../4-Alljoyn/2-Gateway/1-架構說明.html">
+            
+                <a href="../../4-Alljoyn/2-Gateway/1-架構說明.html">
+            
+                    
+                        <b>8.2.1.</b>
+                    
+                    架構說明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.2" data-path="../../4-Alljoyn/2-Gateway/2-啟動流程 & 程式碼.html">
+            
+                <a href="../../4-Alljoyn/2-Gateway/2-啟動流程 & 程式碼.html">
+            
+                    
+                        <b>8.2.2.</b>
+                    
+                    啟動流程 & 程式碼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../../4-Alljoyn/3-Allplay/Readme.html">
+            
+                <a href="../../4-Alljoyn/3-Allplay/Readme.html">
+            
+                    
+                        <b>8.3.</b>
+                    
+                    Allplay
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">AI</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../6-AI/1-Basic/Readme.html">
+            
+                <a href="../../6-AI/1-Basic/Readme.html">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../6-AI/2-TensorFlow/Readme.html">
+            
+                <a href="../../6-AI/2-TensorFlow/Readme.html">
+            
+                    
+                        <b>9.2.</b>
+                    
+                    Tensor Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" >
+            
+                <span>
+            
+                    
+                        <b>9.3.</b>
+                    
+                    AIML
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.3.1" data-path="../../6-AI/3-AIML/1-AIMLv1.html">
+            
+                <a href="../../6-AI/3-AIML/1-AIMLv1.html">
+            
+                    
+                        <b>9.3.1.</b>
+                    
+                    AIM Lv 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.2" data-path="../../6-AI/3-AIML/2-AIMLv2.html">
+            
+                <a href="../../6-AI/3-AIML/2-AIMLv2.html">
+            
+                    
+                        <b>9.3.2.</b>
+                    
+                    AIM Lv 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">IDE</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../9-IDE/1-Xcode/Readme.html">
+            
+                <a href="../../9-IDE/1-Xcode/Readme.html">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../9-IDE/2-Eclipse/Readme.html">
+            
+                <a href="../../9-IDE/2-Eclipse/Readme.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    Eclipse
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Cross Compile</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" >
+            
+                <span>
+            
+                    
+                        <b>11.1.</b>
+                    
+                    Yocto
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../../11-Cross_compile/1-Yocto/1-BBfile.html">
+            
+                <a href="../../11-Cross_compile/1-Yocto/1-BBfile.html">
+            
+                    
+                        <b>11.1.1.</b>
+                    
+                    B Bfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Android</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../10-Android/1-adb/Readme.html">
+            
+                <a href="../../10-Android/1-adb/Readme.html">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    Adb
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../../99-Hardware/1-Voice/Readme.html">
+            
+                <a href="../../99-Hardware/1-Voice/Readme.html">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    Voice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" >
+            
+                <span>
+            
+                    
+                        <b>13.2.</b>
+                    
+                    Open Hardware
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.2.1" >
+            
+                <span>
+            
+                    
+                        <b>13.2.1.</b>
+                    
+                    Arduino Yun
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.2.1.1" data-path="../../99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html">
+            
+                <a href="../../99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html">
+            
+                    
+                        <b>13.2.1.1.</b>
+                    
+                    基本建置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2.1.2" data-path="../../99-Hardware/2-Open Hardware/1-Arduino Yún/2-在Openwrt上寫C++.html">
+            
+                <a href="../../99-Hardware/2-Open Hardware/1-Arduino Yún/2-在Openwrt上寫C++.html">
+            
+                    
+                        <b>13.2.1.2.</b>
+                    
+                    在Openwrt上寫C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../../99-Hardware/3-Interface/Readme.html">
+            
+                <a href="../../99-Hardware/3-Interface/Readme.html">
+            
+                    
+                        <b>13.3.</b>
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Gstreamer</li>
+        
+        
+    
+        <li class="chapter active" data-level="14.1" data-path="Readme.html">
+            
+                <a href="Readme.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Google Cloud</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../../94-Google Cloud/1-Speech/Readme.html">
+            
+                <a href="../../94-Google Cloud/1-Speech/Readme.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    Speech
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" >
+            
+                <span>
+            
+                    
+                        <b>15.2.</b>
+                    
+                    Map
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="15.2.1" data-path="../../94-Google Cloud/2-Map/1-Distance_Matrix.html">
+            
+                <a href="../../94-Google Cloud/2-Map/1-Distance_Matrix.html">
+            
+                    
+                        <b>15.2.1.</b>
+                    
+                    Distance Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2.2" data-path="../../94-Google Cloud/2-Map/2-Places.html">
+            
+                <a href="../../94-Google Cloud/2-Map/2-Places.html">
+            
+                    
+                        <b>15.2.2.</b>
+                    
+                    Places
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../../95-Git/1-Basic/Readme.html">
+            
+                <a href="../../95-Git/1-Basic/Readme.html">
+            
+                    
+                        <b>16.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Network</li>
+        
+        
+    
+        <li class="chapter " data-level="17.1" >
+            
+                <span>
+            
+                    
+                        <b>17.1.</b>
+                    
+                    CCNA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="17.1.1" data-path="../../96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html">
+            
+                <a href="../../96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html">
+            
+                    
+                        <b>17.1.1.</b>
+                    
+                    TCP_IP與OSI網路模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.1.2" data-path="../../96-Network/1-CCNA/2-乙太區域網路基本觀念.html">
+            
+                <a href="../../96-Network/1-CCNA/2-乙太區域網路基本觀念.html">
+            
+                    
+                        <b>17.1.2.</b>
+                    
+                    乙太區域網路基本觀念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.1.3" data-path="../../96-Network/1-CCNA/3-廣域網路的原理.html">
+            
+                <a href="../../96-Network/1-CCNA/3-廣域網路的原理.html">
+            
+                    
+                        <b>17.1.3.</b>
+                    
+                    廣域網路的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.1.4" data-path="../../96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html">
+            
+                <a href="../../96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html">
+            
+                    
+                        <b>17.1.4.</b>
+                    
+                    IPv4定址及路由的基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.1.5" data-path="../../96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html">
+            
+                <a href="../../96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html">
+            
+                    
+                        <b>17.1.5.</b>
+                    
+                    TCP_IP傳輸層和應用層的基本原理.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.1.6" data-path="../../96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html">
+            
+                <a href="../../96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html">
+            
+                    
+                        <b>17.1.6.</b>
+                    
+                    使用交換器建置乙太區域網路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.1.7" data-path="../../96-Network/1-CCNA/7-Cisco區域網路交換器.html">
+            
+                <a href="../../96-Network/1-CCNA/7-Cisco區域網路交換器.html">
+            
+                    
+                        <b>17.1.7.</b>
+                    
+                    Cisco區域網路交換器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Server</li>
+        
+        
+    
+        <li class="chapter " data-level="18.1" data-path="../../97-Server/1-Type/Readme.html">
+            
+                <a href="../../97-Server/1-Type/Readme.html">
+            
+                    
+                        <b>18.1.</b>
+                    
+                    Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Swift</li>
+        
+        
+    
+        <li class="chapter " data-level="19.1" data-path="../../98-Swift/1-Basic/Readme.html">
+            
+                <a href="../../98-Swift/1-Basic/Readme.html">
+            
+                    
+                        <b>19.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.2" data-path="../../98-Swift/2-iOS/Readme.html">
+            
+                <a href="../../98-Swift/2-iOS/Readme.html">
+            
+                    
+                        <b>19.2.</b>
+                    
+                    I OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="20.1" data-path="../../../tags.html">
+            
+                <a href="../../../tags.html">
+            
+                    
+                        <b>20.1.</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Basic</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#gstreamer"><b> </b>GStreamer</a></li><ul><li><span class="title-icon "></span><a href="#&#x524D;&#x8A00;"><b>1. </b>&#x524D;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#code"><b>2. </b>code</a></li></ul></ul></div><a href="#gstreamer" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="gstreamer"><a name="gstreamer" class="anchor-navigation-ex-anchor" href="#gstreamer"><i class="fa fa-link" aria-hidden="true"></i></a> GStreamer</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../../../tags.html#gstreamer">GStreamer</a> <a href="../../../tags.html#voice">Voice</a> <a href="../../../tags.html#video">Video</a></p></div><!-- tagsstop --><sec data-title="&#x524D;&#x8A00;" data-id="1" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x524D;&#x8A00;"><a name="&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x524D;&#x8A00;</h2></div><div class="panel-collapse in" id="1"><div class="panel-body">
+<p>pipeline
+Bins
+elements
+ source pads
+ sink pads
+GstBuffer  from sources to sinks ((downstream)
+GstEvent upstream and downstream , &#x53EF;&#x4EE5;&#x5F9E;application to element</p>
+<p>queries
+messages</p>
+<figure id="fig14.1.1"><img src="../images/1.png" alt="1"><figcaption>Image 1 - 1</figcaption></figure>
+<figure id="fig14.1.2"><img src="../images/2.png" alt="2"><figcaption>Image 2 - 2</figcaption></figure>
+<figure id="fig14.1.3"><img src="../images/3.png" alt="3"><figcaption>Image 3 - 3</figcaption></figure>
+</div></div></div></sec>
+<sec data-title="code" data-id="2" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="code"><a name="code" class="anchor-navigation-ex-anchor" href="#code"><i class="fa fa-link" aria-hidden="true"></i></a>2. code</h2></div><div class="panel-collapse in" id="2"><div class="panel-body">
+<p>$(CC) --silent --tag=CC --mode=link  -o $@ -lrt  -ldl</p>
+<pre><code>  gst_init (&amp;argc, &amp;argv);
+  gst_version (&amp;major, &amp;minor, &amp;micro, &amp;nano);
+ GST_VERSION_MAJOR
+ GST_VERSION_MINOR
+ GST_VERSION_MICRO
+GstElement *element;
+element = gst_element_factory_make (&quot;fakesrc&quot;, &quot;source&quot;);
+ gst_object_unref (GST_OBJECT (element));
+
+  gchar *name;
+  g_object_get (G_OBJECT (element), &quot;name&quot;, &amp;name, NULL);
+  g_free (name);
+
+gst_pipeline_new 
+gst_pipeline_get_bus
+gst_bus_add_watch
+g_main_loop_new 
+g_main_loop_run
+
+gst_pipeline_new
+bus/message pipeline
+ message handler - mainloop
+
+      gchar  *debug;
+      GError *error;
+
+      gst_message_parse_error (msg, &amp;error, &amp;debug);
+      g_free (debug);
+
+      g_printerr (&quot;Error: %s\n&quot;, error-&gt;message);
+      g_error_free (error);
+
+End-of-stream 
+Error
+Tags
+State-changes
+Buffering
+Element messages
+Application-specific messages
+
+ gst_bin_add_many
+ gst_element_link 
+ gst_element_link_many 
+ g_warning
+
+bus = gst_pipeline_get_bus (GST_PIPELINE (pipeline);
+gst_bus_add_signal_watch (bus);
+g_signal_connect (bus, &quot;message::error&quot;, G_CALLBACK (cb_message_error), NULL);
+g_signal_connect (bus, &quot;message::eos&quot;, G_CALLBACK (cb_message_eos), NULL);
+
+
+gst_element_get_static_pad (decoder, &quot;sink&quot;);
+
+  gst_pad_link (pad, sinkpad);
+
+pad = always  sometimes&#x672A;&#x77E5;&#x4F86;&#x6E90; ,on request&#x805A;&#x5408;&#x5668; &#xFF06;Tee elements&#xFF08;&#x8907;&#x88FD;&#xFF09;
+
+
+  gst_element_link (source, demuxer);
+  gst_element_link_many (decoder, conv, sink, NULL);
+  g_signal_connect (demuxer, &quot;pad-added&quot;, G_CALLBACK (on_pad_added), decoder);
+
+
+  pad = gst_element_get_request_pad (tee, &quot;src%d&quot;);
+name = gst_pad_get_name (pad);
+
+gst_element_get_pad_list()
+&#x8ABF;&#x7528;gst_pad_get_parent()&#x53EF;&#x4EE5;&#x7372;&#x5F97;&#x6307;&#x5B9A;&#x896F;&#x588A;&#x6240;&#x5C6C;&#x7684;&#x5143;&#x4EF6;&#xFF0C;&#x8A72;&#x51FD;&#x6578;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x500B;&#x6307;&#x5411;GstElement&#x7684;&#x6307;&#x91DD;&#x3002;
+
+gst_element_get_compatible_pad (mux, tolink_pad);
+  gst_pad_link (tolinkpad, pad);
+
+  gst_element_set_state
+  GST_STATE_NULL
+  GST_STATE_READY
+  GST_STATE_PAUSED
+  GST_STATE_PLAYING
+
+Capabilities
+&#x76EE;&#x6A19;
+Autoplugging
+Compatibility detection
+Metadata
+Filtering &#xFF1A;audioconvert, audioresample, ffmpegcolorspace or videoscale
+
+  const GstStructure *str;
+  str = gst_caps_get_structure (caps, 0);
+  if (!gst_structure_get_int (str, &quot;width&quot;, &amp;width) ||
+      !gst_structure_get_int (str, &quot;height&quot;, &amp;height)) {
+    g_print (&quot;No width/height available\n&quot;);
+    return;
+  }
+gst_element_link_filtered (demuxer, decoder, caps);
+
+struct _GstCaps {
+  gchar *name; /* the name of this caps */
+  guint16 id; /* type id (major type) */
+  guint refcount; /* caps are refcounted */
+  GstProps *properties; /* properties for this capability */
+  GstCaps *next; /* caps can be chained together */
+};
+
+  gst_caps_get_name (cap),
+  gst_caps_get_mime (cap));
+&#x5728;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7BB1;&#x6AC3;&#x4E3B;&#x8981;&#x6709;&#x5169;&#x7A2E;&#x985E;&#x578B;&#xFF1A;
+
+    GstPipeline&#x7BA1;&#x9053;&#x662F;&#x6700;&#x5E38;&#x7528;&#x5230;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x5C0D;&#x65BC;&#x4E00;&#x500B;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x4F86;&#x8B1B;&#xFF0C;&#x5176;&#x9802;&#x5C64;&#x7BB1;&#x6AC3;&#x5FC5;&#x9808;&#x662F;&#x4E00;&#x689D;&#x7BA1;&#x9053;&#x3002;
+    GstThread&#x7DDA;&#x7A0B;&#x7684;&#x4F5C;&#x7528;&#x5728;&#x65BC;&#x80FD;&#x5920;&#x63D0;&#x4F9B;&#x540C;&#x6B65;&#x8655;&#x7406;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x679C;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x9032;&#x884C;&#x56B4;&#x683C;&#x7684;&#x97F3;&#x8996;&#x983B;&#x540C;&#x6B65;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x7528;&#x5230;&#x9019;&#x7A2E;&#x985E;&#x578B;&#x7684;&#x7BB1;&#x6AC3;&#x3002;
+
+GstElement *thread, *pipeline;
+//&#x5275;&#x5EFA;&#x7DDA;&#x7A0B;&#x5C0D;&#x8C61;&#xFF0C;&#x540C;&#x6642;&#x70BA;&#x5176;&#x6307;&#x5B9A;&#x552F;&#x4E00;&#x7684;&#x540D;&#x7A31;&#x3002;
+thread = gst_element_factory_make (&quot;thread&quot;, NULL);
+//&#x6839;&#x64DA;&#x7D66;&#x51FA;&#x7684;&#x540D;&#x7A31;&#xFF0C;&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x7279;&#x5B9A;&#x7684;&#x7BA1;&#x9053;&#x5C0D;&#x8C61;&#x3002;
+pipeline = gst_pipeline_new (&quot;pipeline_name&quot;);
+&#x7BB1;&#x6AC3;&#xFF08;bin&#xFF09;&#x662F;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#x5143;&#x4EF6;&#xFF0C;&#x5B83;&#x901A;&#x5E38;&#x88AB;&#x7528;&#x4F86;&#x5BB9;&#x7D0D;&#x5176;&#x5B83;&#x7684;&#x5143;&#x4EF6;&#x5C0D;&#x8C61;&#xFF0C;&#x4F46;&#x7531;&#x65BC;&#x5176;&#x81EA;&#x8EAB;&#x4E5F;&#x662F;&#x4E00;&#x500B;GstElement&#x5C0D;&#x8C61;
+
+&#x800C;&#x8981;&#x5F9E;&#x7BB1;&#x6AC3;&#x4E2D;&#x627E;&#x5230;&#x7279;&#x5B9A;&#x7684;&#x5143;&#x4EF6;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#xFF0C;&#x53EF;&#x4EE5;&#x85C9;&#x52A9;gst_bin_get_by_name()&#x51FD;&#x6578;&#x5BE6;&#x73FE;&#xFF1A; 
+GstElement *element;
+element = gst_bin_get_by_name (GST_BIN (bin), &quot;decoder&quot;);
+gst_bin_remove()
+&#x7531;&#x65BC;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x4E00;&#x500B;&#x7BB1;&#x6AC3;&#x80FD;&#x5920;&#x6DFB;&#x52A0;&#x5230;&#x53E6;&#x4E00;&#x500B;&#x7BB1;&#x6AC3;&#x4E4B;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x53EF;&#x80FD;&#x6703;&#x51FA;&#x73FE;&#x7BB1;&#x6AC3;&#x5D4C;&#x5957;&#x7684;&#x60C5;&#x6CC1;
+
+&#x5177;&#x6709;&#x7CBE;&#x9748;&#x896F;&#x588A;&#x7684;&#x7BB1;&#x6AC3;&#x5728;&#x884C;&#x70BA;&#x4E0A;&#x8207;&#x5143;&#x4EF6;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x5177;&#x6709;&#x7684;&#x5C6C;&#x6027;&#x5B83;&#x90FD;&#x5177;&#x6709;&#xFF0C;&#x6240;&#x6709;&#x91DD;&#x5C0D;&#x5143;&#x4EF6;&#x80FD;&#x5920;&#x9032;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x4E5F;&#x540C;&#x6A23;&#x80FD;&#x5920;&#x91DD;&#x5C0D;&#x7BB1;&#x6AC3;&#x9032;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x5728;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x80FD;&#x5920;&#x50CF;&#x4F7F;&#x7528;&#x5143;&#x4EF6;&#x4E00;&#x6A23;&#x4F7F;&#x7528;&#x9019;&#x985E;&#x7BB1;&#x6AC3;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x793A;&#x7BC4;&#x77AD;&#x5982;&#x4F55;&#x70BA;&#x7BB1;&#x6AC3;&#x6DFB;&#x52A0;&#x4E00;&#x500B;&#x7CBE;&#x9748;&#x896F;&#x588A;&#xFF1A;
+
+GstElement *bin;
+GstElement *element;
+element = gst_element_factory_create (&quot;mad&quot;, &quot;decoder&quot;);
+bin = gst_bin_new (&quot;bin_name&quot;);
+gst_bin_add (GST_BIN (bin), element);
+gst_element_add_ghost_pad (bin, gst_element_get_pad (element, &quot;sink&quot;), &quot;sink&quot;);
+&#x793A;&#x7BC4;&#x77AD;&#x5982;&#x4F55;&#x5C07;&#x5169;&#x500B;&#x5143;&#x4EF6;&#x901A;&#x904E;&#x896F;&#x588A;&#x9023;&#x63A5;&#x8D77;&#x4F86;
+//&#x9023;&#x63A5;
+gst_pad_link (srcpad, sinkpad);
+//&#x65B7;&#x958B;
+gst_pad_unlink (srcpad, sinkpad);
+
+
+
+
+&#x5225;&#xFF1A;&#x521D;&#x7D1A;
+
+&#x8096;&#x6587;&#x9D6C;,&#x81EA;&#x7531;&#x8EDF;&#x4EF6;&#x611B;&#x597D;&#x8005;
+
+2004&#x5E74;6&#x6708;01&#x65E5;
+
+    GStreamer&#x662F;GNOME&#x684C;&#x9762;&#x74B0;&#x5883;&#x4E0B;&#x7528;&#x4F86;&#x69CB;&#x5EFA;&#x6D41;&#x5A92;&#x9AD4;&#x61C9;&#x7528;&#x7684;&#x7DE8;&#x7A0B;&#x6846;&#x67B6;&#xFF08;framework&#xFF09;&#xFF0C;&#x5176;&#x76EE;&#x6A19;&#x662F;&#x8981;&#x7C21;&#x5316;&#x97F3;/&#x8996;&#x983B;&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x958B;&#x767C;&#xFF0C;&#x76EE;&#x524D;&#x5DF2;&#x7D93;&#x80FD;&#x5920;&#x88AB;&#x7528;&#x4F86;&#x8655;&#x7406;&#x50CF;MP3&#x3001;Ogg&#x3001;MPEG1&#x3001;MPEG2&#x3001;AVI&#x3001; Quicktime&#x7B49;&#x591A;&#x7A2E;&#x683C;&#x5F0F;&#x7684;&#x591A;&#x5A92;&#x9AD4;&#x6578;&#x64DA;&#x3002;
+
+&#x4E00;&#x3001;&#x57FA;&#x672C;&#x6982;&#x5FF5;
+
+GStreamer&#x4F5C;&#x70BA;GNOME&#x684C;&#x9762;&#x74B0;&#x5883;&#x63A8;&#x85A6;&#x7684;&#x6D41;&#x5A92;&#x9AD4;&#x61C9;&#x7528;&#x6846;&#x67B6;&#xFF0C;&#x63A1;&#x7528;&#x4E86;&#x57FA;&#x65BC;&#x63D2;&#x4EF6;&#xFF08;plugin&#xFF09;&#x548C;&#x7BA1;&#x9053;&#xFF08;pipeline&#xFF09;&#x7684;&#x9AD4;&#x7CFB;&#x7D50;&#x69CB;&#xFF0C;&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7684;&#x529F;&#x80FD;&#x6A21;&#x584A;&#x90FD;&#x88AB;&#x5BE6;&#x73FE;&#x6210;&#x53EF;&#x4EE5;&#x63D2;&#x62D4;&#x7684;&#x7D44;&#x4EF6;&#xFF08;component&#xFF09;&#xFF0C;&#x4E26;&#x4E14;&#x5728;&#x9700;&#x8981;&#x7684;&#x6642;&#x5019;&#x80FD;&#x5920;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x5B89;&#x88DD;&#x5230;&#x4EFB;&#x610F;&#x4E00;&#x500B;&#x7BA1;&#x9053;&#x4E0A;&#xFF0C;&#x7531;&#x65BC;&#x6240;&#x6709;&#x63D2;&#x4EF6;&#x90FD;&#x901A;&#x904E;&#x7BA1;&#x9053;&#x6A5F;&#x5236;&#x9032;&#x884C;&#x7D71;&#x4E00;&#x7684;&#x6578;&#x64DA;&#x4EA4;&#x63DB;&#xFF0C;&#x56E0;&#x6B64;&#x5F88;&#x5BB9;&#x6613;&#x5229;&#x7528;&#x5DF2;&#x6709;&#x7684;&#x5404;&#x7A2E;&#x63D2;&#x4EF6;&#x201C;&#x7D44;&#x88DD;&#x201D;&#x51FA;&#x4E00;&#x500B;&#x529F;&#x80FD;&#x5B8C;&#x5584;&#x7684;&#x591A;&#x5A92;&#x9AD4;&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x3002;
+
+1.1&#x5143;&#x4EF6;&#x8655;&#x7406;
+
+&#x5C0D;&#x65BC;&#x9700;&#x8981;&#x61C9;&#x7528;GStreamer&#x6846;&#x67B6;&#x7684;&#x7A0B;&#x5E8F;&#x54E1;&#x4F86;&#x8B1B;&#xFF0C;GstElement&#x662F;&#x4E00;&#x500B;&#x5FC5;&#x9808;&#x7406;&#x89E3;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x56E0;&#x70BA;&#x5B83;&#x662F;&#x7D44;&#x6210;&#x7BA1;&#x9053;&#x7684;&#x57FA;&#x672C;&#x69CB;&#x4EF6;&#xFF0C;&#x4E5F;&#x662F;&#x6846;&#x67B6;&#x4E2D;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7D44;&#x4EF6;&#x7684;&#x57FA;&#x790E;&#xFF0C;&#x9019;&#x4E5F;&#x96E3;&#x602A;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x5927;&#x90E8;&#x5206;&#x51FD;&#x6578;&#x90FD;&#x6703;&#x6D89;&#x53CA;&#x5230;&#x5C0D;GstElement&#x5C0D;&#x8C61;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5F9E;GStreamer&#x81EA;&#x8EAB;&#x7684;&#x89C0;&#x9EDE;&#x4F86;&#x770B;&#xFF0C;GstElement&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x70BA;&#x4E00;&#x500B;&#x5177;&#x6709;&#x7279;&#x5B9A;&#x5C6C;&#x6027;&#x7684;&#x9ED1;&#x76D2;&#x5B50;&#xFF0C;&#x5B83;&#x901A;&#x904E;&#x9023;&#x63A5;&#x9EDE;&#xFF08;link point&#xFF09;&#x8207;&#x5916;&#x754C;&#x9032;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x5411;&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x5176;&#x9918;&#x90E8;&#x5206;&#x9336;&#x5FB5;&#x81EA;&#x5DF1;&#x7684;&#x7279;&#x6027;&#x6216;&#x8005;&#x529F;&#x80FD;&#x3002;
+
+&#x6309;&#x7167;&#x5404;&#x81EA;&#x529F;&#x80FD;&#x4E0A;&#x7684;&#x5DEE;&#x7570;&#xFF0C;GStreamer&#x53C8;&#x5C07;GstElement&#x7D30;&#x5206;&#x6210;&#x5982;&#x4E0B;&#x5E7E;&#x985E;&#xFF1A;
+
+    Source Element&#x6578;&#x64DA;&#x6E90;&#x5143;&#x4EF6;&#x53EA;&#x6709;&#x8F38;&#x51FA;&#x7AEF;&#xFF0C;&#x5B83;&#x50C5;&#x80FD;&#x7528;&#x4F86;&#x7522;&#x751F;&#x4F9B;&#x7BA1;&#x9053;&#x6D88;&#x8CBB;&#x7684;&#x6578;&#x64DA;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x5C0D;&#x6578;&#x64DA;&#x505A;&#x4EFB;&#x4F55;&#x8655;&#x7406;&#x3002;&#x4E00;&#x500B;&#x5178;&#x578B;&#x7684;&#x6578;&#x64DA;&#x6E90;&#x5143;&#x4EF6;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x97F3;&#x983B;&#x6355;&#x7372;&#x55AE;&#x5143;&#xFF0C;&#x5B83;&#x8CA0;&#x8CAC;&#x5F9E;&#x8072;&#x5361;&#x8B80;&#x53D6;&#x539F;&#x59CB;&#x7684;&#x97F3;&#x983B;&#x6578;&#x64DA;&#xFF0C;&#x7136;&#x5F8C;&#x4F5C;&#x70BA;&#x6578;&#x64DA;&#x6E90;&#x63D0;&#x4F9B;&#x7D66;&#x5176;&#x5B83;&#x6A21;&#x584A;&#x4F7F;&#x7528;&#x3002;
+    Filter Element&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x65E2;&#x6709;&#x8F38;&#x5165;&#x7AEF;&#x53C8;&#x6709;&#x8F38;&#x51FA;&#x7AEF;&#xFF0C;&#x5B83;&#x5F9E;&#x8F38;&#x5165;&#x7AEF;&#x7372;&#x5F97;&#x76F8;&#x61C9;&#x7684;&#x6578;&#x64DA;&#xFF0C;&#x4E26;&#x5728;&#x7D93;&#x904E;&#x7279;&#x6B8A;&#x8655;&#x7406;&#x4E4B;&#x5F8C;&#x50B3;&#x905E;&#x7D66;&#x8F38;&#x51FA;&#x7AEF;&#x3002;&#x4E00;&#x500B;&#x5178;&#x578B;&#x7684;&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x97F3;&#x983B;&#x7DE8;&#x78BC;&#x55AE;&#x5143;&#xFF0C;&#x5B83;&#x9996;&#x5148;&#x5F9E;&#x5916;&#x754C;&#x7372;&#x5F97;&#x97F3;&#x983B;&#x6578;&#x64DA;&#xFF0C;&#x7136;&#x5F8C;&#x6839;&#x64DA;&#x7279;&#x5B9A;&#x7684;&#x58D3;&#x7E2E;&#x7B97;&#x6CD5;&#x5C0D;&#x5176;&#x9032;&#x884C;&#x7DE8;&#x78BC;&#xFF0C;&#x6700;&#x5F8C;&#x518D;&#x5C07;&#x7DE8;&#x78BC;&#x5F8C;&#x7684;&#x7D50;&#x679C;&#x63D0;&#x4F9B;&#x7D66;&#x5176;&#x5B83;&#x6A21;&#x584A;&#x4F7F;&#x7528;&#x3002;
+    Sink Element&#x63A5;&#x6536;&#x5668;&#x5143;&#x4EF6;&#x53EA;&#x6709;&#x8F38;&#x5165;&#x7AEF;&#xFF0C;&#x5B83;&#x50C5;&#x5177;&#x6709;&#x6D88;&#x8CBB;&#x6578;&#x64DA;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x662F;&#x6574;&#x689D;&#x5A92;&#x9AD4;&#x7BA1;&#x9053;&#x7684;&#x7D42;&#x7AEF;&#x3002;&#x4E00;&#x500B;&#x5178;&#x578B;&#x7684;&#x63A5;&#x6536;&#x5668;&#x5143;&#x4EF6;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x97F3;&#x983B;&#x56DE;&#x653E;&#x55AE;&#x5143;&#xFF0C;&#x5B83;&#x8CA0;&#x8CAC;&#x5C07;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6578;&#x64DA;&#x5BEB;&#x5230;&#x8072;&#x5361;&#x4E0A;&#xFF0C;&#x901A;&#x5E38;&#x9019;&#x4E5F;&#x662F;&#x97F3;&#x983B;&#x8655;&#x7406;&#x904E;&#x7A0B;&#x4E2D;&#x7684;&#x6700;&#x5F8C;&#x4E00;&#x500B;&#x74B0;&#x7BC0;&#x3002;
+
+&#x5716;1&#x5C07;&#x6709;&#x52A9;&#x65BC;&#x4F60;&#x66F4;&#x597D;&#x5730;&#x7406;&#x89E3;&#x6578;&#x64DA;&#x6E90;&#x5143;&#x4EF6;&#x3001;&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x548C;&#x63A5;&#x6536;&#x5668;&#x5143;&#x4EF6;&#x4E09;&#x8005;&#x7684;&#x5340;&#x5225;&#xFF0C;&#x540C;&#x6642;&#x4E5F;&#x4E0D;&#x96E3;&#x770B;&#x51FA;&#x5B83;&#x5011;&#x662F;&#x5982;&#x4F55;&#x76F8;&#x4E92;&#x914D;&#x5408;&#x5F62;&#x6210;&#x7BA1;&#x9053;&#x7684;&#xFF1A;
+
+&#x5716;1
+
+&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x7684;&#x5177;&#x9AD4;&#x5F62;&#x5F0F;&#x662F;&#x975E;&#x5E38;&#x9748;&#x6D3B;&#x7684;&#xFF0C;GStreamer&#x4E26;&#x6C92;&#x6709;&#x56B4;&#x683C;&#x898F;&#x5B9A;&#x8F38;&#x5165;&#x7AEF;&#x548C;&#x8F38;&#x51FA;&#x7AEF;&#x7684;&#x6578;&#x76EE;&#xFF0C;&#x4E8B;&#x5BE6;&#x4E0A;&#x5B83;&#x5011;&#x90FD;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x500B;&#x6216;&#x8005;&#x591A;&#x500B;&#x3002;&#x5716;2&#x662F;&#x4E00;&#x500B;AVI&#x5206;&#x96E2;&#x5668;&#x7684;&#x57FA;&#x672C;&#x7D50;&#x69CB;&#xFF0C;&#x5B83;&#x80FD;&#x5920;&#x5C07;&#x8F38;&#x5165;&#x6578;&#x64DA;&#x5206;&#x96E2;&#x6210;&#x55AE;&#x7368;&#x7684;&#x97F3;&#x983B;&#x4FE1;&#x606F;&#x548C;&#x8996;&#x983B;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x65BC;&#x5BE6;&#x73FE;&#x8A72;&#x529F;&#x80FD;&#x7684;&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x5F88;&#x660E;&#x986F;&#x53EA;&#x5177;&#x6709;&#x4E00;&#x500B;&#x8F38;&#x5165;&#x7AEF;&#xFF0C;&#x4F46;&#x537B;&#x9700;&#x8981;&#x6709;&#x5169;&#x500B;&#x8F38;&#x51FA;&#x7AEF;&#x3002;
+
+&#x5716;2
+
+&#x8981;&#x60F3;&#x5728;&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x5275;&#x5EFA;GstElement&#x5C0D;&#x8C61;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x8FA6;&#x6CD5;&#x662F;&#x85C9;&#x52A9;&#x65BC;&#x5DE5;&#x5EE0;&#x5C0D;&#x8C61;GstElementFactory&#x3002;&#x7531;&#x65BC;GStreamer&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x4E86;&#x591A;&#x7A2E;&#x985E;&#x578B;&#x7684;GstElement&#x5C0D;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#x5C0D;&#x61C9;&#x5730;&#x63D0;&#x4F9B;&#x4E86;&#x591A;&#x7A2E;&#x985E;&#x578B;&#x7684;GstElementFactory&#x5C0D;&#x8C61;&#xFF0C;&#x5B83;&#x5011;&#x662F;&#x901A;&#x904E;&#x7279;&#x5B9A;&#x7684;&#x5DE5;&#x5EE0;&#x540D;&#x7A31;&#x4F86;&#x9032;&#x884C;&#x5340;&#x5206;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x901A;&#x904E;gst_element_factory_find()&#x51FD;&#x6578;&#x7372;&#x5F97;&#x4E86;&#x4E00;&#x500B;&#x540D;&#x70BA;mad&#x7684;&#x5DE5;&#x5EE0;&#x5C0D;&#x8C61;&#xFF0C;&#x5B83;&#x4E4B;&#x5F8C;&#x53EF;&#x4EE5;&#x7528;&#x4F86;&#x5275;&#x5EFA;&#x8207;&#x4E4B;&#x5C0D;&#x61C9;&#x7684;MP3&#x89E3;&#x78BC;&#x5668;&#x5143;&#x4EF6;&#xFF1A;
+
+    GstElementFactory *factory;
+factory = gst_element_factory_find (&quot;mad&quot;);
+
+
+&#x6210;&#x529F;&#x7372;&#x5F97;&#x5DE5;&#x5EE0;&#x5C0D;&#x8C61;&#x4E4B;&#x5F8C;&#xFF0C;&#x63A5;&#x4E0B;&#x4F86;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x904E;gst_element_factory_create()&#x51FD;&#x6578;&#x4F86;&#x5275;&#x5EFA;&#x7279;&#x5B9A;&#x7684;GstElement&#x5C0D;&#x8C61;&#x4E86;&#xFF0C;&#x8A72;&#x51FD;&#x6578;&#x5728;&#x8ABF;&#x7528;&#x6642;&#x6709;&#x5169;&#x500B;&#x53C3;&#x6578;&#xFF0C;&#x5206;&#x5225;&#x662F;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x5DE5;&#x5EE0;&#x5C0D;&#x8C61;&#xFF0C;&#x4EE5;&#x53CA;&#x5373;&#x5C07;&#x5275;&#x5EFA;&#x7684;&#x5143;&#x4EF6;&#x540D;&#x7A31;&#x3002;&#x5143;&#x4EF6;&#x540D;&#x7A31;&#x53EF;&#x4EE5;&#x7528;&#x67E5;&#x8A62;&#x7684;&#x8FA6;&#x6CD5;&#x7372;&#x5F97;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x904E;&#x50B3;&#x5165;&#x7A7A;&#x6307;&#x91DD;&#xFF08;NULL&#xFF09;&#x4F86;&#x751F;&#x6210;&#x5DE5;&#x5EE0;&#x5C0D;&#x8C61;&#x7684;&#x9ED8;&#x8A8D;&#x5143;&#x4EF6;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x793A;&#x7BC4;&#x77AD;&#x5982;&#x4F55;&#x5229;&#x7528;&#x5DF2;&#x7D93;&#x7372;&#x5F97;&#x7684;&#x5DE5;&#x5EE0;&#x5C0D;&#x8C61;&#xFF0C;&#x4F86;&#x5275;&#x5EFA;&#x540D;&#x70BA;decoder&#x7684;MP3&#x89E3;&#x78BC;&#x5668;&#x5143;&#x4EF6;&#xFF1A;
+
+GstElement *element;
+element = gst_element_factory_create (factory, &quot;decoder&quot;);
+
+
+&#x7576;&#x5275;&#x5EFA;&#x7684;GstElement&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x9084;&#x5FC5;&#x9808;&#x8ABF;&#x7528;gst_element_unref()&#x51FD;&#x6578;&#x91CB;&#x653E;&#x5176;&#x5360;&#x7528;&#x7684;&#x5167;&#x5B58;&#x8CC7;&#x6E90;&#xFF1A;
+
+gst_element_unref (element);
+
+
+GStreamer&#x4F7F;&#x7528;&#x4E86;&#x8207;GObject&#x76F8;&#x540C;&#x7684;&#x6A5F;&#x5236;&#x4F86;&#x5C0D;&#x5C6C;&#x6027;&#xFF08;property&#xFF09;&#x9032;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x5305;&#x62EC;&#x67E5;&#x8A62;&#xFF08;query&#xFF09;&#x3001;&#x8A2D;&#x7F6E;&#xFF08;set&#xFF09;&#x548C;&#x8B80;&#x53D6;&#xFF08;get&#xFF09;&#x7B49;&#x3002;&#x6240;&#x6709;&#x7684;GstElement&#x5C0D;&#x50CF;&#x90FD;&#x9700;&#x8981;&#x5F9E;&#x5176;&#x7236;&#x5C0D;&#x8C61;GstObject&#x90A3;&#x88E1;&#x7E7C;&#x627F;&#x540D;&#x7A31;&#xFF08;name&#xFF09;&#x9019;&#x4E00;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5C6C;&#x6027;&#xFF0C;&#x9019;&#x662F;&#x56E0;&#x70BA;&#x50CF;gst_element_factory_make()&#x548C;gst_element_factory_create()&#x9019;&#x6A23;&#x7684;&#x51FD;&#x6578;&#x5728;&#x5275;&#x5EFA;&#x5DE5;&#x5EE0;&#x5C0D;&#x8C61;&#x548C;&#x5143;&#x4EF6;&#x5C0D;&#x8C61;&#x6642;&#x90FD;&#x6703;&#x7528;&#x5230;&#x540D;&#x7A31;&#x5C6C;&#x6027;&#xFF0C;&#x901A;&#x904E;&#x8ABF;&#x7528;gst_object_set_name()&#x548C;gst_object_get_name()&#x51FD;&#x6578;&#x53EF;&#x4EE5;&#x8A2D;&#x7F6E;&#x548C;&#x8B80;&#x53D6;GstElement&#x5C0D;&#x8C61;&#x7684;&#x540D;&#x7A31;&#x5C6C;&#x6027;&#x3002;
+
+1.2&#x896F;&#x588A;&#x8655;&#x7406;
+
+&#x896F;&#x588A;&#xFF08;pad&#xFF09;&#x662F;GStreamer&#x6846;&#x67B6;&#x5F15;&#x5165;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x500B;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#xFF0C;&#x5B83;&#x6307;&#x7684;&#x662F;&#x5143;&#x4EF6;&#xFF08;element&#xFF09;&#x8207;&#x5916;&#x754C;&#x7684;&#x9023;&#x63A5;&#x901A;&#x9053;&#xFF0C;&#x5C0D;&#x65BC;&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x67D0;&#x500B;&#x7279;&#x5B9A;&#x5143;&#x4EF6;&#x4F86;&#x8AAA;&#xFF0C;&#x5176;&#x80FD;&#x5920;&#x8655;&#x7406;&#x7684;&#x5A92;&#x9AD4;&#x985E;&#x578B;&#x6B63;&#x662F;&#x901A;&#x904E;&#x896F;&#x588A;&#x66B4;&#x9732;&#x7D66;&#x5176;&#x5B83;&#x5143;&#x4EF6;&#x7684;&#x3002;&#x6210;&#x529F;&#x5275;&#x5EFA;GstElement&#x5C0D;&#x8C61;&#x4E4B;&#x5F8C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x904E;gst_element_get_pad()&#x7372;&#x5F97;&#x8A72;&#x5143;&#x4EF6;&#x7684;&#x6307;&#x5B9A;&#x896F;&#x588A;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x5C07;&#x8FD4;&#x56DE;element&#x5143;&#x4EF6;&#x4E2D;&#x540D;&#x70BA;src&#x7684;&#x896F;&#x588A;&#xFF1A;
+
+GstPad *srcpad;
+srcpad = gst_element_get_pad (element, &quot;src&quot;);
+
+
+&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8A71;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x904E;gst_element_get_pad_list()&#x51FD;&#x6578;&#xFF0C;&#x4F86;&#x67E5;&#x8A62;&#x6307;&#x5B9A;&#x5143;&#x4EF6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x896F;&#x588A;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x5C07;&#x8F38;&#x51FA;element&#x5143;&#x4EF6;&#x4E2D;&#x6240;&#x6709;&#x896F;&#x588A;&#x7684;&#x540D;&#x7A31;&#xFF1A;
+
+GList *pads;
+pads = gst_element_get_pad_list (element);
+while (pads) {
+  GstPad *pad = GST_PAD (pads-&gt;data);
+  g_print (&quot;pad name is: %s\n&quot;, gst_pad_get_name (pad));
+  pads = g_list_next (pads);
+}
+
+
+&#x8207;&#x5143;&#x4EF6;&#x4E00;&#x6A23;&#xFF0C;&#x896F;&#x588A;&#x7684;&#x540D;&#x7A31;&#x4E5F;&#x80FD;&#x5920;&#x52D5;&#x614B;&#x8A2D;&#x7F6E;&#x6216;&#x8005;&#x8B80;&#x53D6;&#xFF0C;&#x9019;&#x662F;&#x901A;&#x904E;&#x8ABF;&#x7528;gst_pad_get_name ()&#x548C;gst_pad_set_name()&#x51FD;&#x6578;&#x4F86;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x7684;&#x896F;&#x588A;&#x90FD;&#x53EF;&#x4EE5;&#x7D30;&#x5206;&#x6210;&#x8F38;&#x5165;&#x896F;&#x588A;&#x548C;&#x8F38;&#x51FA;&#x896F;&#x588A;&#x5169;&#x7A2E;&#xFF0C;&#x5176;&#x4E2D;&#x8F38;&#x5165;&#x896F;&#x588A;&#x53EA;&#x80FD;&#x63A5;&#x6536;&#x6578;&#x64DA;&#x4F46;&#x4E0D;&#x80FD;&#x7522;&#x751F;&#x6578;&#x64DA;&#xFF0C;&#x800C;&#x8F38;&#x51FA;&#x896F;&#x588A;&#x5247;&#x6B63;&#x597D;&#x76F8;&#x53CD;&#xFF0C;&#x53EA;&#x80FD;&#x7522;&#x751F;&#x6578;&#x64DA;&#x4F46;&#x4E0D;&#x80FD;&#x63A5;&#x6536;&#x6578;&#x64DA;&#xFF0C;&#x5229;&#x7528;&#x51FD;&#x6578;gst_pad_get_direction()&#x53EF;&#x4EE5;&#x7372;&#x5F97;&#x6307;&#x5B9A;&#x896F;&#x588A;&#x7684;&#x985E;&#x578B;&#x3002; GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x896F;&#x588A;&#x90FD;&#x5FC5;&#x7136;&#x4F9D;&#x9644;&#x65BC;&#x67D0;&#x500B;&#x5143;&#x4EF6;&#x4E4B;&#x4E0A;&#xFF0C;&#x8ABF;&#x7528;gst_pad_get_parent()&#x53EF;&#x4EE5;&#x7372;&#x5F97;&#x6307;&#x5B9A;&#x896F;&#x588A;&#x6240;&#x5C6C;&#x7684;&#x5143;&#x4EF6;&#xFF0C;&#x8A72;&#x51FD;&#x6578;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x500B;&#x6307;&#x5411;GstElement&#x7684;&#x6307;&#x91DD;&#x3002;&#x896F;&#x588A;&#x5F9E;&#x67D0;&#x7A2E;&#x7A0B;&#x5EA6;&#x4E0A;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x5143;&#x4EF6;&#x7684;&#x4EE3;&#x8A00;&#x4EBA;&#xFF0C;&#x56E0;&#x70BA;&#x5B83;&#x8981;&#x8CA0;&#x8CAC;&#x5411;&#x5916;&#x754C;&#x63CF;&#x8FF0;&#x8A72;&#x5143;&#x4EF6;&#x6240;&#x5177;&#x6709;&#x7684;&#x80FD;&#x529B;&#x3002; GStreamer&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x4E86;&#x7D71;&#x4E00;&#x7684;&#x6A5F;&#x5236;&#x4F86;&#x8B93;&#x896F;&#x588A;&#x63CF;&#x8FF0;&#x5143;&#x4EF6;&#x6240;&#x5177;&#x6709;&#x7684;&#x80FD;&#x529B;&#xFF08;capability&#xFF09;&#xFF0C;&#x9019;&#x662F;&#x85C9;&#x52A9;&#x6578;&#x64DA;&#x7D50;&#x69CB;_GstCaps&#x4F86;&#x5BE6;&#x73FE;&#x7684;&#xFF1A;
+
+struct _GstCaps {
+  gchar *name; /* the name of this caps */
+  guint16 id; /* type id (major type) */
+  guint refcount; /* caps are refcounted */
+  GstProps *properties; /* properties for this capability */
+  GstCaps *next; /* caps can be chained together */
+};
+
+
+&#x4EE5;&#x4E0B;&#x662F;&#x5C0D;mad&#x5143;&#x4EF6;&#x7684;&#x80FD;&#x529B;&#x63CF;&#x8FF0;&#xFF0C;&#x4E0D;&#x96E3;&#x770B;&#x51FA;&#x8A72;&#x5143;&#x4EF6;&#x4E2D;&#x5BE6;&#x969B;&#x5305;&#x542B;sink&#x548C;src&#x5169;&#x500B;&#x896F;&#x588A;&#xFF0C;&#x4E26;&#x4E14;&#x6BCF;&#x500B;&#x896F;&#x588A;&#x90FD;&#x5E36;&#x6709;&#x7279;&#x5B9A;&#x7684;&#x529F;&#x80FD;&#x4FE1;&#x606F;&#x3002;&#x540D;&#x70BA;sink&#x7684;&#x896F;&#x588A;&#x662F;mad&#x5143;&#x4EF6;&#x7684;&#x8F38;&#x5165;&#x7AEF;&#xFF0C;&#x5B83;&#x80FD;&#x5920;&#x63A5;&#x53D7;MIME&#x985E;&#x578B;&#x70BA;audio/mp3&#x7684;&#x5A92;&#x9AD4;&#x6578;&#x64DA;&#xFF0C;&#x6B64;&#x5916;&#x9084;&#x5177;&#x6709;layer&#x3001;bitrate&#x548C;framed&#x4E09;&#x7A2E;&#x5C6C;&#x6027;&#x3002;&#x540D;&#x70BA;src&#x7684;&#x896F;&#x588A;&#x662F;mad&#x5143;&#x4EF6;&#x7684;&#x8F38;&#x51FA;&#x7AEF;&#xFF0C;&#x5B83;&#x8CA0;&#x8CAC;&#x7522;&#x751F;MIME&#x985E;&#x578B;&#x70BA;audio/raw&#x5A92;&#x9AD4;&#x6578;&#x64DA;&#xFF0C;&#x6B64;&#x5916;&#x9084;&#x5177;&#x6709;format&#x3001;depth&#x3001;rate&#x548C;channels&#x7B49;&#x591A;&#x7A2E;&#x5C6C;&#x6027;&#x3002;
+
+Pads:
+  SINK template: &#x2019;sink&#x2019;
+    Availability: Always
+    Capabilities:
+    &#x2019;mad_sink&#x2019;:
+      MIME type: &#x2019;audio/mp3&#x2019;:
+  SRC template: &#x2019;src&#x2019;
+    Availability: Always
+    Capabilities:
+      &#x2019;mad_src&#x2019;:
+        MIME type: &#x2019;audio/raw&#x2019;:
+        format: String: int
+        endianness: Integer: 1234
+        width: Integer: 16
+        depth: Integer: 16
+        channels: Integer range: 1 - 2
+        law: Integer: 0
+        signed: Boolean: TRUE
+        rate: Integer range: 11025 - 48000
+
+
+&#x6E96;&#x78BA;&#x5730;&#x8AAA;&#xFF0C;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x6BCF;&#x500B;&#x896F;&#x588A;&#x90FD;&#x53EF;&#x80FD;&#x5C0D;&#x61C9;&#x65BC;&#x591A;&#x500B;&#x80FD;&#x529B;&#x63CF;&#x8FF0;&#xFF0C;&#x5B83;&#x5011;&#x80FD;&#x5920;&#x901A;&#x904E;&#x51FD;&#x6578;gst_pad_get_caps()&#x4F86;&#x7372;&#x5F97;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x5C07;&#x8F38;&#x51FA;pad&#x896F;&#x588A;&#x4E2D;&#x6240;&#x6709;&#x80FD;&#x529B;&#x63CF;&#x8FF0;&#x7684;&#x540D;&#x7A31;&#x53CA;&#x5176;MIME&#x985E;&#x578B;&#xFF1A;
+
+GstCaps *caps;
+caps = gst_pad_get_caps (pad);
+g_print (&quot;pad name is: %s\n&quot;, gst_pad_get_name (pad));
+while (caps) {
+  g_print (&quot; Capability name is %s, MIME type is %s\n&quot;,
+  gst_caps_get_name (cap),
+  gst_caps_get_mime (cap));
+  caps = caps-&gt;next;
+}
+
+
+1.3&#x7BB1;&#x6AC3;
+
+&#x7BB1;&#x6AC3;&#xFF08;bin&#xFF09;&#x662F;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#x5143;&#x4EF6;&#xFF0C;&#x5B83;&#x901A;&#x5E38;&#x88AB;&#x7528;&#x4F86;&#x5BB9;&#x7D0D;&#x5176;&#x5B83;&#x7684;&#x5143;&#x4EF6;&#x5C0D;&#x8C61;&#xFF0C;&#x4F46;&#x7531;&#x65BC;&#x5176;&#x81EA;&#x8EAB;&#x4E5F;&#x662F;&#x4E00;&#x500B;GstElement&#x5C0D;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#x5BE6;&#x969B;&#x4E0A;&#x4E5F;&#x80FD;&#x5920;&#x88AB;&#x7528;&#x4F86;&#x5BB9;&#x7D0D;&#x5176;&#x5B83;&#x7684;&#x7BB1;&#x6AC3;&#x5C0D;&#x8C61;&#x3002;&#x5229;&#x7528;&#x7BB1;&#x6AC3;&#x53EF;&#x4EE5;&#x5C07;&#x9700;&#x8981;&#x8655;&#x7406;&#x7684;&#x591A;&#x500B;&#x5143;&#x4EF6;&#x7D44;&#x5408;&#x6210;&#x4E00;&#x500B;&#x908F;&#x8F2F;&#x5143;&#x4EF6;&#xFF0C;&#x7531;&#x65BC;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x5C0D;&#x7BB1;&#x6AC3;&#x4E2D;&#x7684;&#x5143;&#x4EF6;&#x9010;&#x500B;&#x9032;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x6B64;&#x80FD;&#x5920;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x5229;&#x7528;&#x5B83;&#x4F86;&#x69CB;&#x9020;&#x66F4;&#x52A0;&#x8907;&#x96DC;&#x7684;&#x7BA1;&#x9053;&#x3002;&#x5728;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x4F7F;&#x7528;&#x7BB1;&#x6AC3;&#x9084;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x500B;&#x512A;&#x9EDE;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x5B83;&#x6703;&#x8A66;&#x8457;&#x5C0D;&#x6578;&#x64DA;&#x6D41;&#x9032;&#x884C;&#x512A;&#x5316;&#xFF0C;&#x9019;&#x5C0D;&#x65BC;&#x591A;&#x5A92;&#x9AD4;&#x61C9;&#x7528;&#x4F86;&#x8B1B;&#x662F;&#x5F88;&#x5177;&#x5438;&#x5F15;&#x529B;&#x7684;&#x3002;
+
+&#x5716;3&#x63CF;&#x8FF0;&#x4E86;&#x7BB1;&#x6AC3;&#x5728;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x5178;&#x578B;&#x7D50;&#x69CB;&#xFF1A;
+
+&#x5716;3
+
+&#x5728;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7BB1;&#x6AC3;&#x4E3B;&#x8981;&#x6709;&#x5169;&#x7A2E;&#x985E;&#x578B;&#xFF1A;
+
+    GstPipeline&#x7BA1;&#x9053;&#x662F;&#x6700;&#x5E38;&#x7528;&#x5230;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x5C0D;&#x65BC;&#x4E00;&#x500B;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x4F86;&#x8B1B;&#xFF0C;&#x5176;&#x9802;&#x5C64;&#x7BB1;&#x6AC3;&#x5FC5;&#x9808;&#x662F;&#x4E00;&#x689D;&#x7BA1;&#x9053;&#x3002;
+    GstThread&#x7DDA;&#x7A0B;&#x7684;&#x4F5C;&#x7528;&#x5728;&#x65BC;&#x80FD;&#x5920;&#x63D0;&#x4F9B;&#x540C;&#x6B65;&#x8655;&#x7406;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x679C;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x9032;&#x884C;&#x56B4;&#x683C;&#x7684;&#x97F3;&#x8996;&#x983B;&#x540C;&#x6B65;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x7528;&#x5230;&#x9019;&#x7A2E;&#x985E;&#x578B;&#x7684;&#x7BB1;&#x6AC3;&#x3002;
+
+GStreamer&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x4E86;&#x5169;&#x7A2E;&#x65B9;&#x6CD5;&#x4F86;&#x5275;&#x5EFA;&#x7BB1;&#x6AC3;&#xFF1A;&#x4E00;&#x7A2E;&#x662F;&#x85C9;&#x52A9;&#x5DE5;&#x5EE0;&#x65B9;&#x6CD5;&#xFF0C;&#x53E6;&#x4E00;&#x7A2E;&#x5247;&#x662F;&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x51FD;&#x6578;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x793A;&#x7BC4;&#x77AD;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5DE5;&#x5EE0;&#x65B9;&#x6CD5;&#x5275;&#x5EFA;&#x7DDA;&#x7A0B;&#x5C0D;&#x8C61;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x51FD;&#x6578;&#x4F86;&#x5275;&#x5EFA;&#x7BA1;&#x9053;&#x5C0D;&#x8C61;&#xFF1A;
+
+GstElement *thread, *pipeline;
+//&#x5275;&#x5EFA;&#x7DDA;&#x7A0B;&#x5C0D;&#x8C61;&#xFF0C;&#x540C;&#x6642;&#x70BA;&#x5176;&#x6307;&#x5B9A;&#x552F;&#x4E00;&#x7684;&#x540D;&#x7A31;&#x3002;
+thread = gst_element_factory_make (&quot;thread&quot;, NULL);
+//&#x6839;&#x64DA;&#x7D66;&#x51FA;&#x7684;&#x540D;&#x7A31;&#xFF0C;&#x5275;&#x5EFA;&#x4E00;&#x500B;&#x7279;&#x5B9A;&#x7684;&#x7BA1;&#x9053;&#x5C0D;&#x8C61;&#x3002;
+pipeline = gst_pipeline_new (&quot;pipeline_name&quot;);
+
+
+&#x7BB1;&#x6AC3;&#x6210;&#x529F;&#x5275;&#x5EFA;&#x4E4B;&#x5F8C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8ABF;&#x7528;gst_bin_add()&#x51FD;&#x6578;&#x5C07;&#x5DF2;&#x7D93;&#x5B58;&#x5728;&#x7684;&#x5143;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x5176;&#x4E2D;&#x4F86;&#x4E86;&#xFF1A;
+
+GstElement *element;
+GstElement *bin;
+bin = gst_bin_new (&quot;bin_name&quot;);
+element = gst_element_factory_make (&quot;mpg123&quot;, &quot;decoder&quot;);
+gst_bin_add (GST_BIN (bin), element);
+
+
+&#x800C;&#x8981;&#x5F9E;&#x7BB1;&#x6AC3;&#x4E2D;&#x627E;&#x5230;&#x7279;&#x5B9A;&#x7684;&#x5143;&#x4EF6;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#xFF0C;&#x53EF;&#x4EE5;&#x85C9;&#x52A9;gst_bin_get_by_name()&#x51FD;&#x6578;&#x5BE6;&#x73FE;&#xFF1A;
+
+GstElement *element;
+element = gst_bin_get_by_name (GST_BIN (bin), &quot;decoder&quot;);
+
+
+&#x7531;&#x65BC;GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x4E00;&#x500B;&#x7BB1;&#x6AC3;&#x80FD;&#x5920;&#x6DFB;&#x52A0;&#x5230;&#x53E6;&#x4E00;&#x500B;&#x7BB1;&#x6AC3;&#x4E4B;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x53EF;&#x80FD;&#x6703;&#x51FA;&#x73FE;&#x7BB1;&#x6AC3;&#x5D4C;&#x5957;&#x7684;&#x60C5;&#x6CC1;&#xFF0C;gst_bin_get_by_name()&#x51FD;&#x6578;&#x5728;&#x67E5;&#x627E;&#x5143;&#x4EF6;&#x6642;&#x6703;&#x5C0D;&#x5D4C;&#x5957;&#x7684;&#x7BB1;&#x6AC3;&#x4F5C;&#x905E;&#x6B78;&#x67E5;&#x627E;&#x3002;&#x5143;&#x4EF6;&#x6709;&#x6DFB;&#x52A0;&#x5230;&#x7BB1;&#x6AC3;&#x4E4B;&#x4E2D;&#x4EE5;&#x5F8C;&#xFF0C;&#x5728;&#x9700;&#x8981;&#x7684;&#x6642;&#x5019;&#x9084;&#x53EF;&#x4EE5;&#x5F9E;&#x4E2D;&#x79FB;&#x51FA;&#xFF0C;&#x9019;&#x662F;&#x901A;&#x904E;&#x8ABF;&#x7528;gst_bin_remove()&#x51FD;&#x6578;&#x4F86;&#x5B8C;&#x6210;&#x7684;&#xFF1A;
+
+GstElement *element;
+gst_bin_remove (GST_BIN (bin), element);
+
+
+&#x5982;&#x679C;&#x4ED4;&#x7D30;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x5716;3&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x7BB1;&#x6AC3;&#xFF0C;&#x6703;&#x767C;&#x73FE;&#x5B83;&#x6C92;&#x6709;&#x5C6C;&#x65BC;&#x81EA;&#x5DF1;&#x7684;&#x8F38;&#x5165;&#x896F;&#x588A;&#x548C;&#x8F38;&#x51FA;&#x896F;&#x588A;&#xFF0C;&#x56E0;&#x6B64;&#x986F;&#x7136;&#x662F;&#x7121;&#x6CD5;&#x4F5C;&#x70BA;&#x4E00;&#x500B;&#x908F;&#x8F2F;&#x6574;&#x9AD4;&#x8207;&#x5176;&#x5B83;&#x5143;&#x4EF6;&#x4EA4;&#x4E92;&#x7684;&#x3002;&#x70BA;&#x4E86;&#x89E3;&#x6C7A;&#x9019;&#x4E00;&#x554F;&#x984C;&#xFF0C;GStreamer&#x5F15;&#x5165;&#x4E86;&#x7CBE;&#x9748;&#x896F;&#x588A;&#xFF08;ghost pad&#xFF09;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5B83;&#x662F;&#x5F9E;&#x7BB1;&#x6AC3;&#x88E1;&#x9762;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x7684;&#x896F;&#x588A;&#x4E2D;&#x63A8;&#x8209;&#x51FA;&#x4F86;&#x7684;&#xFF0C;&#x901A;&#x5E38;&#x4F86;&#x8B1B;&#x6703;&#x540C;&#x6642;&#x9078;&#x51FA;&#x8F38;&#x5165;&#x896F;&#x588A;&#x548C;&#x8F38;&#x51FA;&#x896F;&#x588A;&#xFF0C;&#x5982;&#x5716;4&#x6240;&#x793A;&#xFF1A;
+
+&#x5716;4
+
+&#x5177;&#x6709;&#x7CBE;&#x9748;&#x896F;&#x588A;&#x7684;&#x7BB1;&#x6AC3;&#x5728;&#x884C;&#x70BA;&#x4E0A;&#x8207;&#x5143;&#x4EF6;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x5177;&#x6709;&#x7684;&#x5C6C;&#x6027;&#x5B83;&#x90FD;&#x5177;&#x6709;&#xFF0C;&#x6240;&#x6709;&#x91DD;&#x5C0D;&#x5143;&#x4EF6;&#x80FD;&#x5920;&#x9032;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x4E5F;&#x540C;&#x6A23;&#x80FD;&#x5920;&#x91DD;&#x5C0D;&#x7BB1;&#x6AC3;&#x9032;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x5728;GStreamer&#x61C9;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x80FD;&#x5920;&#x50CF;&#x4F7F;&#x7528;&#x5143;&#x4EF6;&#x4E00;&#x6A23;&#x4F7F;&#x7528;&#x9019;&#x985E;&#x7BB1;&#x6AC3;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x793A;&#x7BC4;&#x77AD;&#x5982;&#x4F55;&#x70BA;&#x7BB1;&#x6AC3;&#x6DFB;&#x52A0;&#x4E00;&#x500B;&#x7CBE;&#x9748;&#x896F;&#x588A;&#xFF1A;
+
+GstElement *bin;
+GstElement *element;
+element = gst_element_factory_create (&quot;mad&quot;, &quot;decoder&quot;);
+bin = gst_bin_new (&quot;bin_name&quot;);
+gst_bin_add (GST_BIN (bin), element);
+gst_element_add_ghost_pad (bin, gst_element_get_pad (element, &quot;sink&quot;), &quot;sink&quot;);
+
+
+
+
+
+
+    &#x56DE;&#x9801;&#x9996;
+
+
+&#x4E8C;&#x3001;&#x5143;&#x4EF6;&#x9023;&#x63A5;
+
+&#x5728;&#x5F15;&#x5165;&#x4E86;&#x5143;&#x4EF6;&#x548C;&#x896F;&#x588A;&#x7684;&#x6982;&#x5FF5;&#x4E4B;&#x5F8C;&#xFF0C;GStreamer&#x5C0D;&#x591A;&#x5A92;&#x9AD4;&#x6578;&#x64DA;&#x7684;&#x8655;&#x7406;&#x904E;&#x7A0B;&#x5C31;&#x8B8A;&#x5F97;&#x975E;&#x5E38;&#x6E05;&#x6670;&#x4E86;&#xFF1A;&#x901A;&#x904E;&#x5C07;&#x4E0D;&#x540C;&#x5143;&#x4EF6;&#x7684;&#x896F;&#x588A;&#x4F9D;&#x6B21;&#x9023;&#x63A5;&#x8D77;&#x4F86;&#x69CB;&#x6210;&#x4E00;&#x689D;&#x5A92;&#x9AD4;&#x8655;&#x7406;&#x7BA1;&#x9053;&#xFF0C;&#x4F7F;&#x6578;&#x64DA;&#x5728;&#x6D41;&#x7D93;&#x7BA1;&#x9053;&#x7684;&#x904E;&#x7A0B;&#x80FD;&#x5920;&#x88AB;&#x5404;&#x500B;&#x5143;&#x4EF6;&#x6B63;&#x5E38;&#x8655;&#x7406;&#xFF0C;&#x6700;&#x7D42;&#x5BE6;&#x73FE;&#x7279;&#x5B9A;&#x7684;&#x591A;&#x5A92;&#x9AD4;&#x529F;&#x80FD;&#x3002;
+
+&#x5716;&#xFF11;&#x5C31;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x689D;&#x5F88;&#x7C21;&#x55AE;&#x7684;&#x7BA1;&#x9053;&#xFF0C;&#x5B83;&#x7531;&#x4E09;&#x500B;&#x57FA;&#x672C;&#x5143;&#x4EF6;&#x69CB;&#x6210;&#xFF1A;&#x6578;&#x64DA;&#x6E90;&#x5143;&#x4EF6;&#x53EA;&#x8CA0;&#x8CAC;&#x7522;&#x751F;&#x6578;&#x64DA;&#xFF0C;&#x5B83;&#x7684;&#x8F38;&#x51FA;&#x896F;&#x588A;&#x8207;&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x7684;&#x8F38;&#x5165;&#x896F;&#x588A;&#x76F8;&#x9023;&#xFF1B;&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x8CA0;&#x8CAC;&#x5F9E;&#x81EA;&#x5DF1;&#x7684;&#x8F38;&#x5165;&#x896F;&#x588A;&#x4E2D;&#x7372;&#x53D6;&#x6578;&#x64DA;&#xFF0C;&#x4E26;&#x5728;&#x7D93;&#x904E;&#x7279;&#x5B9A;&#x7684;&#x8655;&#x7406;&#x4E4B;&#x5F8C;&#xFF0C;&#x5C07;&#x7D50;&#x679C;&#x901A;&#x904E;&#x8F38;&#x51FA;&#x896F;&#x588A;&#x50B3;&#x7D66;&#x8207;&#x4E4B;&#x76F8;&#x9023;&#x7684;&#x63A5;&#x6536;&#x5668;&#x5143;&#x4EF6;&#xFF1B;&#x63A5;&#x6536;&#x5668;&#x5143;&#x4EF6;&#x53EA;&#x8CA0;&#x8CAC;&#x63A5;&#x6536;&#x6578;&#x64DA;&#xFF0C;&#x5B83;&#x7684;&#x8F38;&#x5165;&#x896F;&#x588A;&#x8207;&#x904E;&#x6FFE;&#x5668;&#x5143;&#x4EF6;&#x7684;&#x8F38;&#x51FA;&#x896F;&#x588A;&#x76F8;&#x9023;&#xFF0C;&#x8CA0;&#x8CAC;&#x5C0D;&#x6700;&#x7D42;&#x7D50;&#x679C;&#x9032;&#x884C;&#x76F8;&#x61C9;&#x7684;&#x8655;&#x7406;&#x3002;
+
+GStreamer&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x5143;&#x4EF6;&#x662F;&#x901A;&#x904E;&#x5404;&#x81EA;&#x7684;&#x896F;&#x588A;&#x9023;&#x63A5;&#x8D77;&#x4F86;&#x7684;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x78BC;&#x793A;&#x7BC4;&#x77AD;&#x5982;&#x4F55;&#x5C07;&#x5169;&#x500B;&#x5143;&#x4EF6;&#x901A;&#x904E;&#x896F;&#x588A;&#x9023;&#x63A5;&#x8D77;&#x4F86;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5728;&#x9700;&#x8981;&#x7684;&#x6642;&#x5019;&#x65B7;&#x958B;&#x5B83;&#x5011;&#x4E4B;&#x9593;&#x7684;&#x9023;&#x63A5;&#xFF1A;
+
+GstPad *srcpad, *sinkpad;
+srcpad = gst_element_get_pad (element1, &quot;src&quot;);
+sinpad = gst_element_get_pad (element2, &quot;sink&quot;);
+//&#x9023;&#x63A5;
+gst_pad_link (srcpad, sinkpad);
+//&#x65B7;&#x958B;
+gst_pad_unlink (srcpad, sinkpad);
+
+
+&#x5982;&#x679C;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x8D77;&#x9023;&#x63A5;&#x7684;&#x5143;&#x4EF6;&#x90FD;&#x53EA;&#x6709;&#x4E00;&#x500B;&#x8F38;&#x5165;&#x896F;&#x588A;&#x548C;&#x4E00;&#x500B;&#x8F38;&#x51FA;&#x896F;&#x588A;&#xFF0C;&#x90A3;&#x9EBC;&#x66F4;&#x7C21;&#x55AE;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x8ABF;&#x7528;gst_element_link()&#x51FD;&#x6578;&#x76F4;&#x63A5;&#x5728;&#x5B83;&#x5011;&#x4E4B;&#x9593;&#x5EFA;&#x7ACB;&#x8D77;&#x9023;&#x63A5;&#xFF0C;&#x6216;&#x8005;&#x8ABF;&#x7528;gst_element_unlink()&#x51FD;&#x6578;&#x65B7;&#x958B;&#x5B83;&#x5011;&#x4E4B;&#x9593;&#x7684;&#x9023;&#x63A5;&#xFF1A;
+
+//&#x9023;&#x63A5;
+gst_element_link (element1, element2);
+//&#x65B7;&#x958B;
+gst_element_unlink (element1, element2);
+
+
+    NULL&#x9019;&#x662F;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x7684;&#x9ED8;&#x8A8D;&#x72C0;&#x614B;&#xFF0C;&#x8868;&#x660E;&#x5B83;&#x525B;&#x525B;&#x5275;&#x5EFA;&#xFF0C;&#x9084;&#x6C92;&#x6709;&#x958B;&#x59CB;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#x3002;
+    READY&#x8868;&#x660E;&#x5143;&#x4EF6;&#x5DF2;&#x7D93;&#x505A;&#x597D;&#x6E96;&#x5099;&#xFF0C;&#x96A8;&#x6642;&#x53EF;&#x4EE5;&#x958B;&#x59CB;&#x8655;&#x7406;&#x6D41;&#x7A0B;&#x3002;
+    PAUSED&#x8868;&#x660E;&#x5143;&#x4EF6;&#x56E0;&#x67D0;&#x7A2E;&#x539F;&#x56E0;&#x66AB;&#x6642;&#x505C;&#x6B62;&#x8655;&#x7406;&#x6578;&#x64DA;&#x3002;
+    PLAYING&#x8868;&#x660E;&#x5143;&#x4EF6;&#x6B63;&#x5728;&#x9032;&#x884C;&#x6578;&#x64DA;&#x8655;&#x7406;&#x3002;
+
+&#x6240;&#x6709;&#x7684;&#x5143;&#x4EF6;&#x90FD;&#x5F9E;NULL&#x72C0;&#x614B;&#x958B;&#x59CB;&#xFF0C;&#x4F9D;&#x6B21;&#x7D93;&#x6B77;NULL&#x3001;READY&#x3001;PAUSED&#x3001;PLAYING&#x7B49;&#x72C0;&#x614B;&#x9593;&#x7684;&#x8F49;&#x63DB;&#x3002;&#x5143;&#x4EF6;&#x7576;&#x524D;&#x6240;&#x8655;&#x7684;&#x72C0;&#x614B;&#x53EF;&#x4EE5;&#x901A;&#x904E;&#x8ABF;&#x7528;gst_element_set_state()&#x51FD;&#x6578;&#x9032;&#x884C;&#x5207;&#x63DB;&#xFF1A;
+GstElement *bin;
+/*&#x5275;&#x5EFA;&#x5143;&#x4EF6;&#xFF0C;&#x4E26;&#x5C07;&#x5176;&#x9023;&#x63A5;&#x6210;&#x7BB1;&#x6AC3;bin */
+gst_element_set_state (bin, GST_STATE_PLAYING);
+
+&#x9ED8;&#x8A8D;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x7BA1;&#x9053;&#x53CA;&#x5176;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x5728;&#x5275;&#x5EFA;&#x4E4B;&#x5F8C;&#x5C07;&#x8655;&#x65BC;NULL&#x72C0;&#x614B;&#xFF0C;&#x6B64;&#x6642;&#x5B83;&#x5011;&#x4E0D;&#x6703;&#x9032;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;&#x7576;&#x7BA1;&#x9053;&#x4F7F;&#x7528;&#x5B8C;&#x7562;&#x4E4B;&#x5F8C;&#xFF0C;&#x4E0D;&#x8981;&#x5FD8;&#x8A18;&#x91CD;&#x65B0;&#x5C07;&#x7BA1;&#x9053;&#x7684;&#x72C0;&#x614B;&#x5207;&#x63DB;&#x56DE;NULL&#x72C0;&#x614B;&#xFF0C;&#x8B93;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x80FD;&#x5920;&#x6709;&#x6A5F;&#x6703;&#x91CB;&#x653E;&#x5B83;&#x5011;&#x6B63;&#x5728;&#x4F54;&#x7528;&#x7684;&#x8CC7;&#x6E90;&#x3002;
+
+&#x7BA1;&#x9053;&#x771F;&#x6B63;&#x7684;&#x8655;&#x7406;&#x6D41;&#x7A0B;&#x662F;&#x5F9E;&#x7B2C;&#x4E00;&#x6B21;&#x5C07;&#x5176;&#x5207;&#x63DB;&#x5230;READY&#x72C0;&#x614B;&#x6642;&#x958B;&#x59CB;&#x7684;&#xFF0C;&#x6B64;&#x6642;&#x7BA1;&#x9053;&#x53CA;&#x5176;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x5143;&#x4EF6;&#x5C07;&#x505A;&#x597D;&#x76F8;&#x61C9;&#x7684;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F86;&#x70BA;&#x5373;&#x5C07;&#x57F7;&#x884C;&#x7684;&#x6578;&#x64DA;&#x8655;&#x7406;&#x904E;&#x7A0B;&#x505A;&#x597D;&#x6E96;&#x5099;&#x3002;&#x5C0D;&#x65BC;&#x4E00;&#x500B;&#x5178;&#x578B;&#x7684;&#x5143;&#x4EF6;&#x4F86;&#x8B1B;&#xFF0C;&#x8655;&#x65BC;READY&#x72C0;&#x614B;&#x6642;&#x9700;&#x8981;&#x57F7;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x5305;&#x62EC;&#x6253;&#x958B;&#x5A92;&#x9AD4;&#x6587;&#x4EF6;&#x548C;&#x97F3;&#x983B;&#x8A2D;&#x5099;&#x7B49;&#xFF0C;&#x6216;&#x8005;&#x8A66;&#x5716;&#x8207;&#x4F4D;&#x65BC;&#x9060;&#x7AEF;&#x7684;&#x5A92;&#x9AD4;&#x670D;&#x52D9;&#x5668;&#x5EFA;&#x7ACB;&#x8D77;&#x9023;&#x63A5;&#x3002;
+
+&#x8655;&#x65BC;READY&#x72C0;&#x614B;&#x7684;&#x7BA1;&#x9053;&#x4E00;&#x65E6;&#x5207;&#x63DB;&#x5230;PLAYING&#x72C0;&#x614B;&#xFF0C;&#x9700;&#x8981;&#x8655;&#x7406;&#x7684;&#x591A;&#x5A92;&#x9AD4;&#x6578;&#x64DA;&#x5C31;&#x958B;&#x59CB;&#x5728;&#x6574;&#x500B;&#x7BA1;&#x9053;&#x4E2D;&#x6D41;&#x52D5;&#xFF0C;&#x4E26;&#x4F9D;&#x6B21;&#x88AB;&#x7BA1;&#x9053;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x5404;&#x500B;&#x5143;&#x4EF6;&#x9032;&#x884C;&#x8655;&#x7406;&#xFF0C;&#x5F9E;&#x800C;&#x6700;&#x7D42;&#x5BE6;&#x73FE;&#x7BA1;&#x9053;&#x9810;&#x5148;&#x5B9A;&#x7FA9;&#x597D;&#x7684;&#x67D0;&#x7A2E;&#x591A;&#x5A92;&#x9AD4;&#x529F;&#x80FD;&#x3002;
+GStreamer&#x6846;&#x67B6;&#x4E5F;&#x5141;&#x8A31;&#x5C07;&#x7BA1;&#x9053;&#x76F4;&#x63A5;&#x5F9E;NULL&#x72C0;&#x614B;&#x5207;&#x63DB;&#x5230;PLAYING&#x72C0;&#x614B;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x7D93;&#x904E;&#x4E2D;&#x9593;&#x7684;READY&#x72C0;&#x614B;&#x3002;
+
+&#x6B63;&#x8655;&#x65BC;&#x64AD;&#x653E;&#x72C0;&#x614B;&#x7684;&#x7BA1;&#x9053;&#x80FD;&#x5920;&#x96A8;&#x6642;&#x5207;&#x63DB;&#x5230;PAUSED&#x72C0;&#x614B;&#xFF0C;&#x66AB;&#x6642;&#x505C;&#x6B62;&#x7BA1;&#x9053;&#x4E2D;&#x6240;&#x6709;&#x6578;&#x64DA;&#x7684;&#x6D41;&#x52D5;&#xFF0C;&#x4E26;&#x80FD;&#x5920;&#x5728;&#x9700;&#x8981;&#x7684;&#x6642;&#x5019;&#x518D;&#x6B21;&#x5207;&#x63DB;&#x56DE;PLAYING&#x72C0;&#x614B;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x63D2;&#x5165;&#x6216;&#x8005;&#x66F4;&#x6539;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x67D0;&#x500B;&#x5143;&#x4EF6;&#xFF0C;&#x5FC5;&#x9808;&#x5148;&#x5C07;&#x5176;&#x5207;&#x63DB;&#x5230;PAUSED&#x6216;&#x8005;NULL&#x72C0;&#x614B;&#xFF0C;&#x5143;&#x4EF6;&#x5728;&#x8655;&#x65BC;PAUSED&#x72C0;&#x614B;&#x6642;&#x4E26;&#x4E0D;&#x6703;&#x91CB;&#x653E;&#x5176;&#x5360;&#x7528;&#x7684;&#x8CC7;&#x6E90;&#x3002;
+
+&#x7531;&#x65BC;&#x6C92;&#x6709;&#x7528;&#x5230;&#x7DDA;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x5FC5;&#x9808;&#x901A;&#x904E;&#x4E0D;&#x65B7;&#x8ABF;&#x7528;gst_bin_iterate()&#x51FD;&#x6578;&#x7684;&#x8FA6;&#x6CD5;&#xFF0C;&#x4F86;&#x5224;&#x65B7;&#x7BA1;&#x9053;&#x7684;&#x8655;&#x7406;&#x904E;&#x7A0B;&#x6703;&#x5728;&#x4F55;&#x6642;&#x7D50;&#x675F;&#xFF1A;
+
+while (gst_bin_iterate (GST_BIN (pipeline)));
+&#x53EA;&#x8981;&#x7BA1;&#x9053;&#x5167;&#x9084;&#x6703;&#x7E7C;&#x7E8C;&#x6709;&#x65B0;&#x7684;&#x4E8B;&#x4EF6;&#x7522;&#x751F;&#xFF0C;gst_bin_iterate()&#x51FD;&#x6578;&#x5C31;&#x6703;&#x4E00;&#x76F4;&#x8FD4;&#x56DE;TRUE&#xFF0C;&#x53EA;&#x6709;&#x7576;&#x6574;&#x500B;&#x8655;&#x7406;&#x904E;&#x7A0B;&#x90FD;&#x7D50;&#x675F;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x8A72;&#x51FD;&#x6578;&#x624D;&#x6703;&#x8FD4;&#x56DE;FALSE&#xFF0C;&#x6B64;&#x6642;&#x5C31;&#x8A72;&#x7D42;&#x6B62;&#x7BA1;&#x9053;&#x4E26;&#x91CB;&#x653E;&#x4F54;&#x7528;&#x7684;&#x8CC7;&#x6E90;&#x4E86;&#xFF1A; 
+
+Manually adding or removing data from/to a pipeline
+    synchronization, thread-safety and other things
+fakesink fakesrc - old version
+appsrc appsink - new version
+
+cap:is-live  min-latency  max-latency format = GST_FORMAT_TIME
+    non-live format = GST_FORMAT_TIME or GST_FORMAT_BYTES
+event : SEGMENT (appsrc will push) &#x8A08;&#x7B97;&#x63A5;&#x6536;&#x4E86;&#x591A;&#x5C11;&#x6642;&#x9593;&#x7528;
+gst_app_src_push_buffer
+&quot;max-bytes&quot; property &#x201C;enough-data&#x201D; signal
+ &#x201C;need-data&#x201D; signal
+</code></pre><p>&#x9304;wav
+gst-launch alsasrc  ! audioconvert ! audio/x-raw-int,channel
+s=1,depth=16,width=16,rate=16000 !audioresample ! wavenc ! filesink location=mic
+.wav</p>
+<p>&#x6E2C;&#x8A66;&#x64AD;&#x653E;
+gst-launch audiotestsrc ! audioconvert ! audioresample ! alsasink</p>
+<p>&#x64AD;&#x653E;&#x6A94;&#x6848;
+gst-launch filesrc location=toto.ogg ! decodebin ! audioconvert ! audioresample ! alsasink</p>
+<p>&#x5373;&#x6642;&#x64AD;&#x653E;&#x9304;&#x97F3;
+gst-launch -v alsasrc ! alsasink sync=FALSE</p>
+<p>&#x64AD;&#x653E;mp3
+gst-launch-0.10 -v filesrc location=/response.mp3 ! flump3dec ! alsasink</p>
+<p>&#x64AD;&#x653E;url
+gst-launch-0.10 playbin2 uri=<a href="http://kiis-fm.akacast.akamaistream.net/7/572/19773/v1/auth.akacast.akamaistream.net/kiis-fm" target="_blank">http://kiis-fm.akacast.akamaistream.net/7/572/19773/v1/auth.akacast.akamaistream.net/kiis-fm</a></p>
+<p>null-&gt;ready-&gt;pause-&gt;playing
+playing-&gt;pause&gt;ready-&gt;null</p>
+<p>Sources : filesrc | alsasrc | appsrc
+Sink: filesink | alsasink | appsink
+Encoder:
+Decnoder: decodebin
+Converter:
+Bin: playbin</p>
+<p>Gobject &lt;- Element &lt;- Bin &lt;- Pipeline</p>
+</div></div></div></sec> 
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2017-09-04 02:07:58
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../99-Hardware/3-Interface/Readme.html" class="navigation navigation-prev " aria-label="Previous page: Interface">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../94-Google Cloud/1-Speech/Readme.html" class="navigation navigation-next " aria-label="Next page: Speech">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basic","level":"14.1","depth":1,"next":{"title":"Speech","level":"15.1","depth":1,"path":"md/94-Google Cloud/1-Speech/Readme.md","ref":"md/94-Google Cloud/1-Speech/Readme.md","articles":[]},"previous":{"title":"Interface","level":"13.3","depth":1,"path":"md/99-Hardware/3-Interface/Readme.md","ref":"md/99-Hardware/3-Interface/Readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","mermaid","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","flow","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex"],"root":"./books/Linux","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"修訂時間：","copyright":"© 2017 Trashman"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/Linux"},"puml":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"className":"atoc","addClass":true},"splitter":{},"search-pro":{},"mermaid":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"mojombo":{"text":"#000","balloon":"#ddd","even":false},"claylo":{"text":"#fff","balloon":"#08f","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"flow":{"line-color":"#cd4545","fill":"#2d3143","font-color":"#3EB1D0"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"url":"https://plus.google.com/106302595834859374854/","icon":"fa fa-google-plus","label":"Google+"},{"url":"https://www.facebook.com/zhenkunhe/","icon":"fa fa-facebook","label":"Facebook"},{"url":"https://twitter.com/zhenkunhe/","icon":"fa fa-twitter","label":"Twitter"},{"url":"https://www.pinterest.com/zhenkunhe/","icon":"fa fa-pinterest","label":"Pinterest"},{"url":"http://stackoverflow.com/users/6819791/trashman/","icon":"fa fa-stack-overflow","label":"StackOverflow"},{"url":"https://github.com/zhenkunhe/","icon":"fa fa-github","label":"GitHub"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"md/3-Docker/1-Basic/index.html#fig2.1.1","level":"2.1","list_caption":"Figure: 1","alt":"1","nro":1,"url":"../images/1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"md/3-Docker/1-Basic/index.html#fig2.1.2","level":"2.1","list_caption":"Figure: 2","alt":"2","nro":2,"url":"../images/2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2","attributes":{},"skip":false,"key":"2.1.2"},{"backlink":"md/8-Memory/1-Memory_Leak/1-valgrind.html#fig4.1.1.1","level":"4.1.1","list_caption":"Figure: Performance","alt":"Performance","nro":3,"url":"../images/memory_leak_1.jpg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Performance","attributes":{},"skip":false,"key":"4.1.1.1"},{"backlink":"md/2-Mininet/2-什麼是 SDN/index.html#fig6.2.1","level":"6.2","list_caption":"Figure: SDN","alt":"SDN","nro":4,"url":"../image/SDN.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"SDN","attributes":{},"skip":false,"key":"6.2.1"},{"backlink":"md/2-Mininet/2-什麼是 SDN/index.html#fig6.2.2","level":"6.2","list_caption":"Figure: OpenFlow","alt":"OpenFlow","nro":5,"url":"../image/Openflow.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"OpenFlow","attributes":{},"skip":false,"key":"6.2.2"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.1","level":"6.3","list_caption":"Figure: Topology","alt":"Topology","nro":6,"url":"../image/topo.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Topology","attributes":{},"skip":false,"key":"6.3.1"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.2","level":"6.3","list_caption":"Figure: mn","alt":"mn","nro":7,"url":"../image/mn.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"mn","attributes":{},"skip":false,"key":"6.3.2"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.3","level":"6.3","list_caption":"Figure: nodes","alt":"nodes","nro":8,"url":"../image/nodes.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"nodes","attributes":{},"skip":false,"key":"6.3.3"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.4","level":"6.3","list_caption":"Figure: net","alt":"net","nro":9,"url":"../image/net.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"net","attributes":{},"skip":false,"key":"6.3.4"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.5","level":"6.3","list_caption":"Figure: dump","alt":"dump","nro":10,"url":"../image/dump.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"dump","attributes":{},"skip":false,"key":"6.3.5"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.6","level":"6.3","list_caption":"Figure: ping","alt":"ping","nro":11,"url":"../image/ping.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"ping","attributes":{},"skip":false,"key":"6.3.6"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.7","level":"6.3","list_caption":"Figure: xterm","alt":"xterm","nro":12,"url":"../image/xterm.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"xterm","attributes":{},"skip":false,"key":"6.3.7"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.8","level":"6.3","list_caption":"Figure: Server Farm","alt":"Server Farm","nro":13,"url":"../image/server_farm.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Server Farm","attributes":{},"skip":false,"key":"6.3.8"},{"backlink":"md/2-Mininet/3-mininet 實戰/index.html#fig6.3.9","level":"6.3","list_caption":"Figure: example","alt":"example","nro":14,"url":"../image/example.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"example","attributes":{},"skip":false,"key":"6.3.9"},{"backlink":"md/2-Mininet/4-運作原理/1-Network Namespace.html#fig6.4.1.1","level":"6.4.1","list_caption":"Figure: Example1","alt":"Example1","nro":15,"url":"../image/Example1.jpeg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Example1","attributes":{},"skip":false,"key":"6.4.1.1"},{"backlink":"md/2-Mininet/4-運作原理/3-Link.html#fig6.4.3.1","level":"6.4.3","list_caption":"Figure: 拓墣","alt":"拓墣","nro":16,"url":"../image/topo_pre.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"拓墣","attributes":{},"skip":false,"key":"6.4.3.1"},{"backlink":"md/2-Mininet/4-運作原理/4-Interface.html#fig6.4.4.1","level":"6.4.4","list_caption":"Figure: 拓墣","alt":"拓墣","nro":17,"url":"../image/topo.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"拓墣","attributes":{},"skip":false,"key":"6.4.4.1"},{"backlink":"md/1-Namespace/1-簡介/index.html#fig7.1.1","level":"7.1","list_caption":"Figure: Linux的命名空間技術架構","alt":"Linux的命名空間技術架構","nro":18,"url":"../image/Linux的命名空間技術架構.jpg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Linux的命名空間技術架構","attributes":{},"skip":false,"key":"7.1.1"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.1","level":"7.2.1","list_caption":"Figure: 一般乙太網路應用程式","alt":"一般乙太網路應用程式","nro":19,"url":"../image/一般乙太網路應用程式.jpg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"一般乙太網路應用程式","attributes":{},"skip":false,"key":"7.2.1.1"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.2","level":"7.2.1","list_caption":"Figure: PPPoE","alt":"PPPoE","nro":20,"url":"../image/PPPoE.jpg","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"PPPoE","attributes":{},"skip":false,"key":"7.2.1.2"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.3","level":"7.2.1","list_caption":"Figure: VPN","alt":"VPN","nro":21,"url":"../image/VPN.jpg","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"VPN","attributes":{},"skip":false,"key":"7.2.1.3"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.4","level":"7.2.1","list_caption":"Figure: Bridge","alt":"Bridge","nro":22,"url":"../image/Bridge.jpg","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Bridge","attributes":{},"skip":false,"key":"7.2.1.4"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.5","level":"7.2.1","list_caption":"Figure: 一個Network namespace","alt":"一個Network namespace","nro":23,"url":"../image/一個Network namespace.jpg","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"一個Network namespace","attributes":{},"skip":false,"key":"7.2.1.5"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.6","level":"7.2.1","list_caption":"Figure: 複數Network namespace","alt":"複數Network namespace","nro":24,"url":"../image/複數Network namespace.jpg","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"複數Network namespace","attributes":{},"skip":false,"key":"7.2.1.6"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.7","level":"7.2.1","list_caption":"Figure: veth","alt":"veth","nro":25,"url":"../image/veth.jpg","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"veth","attributes":{},"skip":false,"key":"7.2.1.7"},{"backlink":"md/1-Namespace/2-Network namespaces/1-什麼是Network Namespace.html#fig7.2.1.8","level":"7.2.1","list_caption":"Figure: Bridge+Network namespace","alt":"Bridge+Network namespace","nro":26,"url":"../image/Bridge_NS.jpg","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Bridge+Network namespace","attributes":{},"skip":false,"key":"7.2.1.8"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.1","level":"7.2.2","list_caption":"Figure: Example1","alt":"Example1","nro":27,"url":"../image/Example1.jpeg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Example1","attributes":{},"skip":false,"key":"7.2.2.1"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.2","level":"7.2.2","list_caption":"Figure: Step 1-Result","alt":"Step 1-Result","nro":28,"url":"../image/Step1_Result.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 1-Result","attributes":{},"skip":false,"key":"7.2.2.2"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.3","level":"7.2.2","list_caption":"Figure: Step 1-Topo","alt":"Step 1-Topo","nro":29,"url":"../image/Step1_topo.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 1-Topo","attributes":{},"skip":false,"key":"7.2.2.3"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.4","level":"7.2.2","list_caption":"Figure: Step 2-Topo","alt":"Step 2-Topo","nro":30,"url":"../image/Step2_topo.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 2-Topo","attributes":{},"skip":false,"key":"7.2.2.4"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.5","level":"7.2.2","list_caption":"Figure: Step 3-Result","alt":"Step 3-Result","nro":31,"url":"../image/Step3_Result.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 3-Result","attributes":{},"skip":false,"key":"7.2.2.5"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.6","level":"7.2.2","list_caption":"Figure: Step 4-Result","alt":"Step 4-Result","nro":32,"url":"../image/Step4_Result.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 4-Result","attributes":{},"skip":false,"key":"7.2.2.6"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.7","level":"7.2.2","list_caption":"Figure: Step 4-Topo","alt":"Step 4-Topo","nro":33,"url":"../image/Step4_topo.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 4-Topo","attributes":{},"skip":false,"key":"7.2.2.7"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.8","level":"7.2.2","list_caption":"Figure: Step 5-Topo","alt":"Step 5-Topo","nro":34,"url":"../image/Step5_topo.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 5-Topo","attributes":{},"skip":false,"key":"7.2.2.8"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.9","level":"7.2.2","list_caption":"Figure: Step 6-Result","alt":"Step 6-Result","nro":35,"url":"../image/Step6_Result.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 6-Result","attributes":{},"skip":false,"key":"7.2.2.9"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.10","level":"7.2.2","list_caption":"Figure: Step 8-Result","alt":"Step 8-Result","nro":36,"url":"../image/Step8_Result.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Step 8-Result","attributes":{},"skip":false,"key":"7.2.2.10"},{"backlink":"md/1-Namespace/2-Network namespaces/2-範例.html#fig7.2.2.11","level":"7.2.2","list_caption":"Figure: Final-Result","alt":"Final-Result","nro":37,"url":"../image/Final_Result.jpeg","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Final-Result","attributes":{},"skip":false,"key":"7.2.2.11"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.1","level":"8.2.1","list_caption":"Figure: ACL - Access Control List","alt":"ACL - Access Control List","nro":38,"url":"../images/acl.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"ACL - Access Control List","attributes":{},"skip":false,"key":"8.2.1.1"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.2","level":"8.2.1","list_caption":"Figure: Configure file","alt":"Configure file","nro":39,"url":"../images/config.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Configure file","attributes":{},"skip":false,"key":"8.2.1.2"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.3","level":"8.2.1","list_caption":"Figure: 架構","alt":"架構","nro":40,"url":"../images/Gateway_1.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"架構","attributes":{},"skip":false,"key":"8.2.1.3"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.4","level":"8.2.1","list_caption":"Figure: 流程","alt":"流程","nro":41,"url":"../images/Gateway_3.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"流程","attributes":{},"skip":false,"key":"8.2.1.4"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.5","level":"8.2.1","list_caption":"Figure: 對應關係","alt":"對應關係","nro":42,"url":"../images/Gateway_2.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"對應關係","attributes":{},"skip":false,"key":"8.2.1.5"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.6","level":"8.2.1","list_caption":"Figure: Secure","alt":"Secure","nro":43,"url":"../images/secure.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Secure","attributes":{},"skip":false,"key":"8.2.1.6"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.7","level":"8.2.1","list_caption":"Figure: Gateway Discover","alt":"Gateway Discover","nro":44,"url":"../images/discover.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Gateway Discover","attributes":{},"skip":false,"key":"8.2.1.7"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.8","level":"8.2.1","list_caption":"Figure: Create ACL","alt":"Create ACL","nro":45,"url":"../images/create_acl.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Create ACL","attributes":{},"skip":false,"key":"8.2.1.8"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.9","level":"8.2.1","list_caption":"Figure: Activate ACL","alt":"Activate ACL","nro":46,"url":"../images/activate_acl.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Activate ACL","attributes":{},"skip":false,"key":"8.2.1.9"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.10","level":"8.2.1","list_caption":"Figure: Connector startup","alt":"Connector startup","nro":47,"url":"../images/connector_startup.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Connector startup","attributes":{},"skip":false,"key":"8.2.1.10"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.11","level":"8.2.1","list_caption":"Figure: Update ACL","alt":"Update ACL","nro":48,"url":"../images/update_acl.png","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Update ACL","attributes":{},"skip":false,"key":"8.2.1.11"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.12","level":"8.2.1","list_caption":"Figure: Delete ACL","alt":"Delete ACL","nro":49,"url":"../images/delete_acl.png","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Delete ACL","attributes":{},"skip":false,"key":"8.2.1.12"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.13","level":"8.2.1","list_caption":"Figure: Disable ACL","alt":"Disable ACL","nro":50,"url":"../images/disable_acl.png","index":13,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Disable ACL","attributes":{},"skip":false,"key":"8.2.1.13"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.14","level":"8.2.1","list_caption":"Figure: 送出 Notification","alt":"送出 Notification","nro":51,"url":"../images/send_notify.png","index":14,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"送出 Notification","attributes":{},"skip":false,"key":"8.2.1.14"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.15","level":"8.2.1","list_caption":"Figure: 接收 Notification","alt":"接收 Notification","nro":52,"url":"../images/recv_notify.png","index":15,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"接收 Notification","attributes":{},"skip":false,"key":"8.2.1.15"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.16","level":"8.2.1","list_caption":"Figure: 呼叫Method","alt":"呼叫Method","nro":53,"url":"../images/method.png","index":16,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"呼叫Method","attributes":{},"skip":false,"key":"8.2.1.16"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.17","level":"8.2.1","list_caption":"Figure: Get property","alt":"Get property","nro":54,"url":"../images/get_property.png","index":17,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Get property","attributes":{},"skip":false,"key":"8.2.1.17"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.18","level":"8.2.1","list_caption":"Figure: Set property","alt":"Set property","nro":55,"url":"../images/set_property.png","index":18,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Set property","attributes":{},"skip":false,"key":"8.2.1.18"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.19","level":"8.2.1","list_caption":"Figure: session-based signal","alt":"session-based signal","nro":56,"url":"../images/session_signal.png","index":19,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"session-based signal","attributes":{},"skip":false,"key":"8.2.1.19"},{"backlink":"md/4-Alljoyn/2-Gateway/1-架構說明.html#fig8.2.1.20","level":"8.2.1","list_caption":"Figure: Cloud & Connector","alt":"Cloud & Connector","nro":57,"url":"../images/cloud_connector.png","index":20,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Cloud & Connector","attributes":{},"skip":false,"key":"8.2.1.20"},{"backlink":"md/4-Alljoyn/2-Gateway/2-啟動流程 & 程式碼.html#fig8.2.2.1","level":"8.2.2","list_caption":"Figure: Alt text","alt":"Alt text","nro":58,"url":"1452233532472.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Alt text","attributes":{},"skip":false,"key":"8.2.2.1"},{"backlink":"md/6-AI/1-Basic/index.html#fig9.1.1","level":"9.1","list_caption":"Figure: Result","alt":"Result","nro":59,"url":"../images/basic1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Result","attributes":{},"skip":false,"key":"9.1.1"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.1","level":"13.2.1.1","list_caption":"Figure: Buttons","alt":"Buttons","nro":60,"url":"../images/yun_1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Buttons","attributes":{},"skip":false,"key":"13.2.1.1.1"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.2","level":"13.2.1.1","list_caption":"Figure: AP mode","alt":"AP mode","nro":61,"url":"../images/yun_2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"AP mode","attributes":{},"skip":false,"key":"13.2.1.1.2"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.3","level":"13.2.1.1","list_caption":"Figure: Login","alt":"Login","nro":62,"url":"../images/yun_3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Login","attributes":{},"skip":false,"key":"13.2.1.1.3"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.4","level":"13.2.1.1","list_caption":"Figure: Configure","alt":"Configure","nro":63,"url":"../images/yun_4.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Configure","attributes":{},"skip":false,"key":"13.2.1.1.4"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.5","level":"13.2.1.1","list_caption":"Figure: Set wifi","alt":"Set wifi","nro":64,"url":"../images/yun_5.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Set wifi","attributes":{},"skip":false,"key":"13.2.1.1.5"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.6","level":"13.2.1.1","list_caption":"Figure: Restart","alt":"Restart","nro":65,"url":"../images/yun_6.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Restart","attributes":{},"skip":false,"key":"13.2.1.1.6"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.7","level":"13.2.1.1","list_caption":"Figure: Restart","alt":"Restart","nro":66,"url":"../images/yun_7.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Restart","attributes":{},"skip":false,"key":"13.2.1.1.7"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.8","level":"13.2.1.1","list_caption":"Figure: Restart","alt":"Restart","nro":67,"url":"../images/yun_8.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Restart","attributes":{},"skip":false,"key":"13.2.1.1.8"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/1-基本建置.html#fig13.2.1.1.9","level":"13.2.1.1","list_caption":"Figure: Linino","alt":"Linino","nro":68,"url":"../images/yun_9.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Linino","attributes":{},"skip":false,"key":"13.2.1.1.9"},{"backlink":"md/99-Hardware/2-Open Hardware/1-Arduino Yún/2-在Openwrt上寫C++.html#fig13.2.1.2.1","level":"13.2.1.2","list_caption":"Figure: make menuconfig","alt":"make menuconfig","nro":69,"url":"../images/toolchain.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"make menuconfig","attributes":{},"skip":false,"key":"13.2.1.2.1"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig14.1.1","level":"14.1","list_caption":"Figure: 1","alt":"1","nro":70,"url":"../images/1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1","attributes":{},"skip":false,"key":"14.1.1"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig14.1.2","level":"14.1","list_caption":"Figure: 2","alt":"2","nro":71,"url":"../images/2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2","attributes":{},"skip":false,"key":"14.1.2"},{"backlink":"md/93-Gstreamer/1-Basic/index.html#fig14.1.3","level":"14.1","list_caption":"Figure: 3","alt":"3","nro":72,"url":"../images/3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3","attributes":{},"skip":false,"key":"14.1.3"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.1","level":"17.1.1","list_caption":"Figure: 1-1","alt":"1-1","nro":73,"url":"../images/1-1.jpg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-1","attributes":{},"skip":false,"key":"17.1.1.1"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.2","level":"17.1.1","list_caption":"Figure: 1-2","alt":"1-2","nro":74,"url":"../images/1-2.jpg","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-2","attributes":{},"skip":false,"key":"17.1.1.2"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.3","level":"17.1.1","list_caption":"Figure: 1-3","alt":"1-3","nro":75,"url":"../images/1-3.jpg","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-3","attributes":{},"skip":false,"key":"17.1.1.3"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.4","level":"17.1.1","list_caption":"Figure: 1-4","alt":"1-4","nro":76,"url":"../images/1-4.jpg","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-4","attributes":{},"skip":false,"key":"17.1.1.4"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.5","level":"17.1.1","list_caption":"Figure: 1-5","alt":"1-5","nro":77,"url":"../images/1-5.jpg","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-5","attributes":{},"skip":false,"key":"17.1.1.5"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.6","level":"17.1.1","list_caption":"Figure: 1-6","alt":"1-6","nro":78,"url":"../images/1-6.jpg","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-6","attributes":{},"skip":false,"key":"17.1.1.6"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.7","level":"17.1.1","list_caption":"Figure: 1-7","alt":"1-7","nro":79,"url":"../images/1-7.jpg","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-7","attributes":{},"skip":false,"key":"17.1.1.7"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.8","level":"17.1.1","list_caption":"Figure: 1-8","alt":"1-8","nro":80,"url":"../images/1-8.jpg","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-8","attributes":{},"skip":false,"key":"17.1.1.8"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.9","level":"17.1.1","list_caption":"Figure: 1-9-1","alt":"1-9-1","nro":81,"url":"../images/1-9-1.jpg","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-9-1","attributes":{},"skip":false,"key":"17.1.1.9"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.10","level":"17.1.1","list_caption":"Figure: 1-9-2","alt":"1-9-2","nro":82,"url":"../images/1-9-2.jpg","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-9-2","attributes":{},"skip":false,"key":"17.1.1.10"},{"backlink":"md/96-Network/1-CCNA/1-TCP_IP與OSI網路模型.html#fig17.1.1.11","level":"17.1.1","list_caption":"Figure: 1-9-3","alt":"1-9-3","nro":83,"url":"../images/1-9-3.jpg","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-9-3","attributes":{},"skip":false,"key":"17.1.1.11"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.1","level":"17.1.2","list_caption":"Figure: 2-3-1","alt":"2-3-1","nro":84,"url":"../images/2-3-1.jpg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-3-1","attributes":{},"skip":false,"key":"17.1.2.1"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.2","level":"17.1.2","list_caption":"Figure: 2-3-1","alt":"2-3-1","nro":85,"url":"../images/2-3-2.jpg","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-3-1","attributes":{},"skip":false,"key":"17.1.2.2"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.3","level":"17.1.2","list_caption":"Figure: 2-4-1","alt":"2-4-1","nro":86,"url":"../images/2-4-1.jpg","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-4-1","attributes":{},"skip":false,"key":"17.1.2.3"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.4","level":"17.1.2","list_caption":"Figure: 2-4-2","alt":"2-4-2","nro":87,"url":"../images/2-4-2.jpg","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-4-2","attributes":{},"skip":false,"key":"17.1.2.4"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.5","level":"17.1.2","list_caption":"Figure: 2-4-3","alt":"2-4-3","nro":88,"url":"../images/2-4-3.jpg","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-4-3","attributes":{},"skip":false,"key":"17.1.2.5"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.6","level":"17.1.2","list_caption":"Figure: 2-5-1","alt":"2-5-1","nro":89,"url":"../images/2-5-1.jpg","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-5-1","attributes":{},"skip":false,"key":"17.1.2.6"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.7","level":"17.1.2","list_caption":"Figure: 2-5-2","alt":"2-5-2","nro":90,"url":"../images/2-5-2.jpg","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-5-2","attributes":{},"skip":false,"key":"17.1.2.7"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.8","level":"17.1.2","list_caption":"Figure: 2-5-3","alt":"2-5-3","nro":91,"url":"../images/2-5-3.jpg","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-5-3","attributes":{},"skip":false,"key":"17.1.2.8"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.9","level":"17.1.2","list_caption":"Figure: 2-6-1","alt":"2-6-1","nro":92,"url":"../images/2-6-1.jpg","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-6-1","attributes":{},"skip":false,"key":"17.1.2.9"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.10","level":"17.1.2","list_caption":"Figure: 2-6-2","alt":"2-6-2","nro":93,"url":"../images/2-6-2.jpg","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-6-2","attributes":{},"skip":false,"key":"17.1.2.10"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.11","level":"17.1.2","list_caption":"Figure: 2-6-3","alt":"2-6-3","nro":94,"url":"../images/2-6-3.jpg","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-6-3","attributes":{},"skip":false,"key":"17.1.2.11"},{"backlink":"md/96-Network/1-CCNA/2-乙太區域網路基本觀念.html#fig17.1.2.12","level":"17.1.2","list_caption":"Figure: 2-8","alt":"2-8","nro":95,"url":"../images/2-8.jpg","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-8","attributes":{},"skip":false,"key":"17.1.2.12"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.1","level":"17.1.3","list_caption":"Figure: 3-2-1","alt":"3-2-1","nro":96,"url":"../images/3-2-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-1","attributes":{},"skip":false,"key":"17.1.3.1"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.2","level":"17.1.3","list_caption":"Figure: 3-2-2","alt":"3-2-2","nro":97,"url":"../images/3-2-2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-2","attributes":{},"skip":false,"key":"17.1.3.2"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.3","level":"17.1.3","list_caption":"Figure: 3-2-3","alt":"3-2-3","nro":98,"url":"../images/3-2-3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-3","attributes":{},"skip":false,"key":"17.1.3.3"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.4","level":"17.1.3","list_caption":"Figure: 3-2-4","alt":"3-2-4","nro":99,"url":"../images/3-2-4.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-4","attributes":{},"skip":false,"key":"17.1.3.4"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.5","level":"17.1.3","list_caption":"Figure: 3-2-5","alt":"3-2-5","nro":100,"url":"../images/3-2-5.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-5","attributes":{},"skip":false,"key":"17.1.3.5"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.6","level":"17.1.3","list_caption":"Figure: 3-2-6","alt":"3-2-6","nro":101,"url":"../images/3-2-6.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-6","attributes":{},"skip":false,"key":"17.1.3.6"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.7","level":"17.1.3","list_caption":"Figure: 3-2-7","alt":"3-2-7","nro":102,"url":"../images/3-2-7.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-7","attributes":{},"skip":false,"key":"17.1.3.7"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.8","level":"17.1.3","list_caption":"Figure: 3-2-8","alt":"3-2-8","nro":103,"url":"../images/3-2-8.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-8","attributes":{},"skip":false,"key":"17.1.3.8"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.9","level":"17.1.3","list_caption":"Figure: 3-2-9","alt":"3-2-9","nro":104,"url":"../images/3-2-9.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-9","attributes":{},"skip":false,"key":"17.1.3.9"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.10","level":"17.1.3","list_caption":"Figure: 3-3","alt":"3-3","nro":105,"url":"../images/3-2-3.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-3","attributes":{},"skip":false,"key":"17.1.3.10"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.11","level":"17.1.3","list_caption":"Figure: 3-4-1","alt":"3-4-1","nro":106,"url":"../images/3-4-1.png","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-1","attributes":{},"skip":false,"key":"17.1.3.11"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.12","level":"17.1.3","list_caption":"Figure: 3-4-2","alt":"3-4-2","nro":107,"url":"../images/3-4-2.png","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-2","attributes":{},"skip":false,"key":"17.1.3.12"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.13","level":"17.1.3","list_caption":"Figure: 3-4-3","alt":"3-4-3","nro":108,"url":"../images/3-4-3.png","index":13,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-3","attributes":{},"skip":false,"key":"17.1.3.13"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.14","level":"17.1.3","list_caption":"Figure: 3-4-4","alt":"3-4-4","nro":109,"url":"../images/3-4-4.png","index":14,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-4","attributes":{},"skip":false,"key":"17.1.3.14"},{"backlink":"md/96-Network/1-CCNA/3-廣域網路的原理.html#fig17.1.3.15","level":"17.1.3","list_caption":"Figure: 3-4-5","alt":"3-4-5","nro":110,"url":"../images/3-4-5.png","index":15,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-5","attributes":{},"skip":false,"key":"17.1.3.15"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.1","level":"17.1.4","list_caption":"Figure: 4-1","alt":"4-1","nro":111,"url":"../images/4-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-1","attributes":{},"skip":false,"key":"17.1.4.1"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.2","level":"17.1.4","list_caption":"Figure: 4-2-1","alt":"4-2-1","nro":112,"url":"../images/4-2-1.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-2-1","attributes":{},"skip":false,"key":"17.1.4.2"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.3","level":"17.1.4","list_caption":"Figure: 4-2-2","alt":"4-2-2","nro":113,"url":"../images/4-2-2.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-2-2","attributes":{},"skip":false,"key":"17.1.4.3"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.4","level":"17.1.4","list_caption":"Figure: 4-2-3","alt":"4-2-3","nro":114,"url":"../images/4-2-3.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-2-3","attributes":{},"skip":false,"key":"17.1.4.4"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.5","level":"17.1.4","list_caption":"Figure: 4-3-1","alt":"4-3-1","nro":115,"url":"../images/4-3-1.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-3-1","attributes":{},"skip":false,"key":"17.1.4.5"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.6","level":"17.1.4","list_caption":"Figure: 4-3-2","alt":"4-3-2","nro":116,"url":"../images/4-3-2.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-3-2","attributes":{},"skip":false,"key":"17.1.4.6"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.7","level":"17.1.4","list_caption":"Figure: 4-4","alt":"4-4","nro":117,"url":"../images/4-4.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-4","attributes":{},"skip":false,"key":"17.1.4.7"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.8","level":"17.1.4","list_caption":"Figure: 4-5-1","alt":"4-5-1","nro":118,"url":"../images/4-5-1.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-5-1","attributes":{},"skip":false,"key":"17.1.4.8"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.9","level":"17.1.4","list_caption":"Figure: 4-5-2","alt":"4-5-2","nro":119,"url":"../images/4-5-2.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-5-2","attributes":{},"skip":false,"key":"17.1.4.9"},{"backlink":"md/96-Network/1-CCNA/4-IPv4定址及路由的基本原理.html#fig17.1.4.10","level":"17.1.4","list_caption":"Figure: 4-5-3","alt":"4-5-3","nro":120,"url":"../images/4-5-3.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-5-3","attributes":{},"skip":false,"key":"17.1.4.10"},{"backlink":"md/96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig17.1.5.1","level":"17.1.5","list_caption":"Figure: 5-1-1","alt":"5-1-1","nro":121,"url":"../images/5-1-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-1","attributes":{},"skip":false,"key":"17.1.5.1"},{"backlink":"md/96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig17.1.5.2","level":"17.1.5","list_caption":"Figure: 5-1-2","alt":"5-1-2","nro":122,"url":"../images/5-1-2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-2","attributes":{},"skip":false,"key":"17.1.5.2"},{"backlink":"md/96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig17.1.5.3","level":"17.1.5","list_caption":"Figure: 5-1-3","alt":"5-1-3","nro":123,"url":"../images/5-1-3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-3","attributes":{},"skip":false,"key":"17.1.5.3"},{"backlink":"md/96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig17.1.5.4","level":"17.1.5","list_caption":"Figure: 5-1-4","alt":"5-1-4","nro":124,"url":"../images/5-1-4.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-4","attributes":{},"skip":false,"key":"17.1.5.4"},{"backlink":"md/96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig17.1.5.5","level":"17.1.5","list_caption":"Figure: 5-1-5","alt":"5-1-5","nro":125,"url":"../images/5-1-5.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-5","attributes":{},"skip":false,"key":"17.1.5.5"},{"backlink":"md/96-Network/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig17.1.5.6","level":"17.1.5","list_caption":"Figure: 5-2","alt":"5-2","nro":126,"url":"../images/5-2.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-2","attributes":{},"skip":false,"key":"17.1.5.6"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.1","level":"17.1.6","list_caption":"Figure: 6-1-1","alt":"6-1-1","nro":127,"url":"../images/6-1-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-1","attributes":{},"skip":false,"key":"17.1.6.1"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.2","level":"17.1.6","list_caption":"Figure: 6-1-2","alt":"6-1-2","nro":128,"url":"../images/6-1-2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-2","attributes":{},"skip":false,"key":"17.1.6.2"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.3","level":"17.1.6","list_caption":"Figure: 6-1-3","alt":"6-1-3","nro":129,"url":"../images/6-1-3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-3","attributes":{},"skip":false,"key":"17.1.6.3"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.4","level":"17.1.6","list_caption":"Figure: 6-1-4","alt":"6-1-4","nro":130,"url":"../images/6-1-4.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-4","attributes":{},"skip":false,"key":"17.1.6.4"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.5","level":"17.1.6","list_caption":"Figure: 6-1-5","alt":"6-1-5","nro":131,"url":"../images/6-1-5.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-5","attributes":{},"skip":false,"key":"17.1.6.5"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.6","level":"17.1.6","list_caption":"Figure: 6-1-6","alt":"6-1-6","nro":132,"url":"../images/6-1-6.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-6","attributes":{},"skip":false,"key":"17.1.6.6"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.7","level":"17.1.6","list_caption":"Figure: 6-2-1","alt":"6-2-1","nro":133,"url":"../images/6-2-1.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-1","attributes":{},"skip":false,"key":"17.1.6.7"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.8","level":"17.1.6","list_caption":"Figure: 6-2-2","alt":"6-2-2","nro":134,"url":"../images/6-2-2.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-2","attributes":{},"skip":false,"key":"17.1.6.8"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.9","level":"17.1.6","list_caption":"Figure: 6-2-3","alt":"6-2-3","nro":135,"url":"../images/6-2-3.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-3","attributes":{},"skip":false,"key":"17.1.6.9"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.10","level":"17.1.6","list_caption":"Figure: 6-2-4","alt":"6-2-4","nro":136,"url":"../images/6-2-4.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-4","attributes":{},"skip":false,"key":"17.1.6.10"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.11","level":"17.1.6","list_caption":"Figure: 6-2-5","alt":"6-2-5","nro":137,"url":"../images/6-2-5.png","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-5","attributes":{},"skip":false,"key":"17.1.6.11"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.12","level":"17.1.6","list_caption":"Figure: 6-2-6","alt":"6-2-6","nro":138,"url":"../images/6-2-6.png","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-6","attributes":{},"skip":false,"key":"17.1.6.12"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.13","level":"17.1.6","list_caption":"Figure: 6-2-7","alt":"6-2-7","nro":139,"url":"../images/6-2-7.png","index":13,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-7","attributes":{},"skip":false,"key":"17.1.6.13"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.14","level":"17.1.6","list_caption":"Figure: 6-2-8","alt":"6-2-8","nro":140,"url":"../images/6-2-8.png","index":14,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-8","attributes":{},"skip":false,"key":"17.1.6.14"},{"backlink":"md/96-Network/1-CCNA/6-使用交換器建置乙太區域網路.html#fig17.1.6.15","level":"17.1.6","list_caption":"Figure: 6-2-9","alt":"6-2-9","nro":141,"url":"../images/6-2-9.png","index":15,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-9","attributes":{},"skip":false,"key":"17.1.6.15"},{"backlink":"md/98-Swift/2-iOS/index.html#fig19.2.1","level":"19.2","list_caption":"Figure: Animation","alt":"Animation","nro":142,"url":"../images/ios9.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Animation","attributes":{},"skip":false,"key":"19.2.1"}]},"title":"Trashman's Program Note","language":"zh-tw","gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"md/93-Gstreamer/1-Basic/Readme.md","mtime":"2017-09-03T18:07:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-03T19:20:14.424Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
