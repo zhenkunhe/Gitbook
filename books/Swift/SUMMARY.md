@@ -4,9 +4,11 @@
 * [Introduction](README.md)
 
 
-## Swift
-  - [Basic](md/98-Swift/1-Basic/Readme.md)
-  - [I OS](md/98-Swift/2-iOS/Readme.md)
+## Basic
+  - [Basic](md/1-Basic/1-Basic/Readme.md)
+
+## I OS
+  - [I OS](md/2-iOS/2-iOS/Readme.md)
 
 ## Tags
 * [Tags](tags.md)

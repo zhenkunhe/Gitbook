@@ -5,7 +5,7 @@ function gen_book
     python tool/bookJsonMaker.py $1
     rm -r docs/$1
     cd books/$1
-    book sm -s "\d-"
+    book sm -s "\d-" -i 準備中
     cd ../../
     python tool/change_summary.py $1
     gitbook build
