@@ -1,0 +1,673 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TCP_IP傳輸層和應用層的基本原理.1 · Trashman's Program Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-maxiang/maxiang.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chatlog/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6-使用交換器建置乙太區域網路.html" />
+    
+    
+    <link rel="prev" href="4-IPv4定址及路由的基本原理.html" />
+    
+
+    
+    <script src="../../gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">CCNA</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1-TCP_IP與OSI網路模型.html">
+            
+                <a href="1-TCP_IP與OSI網路模型.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    TCP_IP與OSI網路模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2-乙太區域網路基本觀念.html">
+            
+                <a href="2-乙太區域網路基本觀念.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    乙太區域網路基本觀念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="3-廣域網路的原理.html">
+            
+                <a href="3-廣域網路的原理.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    廣域網路的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="4-IPv4定址及路由的基本原理.html">
+            
+                <a href="4-IPv4定址及路由的基本原理.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    IPv4定址及路由的基本原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="5-TCP_IP傳輸層和應用層的基本原理.1.html">
+            
+                <a href="5-TCP_IP傳輸層和應用層的基本原理.1.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    TCP_IP傳輸層和應用層的基本原理.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="6-使用交換器建置乙太區域網路.html">
+            
+                <a href="6-使用交換器建置乙太區域網路.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    使用交換器建置乙太區域網路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../tags.html">
+            
+                <a href="../../tags.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >TCP_IP傳輸層和應用層的基本原理.1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#tcpip&#x50B3;&#x8F38;&#x5C64;&#x548C;&#x61C9;&#x7528;&#x5C64;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;"><b> </b>TCP/IP&#x50B3;&#x8F38;&#x5C64;&#x548C;&#x61C9;&#x7528;&#x5C64;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;"><b>1. </b>&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;</a></li><li><span class="title-icon "></span><a href="#&#x50B3;&#x8F38;&#x5C64;&#x76EE;&#x6A19;&#x8207;&#x529F;&#x80FD;&#x8981;&#x6C42;"><b>2. </b>&#x50B3;&#x8F38;&#x5C64;&#x76EE;&#x6A19;&#x8207;&#x529F;&#x80FD;&#x8981;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#tcpip&#x61C9;&#x7528;&#x5C64;"><b>3. </b>TCP/IP&#x61C9;&#x7528;&#x5C64;</a></li></ul></ul></div><a href="#tcpip&#x50B3;&#x8F38;&#x5C64;&#x548C;&#x61C9;&#x7528;&#x5C64;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="tcpip&#x50B3;&#x8F38;&#x5C64;&#x548C;&#x61C9;&#x7528;&#x5C64;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;"><a name="tcpip&#x50B3;&#x8F38;&#x5C64;&#x548C;&#x61C9;&#x7528;&#x5C64;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#tcpip&#x50B3;&#x8F38;&#x5C64;&#x548C;&#x61C9;&#x7528;&#x5C64;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a> TCP/IP&#x50B3;&#x8F38;&#x5C64;&#x548C;&#x61C9;&#x7528;&#x5C64;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../../tags.html#ccna">CCNA</a> <a href="../../tags.html#network">Network</a> <a href="../../tags.html#cisco">Cisco</a> <a href="../../tags.html#&#x901A;&#x8A0A;">&#x901A;&#x8A0A;</a> <a href="../../tags.html#protocol">Protocol</a> <a href="../../tags.html#&#x8B49;&#x7167;">&#x8B49;&#x7167;</a></p></div><!-- tagsstop --><h2 id="&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;"><a name="&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;" class="anchor-navigation-ex-anchor" href="#&#x540D;&#x8A5E;&#x5B9A;&#x7FA9;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x540D;&#x8A5E;&#x5B9A;&#x7FA9;</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x4E2D;&#x6587;</th>
+<th style="text-align:center">&#x82F1;&#x6587;&#x7C21;&#x7A31;</th>
+<th style="text-align:center">&#x82F1;&#x6587;&#x5168;&#x7A31;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x7DB2;&#x8DEF;&#x96FB;&#x8A71;</td>
+<td style="text-align:center">VoIP</td>
+<td style="text-align:center">Voice over IP</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7DB2;&#x8DEF;&#x8996;&#x8A0A;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Video over IP</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5168;&#x7403;&#x8CC7;&#x8A0A;&#x7DB2;</td>
+<td style="text-align:center">WWW</td>
+<td style="text-align:center">World Wide Web</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5C08;&#x9580;&#x7BA1;&#x7406;&#x7DB2;&#x8DEF;&#x8A2D;&#x5099;&#x7684;&#x8EDF;&#x9AD4;&#x4F7F;&#x7528;</td>
+<td style="text-align:center">DNS</td>
+<td style="text-align:center">Domain Name System</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x5C0F;&#x578B;&#x6A94;&#x6848;&#x50B3;&#x8F38;&#x5354;&#x5B9A;</td>
+<td style="text-align:center">TFTP</td>
+<td style="text-align:center">Trivial File Transfer Protocol</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x6A94;&#x6848;&#x50B3;&#x8F38;&#x5354;&#x5B9A;</td>
+<td style="text-align:center">FTP</td>
+<td style="text-align:center">File Transfer Protocol</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7C21;&#x55AE;&#x90F5;&#x4EF6;&#x50B3;&#x8F38;&#x901A;&#x8A0A;&#x5354;&#x5B9A;</td>
+<td style="text-align:center">SMTP</td>
+<td style="text-align:center">Simple Mail Transfer Protocol</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x90F5;&#x4EF6;&#x901A;&#x8A0A;&#x5354;&#x5B9A;&#x7248;&#x672C;</td>
+<td style="text-align:center">POP3</td>
+<td style="text-align:center">Post Office Protocol version 3</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x52D5;&#x614B;&#x57E0;&#x865F;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">dynamic port numbers</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x7DB2;&#x8DEF;&#x6A94;&#x6848;&#x7CFB;&#x7D71;</td>
+<td style="text-align:center">NFS</td>
+<td style="text-align:center">Network File System</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x552F;&#x4E00;&#x8CC7;&#x6E90;&#x5B9A;&#x4F4D;&#x5668;</td>
+<td style="text-align:center">URL</td>
+<td style="text-align:center">Unifrom Resource Locator</td>
+</tr>
+</tbody>
+</table>
+<sec data-title="&#x50B3;&#x8F38;&#x5C64;&#x76EE;&#x6A19;&#x8207;&#x529F;&#x80FD;&#x8981;&#x6C42;" data-id="1" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="&#x50B3;&#x8F38;&#x5C64;&#x76EE;&#x6A19;&#x8207;&#x529F;&#x80FD;&#x8981;&#x6C42;"><a name="&#x50B3;&#x8F38;&#x5C64;&#x76EE;&#x6A19;&#x8207;&#x529F;&#x80FD;&#x8981;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x50B3;&#x8F38;&#x5C64;&#x76EE;&#x6A19;&#x8207;&#x529F;&#x80FD;&#x8981;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x50B3;&#x8F38;&#x5C64;&#x76EE;&#x6A19;&#x8207;&#x529F;&#x80FD;&#x8981;&#x6C42;</h2></div><div class="panel-collapse in" id="1"><div class="panel-body">
+<ul>
+<li><strong>UDP</strong>&#x53EA;&#x652F;&#x63F4;&#x4E0B;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x9805;&#xFF0C;<strong>TCP</strong>&#x5247;&#x652F;&#x63F4;&#x5168;&#x90E8;&#x3002;</li>
+</ul>
+<figure id="fig2.5.1"><img src="images/5-1-1.png" alt="5-1-1"><figcaption>Image 1 - 5-1-1</figcaption></figure>
+<ul>
+<li><strong>&#x63D0;&#x4F9B;&#x670D;&#x52D9;</strong>&#x7D66;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x3002;</li>
+<li><strong>TCP</strong>&#x6A19;&#x982D;&#x5982;&#x4E0B;&#x3002;</li>
+</ul>
+<figure id="fig2.5.2"><img src="images/5-1-2.png" alt="5-1-2"><figcaption>Image 2 - 5-1-2</figcaption></figure>
+<ul>
+<li><strong>UDP</strong>&#x7684;&#x6A19;&#x982D;&#x5982;&#x4E0B;&#x3002;</li>
+</ul>
+<figure id="fig2.5.3"><img src="images/5-1-3.png" alt="5-1-3"><figcaption>Image 3 - 5-1-3</figcaption></figure>
+<ul>
+<li>&#x70BA;&#x4E86;&#x5340;&#x5225;&#x5C01;&#x5305;&#x8981;&#x9935;&#x7D66;&#x54EA;&#x500B;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;<strong>TCP/UDP</strong>&#x90FD;&#x7528;&#x4E86;<strong>&#x57E0;&#x865F;</strong>&#x3002;</li>
+</ul>
+<figure id="fig2.5.4"><img src="images/5-1-4.png" alt="5-1-4"><figcaption>Image 4 - 5-1-4</figcaption></figure>
+<ul>
+<li>&#x591A;&#x5DE5;&#x4F7F;&#x7528;&#x4E86;<strong>&#x901A;&#x8A0A;&#x7AEF;(Socket)</strong>&#x7684;&#x6982;&#x5FF5;&#x3002;</li>
+</ul>
+<blockquote>
+<p><strong>Socket</strong>&#x5305;&#x542B;&#x4E09;&#x500B;&#x65B9;&#x9762;&#xFF1A;</p>
+<ul>
+<li><strong>IP &#x4F4D;&#x7F6E;</strong></li>
+<li><strong>&#x50B3;&#x8F38;&#x901A;&#x8A0A;&#x5354;&#x5B9A;</strong></li>
+<li><strong>&#x57E0;&#x865F;</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li>&#x57E0;&#x865F;<strong>1024</strong>&#x4EE5;&#x4E0B;&#xFF0C;&#x662F;&#x4FDD;&#x7559;&#x7D66;&#x516C;&#x8A8D;&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x57E0;&#x865F;<strong>1024</strong>&#x958B;&#x59CB;&#xFF0C;&#x7A31;&#x70BA;<strong>&#x52D5;&#x614B;&#x57E0;&#x865F;(dynamic port numbers)</strong>&#x3002;</li>
+<li>&#x4E00;&#x822C;&#x516C;&#x8A8D;&#x7684;&#x57E0;&#x865F;&#x90FD;&#x4F7F;&#x7528;&#x5728;<strong>&#x4F3A;&#x670D;&#x5668;</strong>&#x4E0A;&#xFF0C;&#x5176;&#x4ED6;&#x57E0;&#x865F;&#x5247;&#x4F7F;&#x7528;&#x5728;&#x7528;&#x6236;&#x7AEF;&#x4E0A;&#x3002;</li>
+</ul>
+<figure id="fig2.5.5"><img src="images/5-1-5.png" alt="5-1-5"><figcaption>Image 5 - 5-1-5</figcaption></figure>
+<blockquote>
+<p> &#x5E38;&#x898B;&#x7684;<strong>TCP/IP</strong>&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x6709;&#xFF1A;</p>
+<ul>
+<li><strong>WWW</strong>&#xFF1A;&#x7DB2;&#x9801;&#x4F3A;&#x670D;&#x5668;&#x3002;</li>
+<li><strong>DNS</strong>&#xFF1A;&#x67E5;&#x8A62;&#x540D;&#x7A31;&#x5C0D;&#x61C9;&#x7684;IP&#x3002;</li>
+<li><strong>SNMP</strong>&#xFF1A;&#x5C08;&#x9580;&#x7BA1;&#x7406;&#x7DB2;&#x8DEF;&#x8A2D;&#x5099;&#x7684;&#x8EDF;&#x9AD4;&#x4F7F;&#x7528;&#x3002;</li>
+<li><strong>TFTP</strong>&#xFF1A;&#x5C0F;&#x578B;&#x6A94;&#x6848;&#x50B3;&#x8F38;&#x5354;&#x5B9A;&#x3002;</li>
+<li><strong>FTP</strong>&#xFF1A;&#x6A94;&#x6848;&#x50B3;&#x8F38;&#x5354;&#x5B9A;&#x3002;</li>
+<li><strong>SMTP</strong>&#xFF1A;&#x7C21;&#x55AE;&#x90F5;&#x4EF6;&#x50B3;&#x8F38;&#x901A;&#x8A0A;&#x5354;&#x5B9A;&#x3002;</li>
+<li><strong>POP3</strong>&#xFF1A;&#x90F5;&#x4EF6;&#x901A;&#x8A0A;&#x5354;&#x5B9A;&#x7248;&#x672C;&#x3002;</li>
+</ul>
+<p>&#x5E38;&#x898B;&#x7684;UDP&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x6709;&#xFF1A;</p>
+<ul>
+<li><strong>&#x7DB2;&#x8DEF;&#x96FB;&#x8A71;(VoIP*)</strong>&amp; <strong>&#x7DB2;&#x8DEF;&#x8996;&#x8A0A;</strong>&#x3002;</li>
+<li><strong>DNS&#x7684;&#x8ACB;&#x6C42;</strong>&#x3002;</li>
+<li><strong>&#x7DB2;&#x8DEF;&#x6A94;&#x6848;&#x7CFB;&#x7D71;(NFS)</strong>&#xFF1A;&#x4F7F;&#x7528;<strong>&#x61C9;&#x7528;&#x5C64;&#x7684;&#x5FA9;&#x539F;</strong>&#x3002;</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>&#x4E09;&#x5411;&#x4EA4;&#x63E1;</strong>&#x4F7F;&#x7528;&#x4E86;<strong>SYN</strong> flag &amp; <strong>ACK</strong> flag &amp; <strong>FIN</strong> flag&#x3002;</li>
+<li>&#x5927;&#x9AD4;&#x4F86;&#x8AAA;&#xFF0C;&#x50B3;&#x8F38;&#x5C64;&#x901A;&#x8A0A;&#x5354;&#x5B9A;&#x5206;&#x70BA;<strong>&#x9023;&#x63A5;&#x5C0E;&#x5411; </strong>&amp; <strong>&#x975E;&#x9023;&#x63A5;&#x5C0E;&#x5411;</strong>&#x5169;&#x5927;&#x985E;&#xFF0C;&#x7528;&#x4EE5;&#x8868;&#x660E;&#x662F;&#x5426;<strong>&#x4EA4;&#x63DB;&#x8CC7;&#x6599;&#x524D;</strong>&#x662F;&#x5426;&#x8981;&#x5148;&#x5EFA;&#x7ACB;&#x95DC;&#x4FC2;&#x3002;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="TCP/IP&#x61C9;&#x7528;&#x5C64;" data-id="2" data-nopdf="true" data-collapse="false"><div class="panel panel-default"><div class="panel-heading"><h2 id="tcpip&#x61C9;&#x7528;&#x5C64;"><a name="tcpip&#x61C9;&#x7528;&#x5C64;" class="anchor-navigation-ex-anchor" href="#tcpip&#x61C9;&#x7528;&#x5C64;"><i class="fa fa-link" aria-hidden="true"></i></a>3. TCP/IP&#x61C9;&#x7528;&#x5C64;</h2></div><div class="panel-collapse in" id="2"><div class="panel-body">
+<ul>
+<li>&#x61C9;&#x7528;&#x7A0B;&#x5F0F;&#x5927;&#x7565;&#x5206;&#x4E09;&#x985E;&#x578B;&#x7684;<strong>&#x670D;&#x52D9;&#x54C1;&#x8CEA;(QoS)</strong>&#x9700;&#x6C42;&#xFF1A;<strong>&#x6279;&#x6B21;&#x8655;&#x7406;</strong>&#x3001;<strong>&#x4E92;&#x52D5;&#x5F0F;</strong>&#x3001;<strong>&#x5373;&#x6642;&#x6027;</strong>&#x3002;</li>
+</ul>
+<blockquote>
+<p><strong>QoS</strong>&#x5305;&#x542B;&#x56DB;&#x500B;&#x7279;&#x5FB5;</p>
+<ul>
+<li><strong>&#x983B;&#x5BEC;</strong>&#xFF1A;&#x6BCF;&#x79D2;&#x50B3;&#x8F38;&#x7684;&#x4F4D;&#x5143;&#x91CF;&#x3002;</li>
+<li><strong>&#x5EF6;&#x9072;</strong>&#xFF1A;IP&#x50B3;&#x8F38;&#x6240;&#x9700;&#x6642;&#x9593;&#x3002;</li>
+<li><strong>&#x6296;&#x52D5;</strong>&#xFF1A;&#x5EF6;&#x9072;&#x7522;&#x751F;&#x7684;&#x8B8A;&#x52D5;&#x91CF;&#x3002;</li>
+<li><strong>&#x8017;&#x640D;</strong>&#xFF1A;&#x5230;&#x9054;&#x524D;&#x88AB;&#x4E1F;&#x68C4;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x3002;</li>
+</ul>
+</blockquote>
+<figure id="fig2.5.6"><img src="images/5-2.png" alt="5-2"><figcaption>Image 6 - 5-2</figcaption></figure>
+<ul>
+<li>&#x6279;&#x6B21;&#x8655;&#x7406;&#x6BD4;&#x8F03;&#x5728;&#x610F;<strong>&#x983B;&#x5BEC;</strong>&#x3002;</li>
+</ul>
+</div></div></div></sec> 
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2017-09-18 05:56:50
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4-IPv4定址及路由的基本原理.html" class="navigation navigation-prev " aria-label="Previous page: IPv4定址及路由的基本原理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6-使用交換器建置乙太區域網路.html" class="navigation navigation-next " aria-label="Next page: 使用交換器建置乙太區域網路">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TCP_IP傳輸層和應用層的基本原理.1","level":"2.5","depth":1,"next":{"title":"使用交換器建置乙太區域網路","level":"2.6","depth":1,"path":"md/1-CCNA/6-使用交換器建置乙太區域網路.md","ref":"md/1-CCNA/6-使用交換器建置乙太區域網路.md","articles":[]},"previous":{"title":"IPv4定址及路由的基本原理","level":"2.4","depth":1,"path":"md/1-CCNA/4-IPv4定址及路由的基本原理.md","ref":"md/1-CCNA/4-IPv4定址及路由的基本原理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","mermaid","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","flow","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex"],"root":"./books/Network","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"修訂時間：","copyright":"© 2017 Trashman"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/Network"},"puml":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"className":"atoc","addClass":true},"splitter":{},"search-pro":{},"mermaid":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"mojombo":{"text":"#000","balloon":"#ddd","even":false},"claylo":{"text":"#fff","balloon":"#08f","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"flow":{"line-color":"#cd4545","fill":"#2d3143","font-color":"#3EB1D0"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"url":"https://plus.google.com/106302595834859374854/","icon":"fa fa-google-plus","label":"Google+"},{"url":"https://www.facebook.com/zhenkunhe/","icon":"fa fa-facebook","label":"Facebook"},{"url":"https://twitter.com/zhenkunhe/","icon":"fa fa-twitter","label":"Twitter"},{"url":"https://www.pinterest.com/zhenkunhe/","icon":"fa fa-pinterest","label":"Pinterest"},{"url":"http://stackoverflow.com/users/6819791/trashman/","icon":"fa fa-stack-overflow","label":"StackOverflow"},{"url":"https://github.com/zhenkunhe/","icon":"fa fa-github","label":"GitHub"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.1","level":"2.1","list_caption":"Figure: 1-1","alt":"1-1","nro":1,"url":"images/1-1.jpg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-1","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.2","level":"2.1","list_caption":"Figure: 1-2","alt":"1-2","nro":2,"url":"images/1-2.jpg","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-2","attributes":{},"skip":false,"key":"2.1.2"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.3","level":"2.1","list_caption":"Figure: 1-3","alt":"1-3","nro":3,"url":"images/1-3.jpg","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-3","attributes":{},"skip":false,"key":"2.1.3"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.4","level":"2.1","list_caption":"Figure: 1-4","alt":"1-4","nro":4,"url":"images/1-4.jpg","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-4","attributes":{},"skip":false,"key":"2.1.4"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.5","level":"2.1","list_caption":"Figure: 1-5","alt":"1-5","nro":5,"url":"images/1-5.jpg","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-5","attributes":{},"skip":false,"key":"2.1.5"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.6","level":"2.1","list_caption":"Figure: 1-6","alt":"1-6","nro":6,"url":"images/1-6.jpg","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-6","attributes":{},"skip":false,"key":"2.1.6"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.7","level":"2.1","list_caption":"Figure: 1-7","alt":"1-7","nro":7,"url":"images/1-7.jpg","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-7","attributes":{},"skip":false,"key":"2.1.7"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.8","level":"2.1","list_caption":"Figure: 1-8","alt":"1-8","nro":8,"url":"images/1-8.jpg","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-8","attributes":{},"skip":false,"key":"2.1.8"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.9","level":"2.1","list_caption":"Figure: 1-9-1","alt":"1-9-1","nro":9,"url":"images/1-9-1.jpg","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-9-1","attributes":{},"skip":false,"key":"2.1.9"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.10","level":"2.1","list_caption":"Figure: 1-9-2","alt":"1-9-2","nro":10,"url":"images/1-9-2.jpg","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-9-2","attributes":{},"skip":false,"key":"2.1.10"},{"backlink":"md/1-CCNA/1-TCP_IP與OSI網路模型.html#fig2.1.11","level":"2.1","list_caption":"Figure: 1-9-3","alt":"1-9-3","nro":11,"url":"images/1-9-3.jpg","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"1-9-3","attributes":{},"skip":false,"key":"2.1.11"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.1","level":"2.2","list_caption":"Figure: 2-3-1","alt":"2-3-1","nro":12,"url":"images/2-3-1.jpg","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-3-1","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.2","level":"2.2","list_caption":"Figure: 2-3-1","alt":"2-3-1","nro":13,"url":"images/2-3-2.jpg","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-3-1","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.3","level":"2.2","list_caption":"Figure: 2-4-1","alt":"2-4-1","nro":14,"url":"images/2-4-1.jpg","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-4-1","attributes":{},"skip":false,"key":"2.2.3"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.4","level":"2.2","list_caption":"Figure: 2-4-2","alt":"2-4-2","nro":15,"url":"images/2-4-2.jpg","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-4-2","attributes":{},"skip":false,"key":"2.2.4"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.5","level":"2.2","list_caption":"Figure: 2-4-3","alt":"2-4-3","nro":16,"url":"images/2-4-3.jpg","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-4-3","attributes":{},"skip":false,"key":"2.2.5"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.6","level":"2.2","list_caption":"Figure: 2-5-1","alt":"2-5-1","nro":17,"url":"images/2-5-1.jpg","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-5-1","attributes":{},"skip":false,"key":"2.2.6"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.7","level":"2.2","list_caption":"Figure: 2-5-2","alt":"2-5-2","nro":18,"url":"images/2-5-2.jpg","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-5-2","attributes":{},"skip":false,"key":"2.2.7"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.8","level":"2.2","list_caption":"Figure: 2-5-3","alt":"2-5-3","nro":19,"url":"images/2-5-3.jpg","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-5-3","attributes":{},"skip":false,"key":"2.2.8"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.9","level":"2.2","list_caption":"Figure: 2-6-1","alt":"2-6-1","nro":20,"url":"images/2-6-1.jpg","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-6-1","attributes":{},"skip":false,"key":"2.2.9"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.10","level":"2.2","list_caption":"Figure: 2-6-2","alt":"2-6-2","nro":21,"url":"images/2-6-2.jpg","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-6-2","attributes":{},"skip":false,"key":"2.2.10"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.11","level":"2.2","list_caption":"Figure: 2-6-3","alt":"2-6-3","nro":22,"url":"images/2-6-3.jpg","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-6-3","attributes":{},"skip":false,"key":"2.2.11"},{"backlink":"md/1-CCNA/2-乙太區域網路基本觀念.html#fig2.2.12","level":"2.2","list_caption":"Figure: 2-8","alt":"2-8","nro":23,"url":"images/2-8.jpg","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"2-8","attributes":{},"skip":false,"key":"2.2.12"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.1","level":"2.3","list_caption":"Figure: 3-2-1","alt":"3-2-1","nro":24,"url":"images/3-2-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-1","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.2","level":"2.3","list_caption":"Figure: 3-2-2","alt":"3-2-2","nro":25,"url":"images/3-2-2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-2","attributes":{},"skip":false,"key":"2.3.2"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.3","level":"2.3","list_caption":"Figure: 3-2-3","alt":"3-2-3","nro":26,"url":"images/3-2-3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-3","attributes":{},"skip":false,"key":"2.3.3"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.4","level":"2.3","list_caption":"Figure: 3-2-4","alt":"3-2-4","nro":27,"url":"images/3-2-4.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-4","attributes":{},"skip":false,"key":"2.3.4"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.5","level":"2.3","list_caption":"Figure: 3-2-5","alt":"3-2-5","nro":28,"url":"images/3-2-5.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-5","attributes":{},"skip":false,"key":"2.3.5"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.6","level":"2.3","list_caption":"Figure: 3-2-6","alt":"3-2-6","nro":29,"url":"images/3-2-6.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-6","attributes":{},"skip":false,"key":"2.3.6"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.7","level":"2.3","list_caption":"Figure: 3-2-7","alt":"3-2-7","nro":30,"url":"images/3-2-7.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-7","attributes":{},"skip":false,"key":"2.3.7"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.8","level":"2.3","list_caption":"Figure: 3-2-8","alt":"3-2-8","nro":31,"url":"images/3-2-8.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-8","attributes":{},"skip":false,"key":"2.3.8"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.9","level":"2.3","list_caption":"Figure: 3-2-9","alt":"3-2-9","nro":32,"url":"images/3-2-9.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-2-9","attributes":{},"skip":false,"key":"2.3.9"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.10","level":"2.3","list_caption":"Figure: 3-3","alt":"3-3","nro":33,"url":"images/3-2-3.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-3","attributes":{},"skip":false,"key":"2.3.10"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.11","level":"2.3","list_caption":"Figure: 3-4-1","alt":"3-4-1","nro":34,"url":"images/3-4-1.png","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-1","attributes":{},"skip":false,"key":"2.3.11"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.12","level":"2.3","list_caption":"Figure: 3-4-2","alt":"3-4-2","nro":35,"url":"images/3-4-2.png","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-2","attributes":{},"skip":false,"key":"2.3.12"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.13","level":"2.3","list_caption":"Figure: 3-4-3","alt":"3-4-3","nro":36,"url":"images/3-4-3.png","index":13,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-3","attributes":{},"skip":false,"key":"2.3.13"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.14","level":"2.3","list_caption":"Figure: 3-4-4","alt":"3-4-4","nro":37,"url":"images/3-4-4.png","index":14,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-4","attributes":{},"skip":false,"key":"2.3.14"},{"backlink":"md/1-CCNA/3-廣域網路的原理.html#fig2.3.15","level":"2.3","list_caption":"Figure: 3-4-5","alt":"3-4-5","nro":38,"url":"images/3-4-5.png","index":15,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"3-4-5","attributes":{},"skip":false,"key":"2.3.15"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.1","level":"2.4","list_caption":"Figure: 4-1","alt":"4-1","nro":39,"url":"images/4-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-1","attributes":{},"skip":false,"key":"2.4.1"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.2","level":"2.4","list_caption":"Figure: 4-2-1","alt":"4-2-1","nro":40,"url":"images/4-2-1.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-2-1","attributes":{},"skip":false,"key":"2.4.2"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.3","level":"2.4","list_caption":"Figure: 4-2-2","alt":"4-2-2","nro":41,"url":"images/4-2-2.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-2-2","attributes":{},"skip":false,"key":"2.4.3"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.4","level":"2.4","list_caption":"Figure: 4-2-3","alt":"4-2-3","nro":42,"url":"images/4-2-3.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-2-3","attributes":{},"skip":false,"key":"2.4.4"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.5","level":"2.4","list_caption":"Figure: 4-3-1","alt":"4-3-1","nro":43,"url":"images/4-3-1.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-3-1","attributes":{},"skip":false,"key":"2.4.5"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.6","level":"2.4","list_caption":"Figure: 4-3-2","alt":"4-3-2","nro":44,"url":"images/4-3-2.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-3-2","attributes":{},"skip":false,"key":"2.4.6"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.7","level":"2.4","list_caption":"Figure: 4-4","alt":"4-4","nro":45,"url":"images/4-4.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-4","attributes":{},"skip":false,"key":"2.4.7"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.8","level":"2.4","list_caption":"Figure: 4-5-1","alt":"4-5-1","nro":46,"url":"images/4-5-1.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-5-1","attributes":{},"skip":false,"key":"2.4.8"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.9","level":"2.4","list_caption":"Figure: 4-5-2","alt":"4-5-2","nro":47,"url":"images/4-5-2.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-5-2","attributes":{},"skip":false,"key":"2.4.9"},{"backlink":"md/1-CCNA/4-IPv4定址及路由的基本原理.html#fig2.4.10","level":"2.4","list_caption":"Figure: 4-5-3","alt":"4-5-3","nro":48,"url":"images/4-5-3.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"4-5-3","attributes":{},"skip":false,"key":"2.4.10"},{"backlink":"md/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig2.5.1","level":"2.5","list_caption":"Figure: 5-1-1","alt":"5-1-1","nro":49,"url":"images/5-1-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-1","attributes":{},"skip":false,"key":"2.5.1"},{"backlink":"md/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig2.5.2","level":"2.5","list_caption":"Figure: 5-1-2","alt":"5-1-2","nro":50,"url":"images/5-1-2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-2","attributes":{},"skip":false,"key":"2.5.2"},{"backlink":"md/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig2.5.3","level":"2.5","list_caption":"Figure: 5-1-3","alt":"5-1-3","nro":51,"url":"images/5-1-3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-3","attributes":{},"skip":false,"key":"2.5.3"},{"backlink":"md/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig2.5.4","level":"2.5","list_caption":"Figure: 5-1-4","alt":"5-1-4","nro":52,"url":"images/5-1-4.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-4","attributes":{},"skip":false,"key":"2.5.4"},{"backlink":"md/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig2.5.5","level":"2.5","list_caption":"Figure: 5-1-5","alt":"5-1-5","nro":53,"url":"images/5-1-5.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-1-5","attributes":{},"skip":false,"key":"2.5.5"},{"backlink":"md/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.html#fig2.5.6","level":"2.5","list_caption":"Figure: 5-2","alt":"5-2","nro":54,"url":"images/5-2.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"5-2","attributes":{},"skip":false,"key":"2.5.6"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.1","level":"2.6","list_caption":"Figure: 6-1-1","alt":"6-1-1","nro":55,"url":"images/6-1-1.png","index":1,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-1","attributes":{},"skip":false,"key":"2.6.1"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.2","level":"2.6","list_caption":"Figure: 6-1-2","alt":"6-1-2","nro":56,"url":"images/6-1-2.png","index":2,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-2","attributes":{},"skip":false,"key":"2.6.2"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.3","level":"2.6","list_caption":"Figure: 6-1-3","alt":"6-1-3","nro":57,"url":"images/6-1-3.png","index":3,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-3","attributes":{},"skip":false,"key":"2.6.3"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.4","level":"2.6","list_caption":"Figure: 6-1-4","alt":"6-1-4","nro":58,"url":"images/6-1-4.png","index":4,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-4","attributes":{},"skip":false,"key":"2.6.4"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.5","level":"2.6","list_caption":"Figure: 6-1-5","alt":"6-1-5","nro":59,"url":"images/6-1-5.png","index":5,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-5","attributes":{},"skip":false,"key":"2.6.5"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.6","level":"2.6","list_caption":"Figure: 6-1-6","alt":"6-1-6","nro":60,"url":"images/6-1-6.png","index":6,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-1-6","attributes":{},"skip":false,"key":"2.6.6"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.7","level":"2.6","list_caption":"Figure: 6-2-1","alt":"6-2-1","nro":61,"url":"images/6-2-1.png","index":7,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-1","attributes":{},"skip":false,"key":"2.6.7"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.8","level":"2.6","list_caption":"Figure: 6-2-2","alt":"6-2-2","nro":62,"url":"images/6-2-2.png","index":8,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-2","attributes":{},"skip":false,"key":"2.6.8"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.9","level":"2.6","list_caption":"Figure: 6-2-3","alt":"6-2-3","nro":63,"url":"images/6-2-3.png","index":9,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-3","attributes":{},"skip":false,"key":"2.6.9"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.10","level":"2.6","list_caption":"Figure: 6-2-4","alt":"6-2-4","nro":64,"url":"images/6-2-4.png","index":10,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-4","attributes":{},"skip":false,"key":"2.6.10"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.11","level":"2.6","list_caption":"Figure: 6-2-5","alt":"6-2-5","nro":65,"url":"images/6-2-5.png","index":11,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-5","attributes":{},"skip":false,"key":"2.6.11"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.12","level":"2.6","list_caption":"Figure: 6-2-6","alt":"6-2-6","nro":66,"url":"images/6-2-6.png","index":12,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-6","attributes":{},"skip":false,"key":"2.6.12"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.13","level":"2.6","list_caption":"Figure: 6-2-7","alt":"6-2-7","nro":67,"url":"images/6-2-7.png","index":13,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-7","attributes":{},"skip":false,"key":"2.6.13"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.14","level":"2.6","list_caption":"Figure: 6-2-8","alt":"6-2-8","nro":68,"url":"images/6-2-8.png","index":14,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-8","attributes":{},"skip":false,"key":"2.6.14"},{"backlink":"md/1-CCNA/6-使用交換器建置乙太區域網路.html#fig2.6.15","level":"2.6","list_caption":"Figure: 6-2-9","alt":"6-2-9","nro":69,"url":"images/6-2-9.png","index":15,"caption_template":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"6-2-9","attributes":{},"skip":false,"key":"2.6.15"}]},"title":"Trashman's Program Note","language":"zh-tw","gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"md/1-CCNA/5-TCP_IP傳輸層和應用層的基本原理.1.md","mtime":"2017-09-17T21:56:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-17T23:24:52.536Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

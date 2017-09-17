@@ -9,7 +9,7 @@ function gen_book
     cd ../../
     python tool/change_summary.py $1
     gitbook build
-	rm -r _book/md
+	rm -r _book/md/準備中
     mv _book docs/$1
     rm book.json
 }
