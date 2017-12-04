@@ -2,6 +2,7 @@
 
 function gen_book
 {
+    echo $1
     python tool/bookJsonMaker.py $1
     rm -r docs/$1
     cd books/$1
@@ -9,7 +10,7 @@ function gen_book
     cd ../../
     python tool/change_summary.py $1
     gitbook build
-	rm -r _book/md/準備中
+    rm -r _book/md/準備中
     mv _book docs/$1
     rm book.json
 }

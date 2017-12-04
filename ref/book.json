@@ -22,7 +22,6 @@
         "editlink",
         "tbfed-pagefooter",
         "youtubex",
-        "mermaid",
         "expandable-chapters",
         "book-summary-scroll-position-saver",
         "include-codeblock",
@@ -36,7 +35,6 @@
         "todo",
         "chatlog",
         "bootstrap-callout",
-        "flow",
         "tags",
         "chart",
         "hints",
@@ -55,11 +53,6 @@
         },
         "theme-default": {
             "showLevel": true
-        },
-        "flow": {
-            "font-color": "#3EB1D0",
-            "line-color": "#cd4545",
-            "fill": "#2d3143"
         },
         "chart": {
             "type": "highcharts"
