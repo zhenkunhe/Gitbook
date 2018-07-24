@@ -28,3 +28,5 @@ for line in fileinput.input('books/'+sys.argv[1]+'/SUMMARY.md', inplace=True):
         continue
     else:
         print line
+
+file('books/' + sys.argv[1] + '/SUMMARY.md', 'a').write("\n## Tags\n  * [Tags](tags.md)")

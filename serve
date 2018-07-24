@@ -2,8 +2,13 @@
 
 python tool/bookJsonMaker.py $1
 cd books/$1
-book sm -s "\d-" -i 準備中
+node ../../node_modules/gitbook-summary/bin/summary.js  sm -s "\d-" -i 準備中
 cd ../../
 python tool/change_summary.py $1
+rm -r .temp
+mkdir .temp
+cp -r ref/chatlog .temp
+cp -r ref/styles .temp
+cp -r books/$1/* .temp
+cp ref/tags.md .temp
 gitbook serve
-rm book.json

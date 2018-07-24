@@ -10,7 +10,7 @@ sys.setdefaultencoding('utf8')
 with open("ref/book.json", "r") as jsonFile:
     data = json.load(jsonFile)
 
-data["root"] = "./books/"+sys.argv[1]
+data["root"] = "./.temp"
 data["pluginsConfig"]["editlink"]["base"]="https://github.com/zhenkunhe/Gitbook/edit/master/books/"+sys.argv[1]
 
 with open("book.json", "w") as jsonFile:
