@@ -1,0 +1,36 @@
+# Exchange
+[TOC]
+## 1. 第1001間交易所
+
+- New Hand
+    - maiCoin
+    - shapeShift
+
+### 混合式交易所
+
+- IDEX
+- Joyso
+- Dinngo
+    - bluetooth
+    - mobile
+
+### 集中式交易所
+
+- 配對/非配對
+
+### 去中心化交易所
+
+- 
+
+### 分散式交易所
+
+- client自己配對（類似Kanbon）
+- 
+
+## 2. conf
+
+- MoneyConf
+    - SCA監管
+    - FCA
+    - 大交易所的都在歐洲佈局
+- smart constracts to oracles interface

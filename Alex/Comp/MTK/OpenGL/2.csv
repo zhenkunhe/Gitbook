@@ -1,0 +1,6 @@
+﻿類型,含義
+vecn,包含n個float分量的默認向量
+bvecn,包含n個bool分量的向量
+ivecn,包含n個int分量的向量
+uvecn,包含n個unsigned int分量的向量
+dvecn,包含n個double分量的向量
