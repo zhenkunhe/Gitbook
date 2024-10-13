@@ -1,0 +1,571 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Thread · Trashman's Program Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex Hoh <zhenkunhe@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-maxiang/maxiang.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-youtubex/player.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-spoiler/spoiler.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chatlog/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="md/1-Basic/Basic.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+    <script src="gitbook/gitbook-plugin-chart/highcharts/highcharts.js"></script>
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
+  
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="Thread.html">
+            
+                <a href="Thread.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="md/1-Basic/Basic.html">
+            
+                <a href="md/1-Basic/Basic.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tags</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="tags.html">
+            
+                <a href="tags.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Thread</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#thread"><b> </b>Thread</a></li><ul><li><span class="title-icon "></span><a href="#stdconditionvariable"><b>1. </b>std::condition_variable</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x8AAA;&#x660E;"><b>1.1. </b>1 &#x8AAA;&#x660E;</a></li><li><span class="title-icon "></span><a href="#2-&#x9032;&#x968E;&#x8AAA;&#x660E;"><b>1.2. </b>2 &#x9032;&#x968E;&#x8AAA;&#x660E;</a></li><li><span class="title-icon "></span><a href="#3-&#x7BC4;&#x4F8B;"><b>1.3. </b>3 &#x7BC4;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#note"><b>2. </b>note</a></li><li><span class="title-icon "></span><a href="#mutex"><b>3. </b>mutex</a></li><li><span class="title-icon "></span><a href="#lock"><b>4. </b>lock</a></li><li><span class="title-icon "></span><a href="#thread_1"><b>5. </b>thread</a></li><li><span class="title-icon "></span><a href="#future"><b>6. </b>future</a></li><li><span class="title-icon "></span><a href="#atomic"><b>7. </b>atomic</a></li></ul></ul></div><a href="#thread" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="thread"><a name="thread" class="anchor-navigation-ex-anchor" href="#thread"><i class="fa fa-link" aria-hidden="true"></i></a> Thread</h1>
+<p>[TOC]</p>
+<h2 id="stdconditionvariable"><a name="stdconditionvariable" class="anchor-navigation-ex-anchor" href="#stdconditionvariable"><i class="fa fa-link" aria-hidden="true"></i></a>1. std::condition_variable</h2>
+<h3 id="1-&#x8AAA;&#x660E;"><a name="1-&#x8AAA;&#x660E;" class="anchor-navigation-ex-anchor" href="#1-&#x8AAA;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1 &#x8AAA;&#x660E;</h3>
+<ul>
+<li>&#x4F7F;Thread&#x8207;Thread&#x4E4B;&#x9593;&#x6709;&#x8457;<code>&#x7B49;&#x5F85;</code>&#x8207;<code>&#x901A;&#x77E5;</code>&#x7684;&#x6A5F;&#x5236;</li>
+<li>&#x56E0;&#x6B64;&#x6700;&#x4E3B;&#x8981;&#x6703;&#x6709;&#x5169;&#x500B;&#x529F;&#x80FD;&#x7684;function:<code>wait</code>&amp;<code>signal</code></li>
+<li>&#x547C;&#x53EB;<code>wait</code>&#x7684;Thread&#x4E00;&#x822C;&#x88AB;&#x5B9A;&#x4F4D;&#x6210;<code>consumer</code></li>
+<li>&#x547C;&#x53EB;<code>signal</code>&#x7684;Thread&#x4E00;&#x822C;&#x88AB;&#x5B9A;&#x4F4D;&#x6210;<code>Productor</code>&#x6216;<code>Worker</code></li>
+</ul>
+<h3 id="2-&#x9032;&#x968E;&#x8AAA;&#x660E;"><a name="2-&#x9032;&#x968E;&#x8AAA;&#x660E;" class="anchor-navigation-ex-anchor" href="#2-&#x9032;&#x968E;&#x8AAA;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 2 &#x9032;&#x968E;&#x8AAA;&#x660E;</h3>
+<h3 id="3-&#x7BC4;&#x4F8B;"><a name="3-&#x7BC4;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#3-&#x7BC4;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 3 &#x7BC4;&#x4F8B;</h3>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span>                // std::cout</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;thread&gt;</span>                // std::thread</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mutex&gt;</span>                // std::mutex, std::unique_lock</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;condition_variable&gt;</span>    // std::condition_variable</span>
+
+<span class="hljs-built_in">std</span>::mutex mtx; <span class="hljs-comment">// &#x5168;&#x5C40;&#x4E92;&#x65A5;&#x9501;.</span>
+<span class="hljs-built_in">std</span>::condition_variable cv; <span class="hljs-comment">// &#x5168;&#x5C40;&#x6761;&#x4EF6;&#x53D8;&#x91CF;.</span>
+<span class="hljs-keyword">bool</span> ready = <span class="hljs-literal">false</span>; <span class="hljs-comment">// &#x5168;&#x5C40;&#x6807;&#x5FD7;&#x4F4D;.</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">do_print_id</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id)</span>
+</span>{
+    <span class="hljs-built_in">std</span>::unique_lock &lt;<span class="hljs-built_in">std</span>::mutex&gt; lck(mtx);
+    <span class="hljs-keyword">while</span> (!ready) <span class="hljs-comment">// &#x5982;&#x679C;&#x6807;&#x5FD7;&#x4F4D;&#x4E0D;&#x4E3A; true, &#x5219;&#x7B49;&#x5F85;...</span>
+        cv.wait(mtx); <span class="hljs-comment">// &#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x88AB;&#x963B;&#x585E;, &#x5F53;&#x5168;&#x5C40;&#x6807;&#x5FD7;&#x4F4D;&#x53D8;&#x4E3A; true &#x4E4B;&#x540E;,</span>
+    <span class="hljs-comment">// &#x7EBF;&#x7A0B;&#x88AB;&#x5524;&#x9192;, &#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#x6253;&#x5370;&#x7EBF;&#x7A0B;&#x7F16;&#x53F7;id.</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;thread &quot;</span> &lt;&lt; id &lt;&lt; <span class="hljs-string">&apos;\n&apos;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">go</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-built_in">std</span>::unique_lock &lt;<span class="hljs-built_in">std</span>::mutex&gt; lck(mtx);
+    ready = <span class="hljs-literal">true</span>; <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x6807;&#x5FD7;&#x4F4D;&#x4E3A; true.</span>
+    cv.notify_all(); <span class="hljs-comment">// &#x5524;&#x9192;&#x6240;&#x6709;&#x7EBF;&#x7A0B;.</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-built_in">std</span>::thread threads[<span class="hljs-number">10</span>];
+    <span class="hljs-comment">// spawn 10 threads:</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; ++i)
+        threads[i] = <span class="hljs-built_in">std</span>::thread(do_print_id, i);
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;10 threads ready to race...\n&quot;</span>;
+    go(); <span class="hljs-comment">// go!</span>
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> &amp; th:threads)
+        th.join();
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="note"><a name="note" class="anchor-navigation-ex-anchor" href="#note"><i class="fa fa-link" aria-hidden="true"></i></a>2. note</h2>
+<p>std::condition_variable
+wait
+wait_for
+wait_until
+notify_one
+notify_all</p>
+<h2 id="mutex"><a name="mutex" class="anchor-navigation-ex-anchor" href="#mutex"><i class="fa fa-link" aria-hidden="true"></i></a>3. mutex</h2>
+<p>std::mutex
+timed_mutex
+recursive_mutex
+recursive_timed_mutex
+lock
+unlock</p>
+<h2 id="lock"><a name="lock" class="anchor-navigation-ex-anchor" href="#lock"><i class="fa fa-link" aria-hidden="true"></i></a>4. lock</h2>
+<p>std::unique_lock
+std::lock_guard
+std::lock</p>
+<h2 id="thread_1"><a name="thread_1" class="anchor-navigation-ex-anchor" href="#thread_1"><i class="fa fa-link" aria-hidden="true"></i></a>5. thread</h2>
+<p>std::thread
+&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x8C03;&#x7528;t.join()&#x5C31;&#x4F1A;&#x9047;&#x5230; &#x201C;terminate called whithout an active exception&#x201D;,&#x4F46;&#x662F;&#x5728;&#x4F7F;&#x7528;boost:thread&#x7684;&#x65F6;&#x5019;&#x5374;&#x6CA1;&#x9047;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;google&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x627E;&#x5230;&#x7B54;&#x6848;:
+&#x5927;&#x610F;&#x662F;&#x8BF4;&#xFF0C;&#x5728;~thread();&#x524D;&#x6CA1;&#x6709;&#x8C03;&#x7528;join()&#x5219;&#x4F1A;&#x9047;&#x5230;&#x95EE;&#x9898;&#x5F88;&#x96BE;&#x8C03;&#x8BD5;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x8C03;&#x7528;join()&#x7B49;&#x7EBF;&#x7A0B;&#x7ED3;&#x675F;&#x7684;&#x8BDD;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x7528;detach().&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x9047;&#x5230;&#x201D;terminate called whithout an active exception&#x201D;
+&#x5982;&#x4E0B;:
+{
+std::thread t(func);
+t.detach();
+}</p>
+<p>std::this_thread
+get_id()&#x53EF;&#x4EE5;&#x7528;&#x4F86;&#x53D6;&#x5F97;&#x76EE;&#x524D;&#x7684;&#x57F7;&#x884C;&#x5E8F;&#x7684; id&#xFF08;&#x578B;&#x5225;&#x662F; thread::id&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x900F;&#x904E; std::thread &#x7684;&#x7269;&#x4EF6;&#x7684; get_id() &#x9019;&#x500B; member function &#x4F86;&#x53D6;&#x5F97;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;mThread.get_id()&#xFF09;&#x3002;&#x9019;&#x500B;&#x529F;&#x80FD;&#x4E3B;&#x8981;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x4F86;&#x8B58;&#x5225;&#x4E0D;&#x540C;&#x7684;&#x57F7;&#x884C;&#x5E8F;&#xFF0C;&#x6709;&#x7684;&#x6642;&#x5019;&#x662F;&#x7528;&#x7684;&#x5230;&#x7684;&#x3002;
+yield() CPU&#x9084;&#x662F;&#x5403;&#x6EFF;&#x6EFF; &#x662F;&#x66AB;&#x6642;&#x653E;&#x68C4;&#x4E00;&#x6BB5; CPU &#x6642;&#x9593;&#x3001;&#x8B93;&#x7D66;&#x5176;&#x4ED6;&#x57F7;&#x884C;&#x5E8F;&#x4F7F;&#x7528;&#x7684;&#xFF1B;&#x9019;&#x500B;&#x61C9;&#x8A72;&#x7B97;&#x662F;&#x6BD4;&#x8F03;&#x9032;&#x968E;&#x7684;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5728;&#x9019;&#x908A;&#x66AB;&#x6642;&#x8DF3;&#x904E;&#xFF0C;&#x4E4B;&#x5F8C;&#x6709;&#x6A5F;&#x6703;&#x518D;&#x6574;&#x7406;&#x3002;
+sleep_for() CPU&#x4E0D;&#x6703;&#x5403;&#x5230; &#x548C; sleep_until() &#x5247;&#x662F;&#x7528;&#x4F86;&#x8B93;&#x76EE;&#x524D;&#x7684;&#x57F7;&#x884C;&#x5E8F;&#x66AB;&#x6642;&#x505C;&#x4E0B;&#x4F86;&#x7684;&#xFF0C;&#x524D;&#x8005;&#x662F;&#x505C;&#x6B62;&#x4E00;&#x6BB5;&#x6307;&#x5B9A;&#x7684;&#x6642;&#x9593;&#x3001;&#x5F8C;&#x8005;&#x5247;&#x662F;&#x8A2D;&#x5B9A;&#x4E00;&#x500B;&#x7D55;&#x5C0D;&#x6642;&#x9593;&#x3001;&#x8B93;&#x57F7;&#x884C;&#x5E8F;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x6642;&#x9593;&#x518D;&#x7E7C;&#x7E8C;&#x57F7;&#x884C;&#xFF1B;&#x800C;&#x6642;&#x9593;&#x7684;&#x53C3;&#x6578;&#xFF0C;&#x5247;&#x662F;&#x8981;&#x4F7F;&#x7528; std::chrono&#xFF08;MSDN&#xFF09;&#x7684; duration&#xFF08;&#x7BC4;&#x4F8B;&#xFF09;&#x548C; time_point&#xFF08;&#x7BC4;&#x4F8B;&#xFF09;&#x9019;&#x5169;&#x7A2E;&#x578B;&#x5225;&#x7684;&#x6642;&#x9593;&#x8CC7;&#x6599;&#x3002;</p>
+<h2 id="future"><a name="future" class="anchor-navigation-ex-anchor" href="#future"><i class="fa fa-link" aria-hidden="true"></i></a>6. future</h2>
+<p>std::future
+async
+get
+valid
+wait
+wait_for
+wait_until</p>
+<p>future_status::ready &#x5171;&#x4EAB;&#x72B6;&#x6001;&#x7684;&#x6807;&#x5FD7;&#x5DF2;&#x7ECF;&#x53D8;&#x4E3A; ready&#xFF0C;&#x5373; Provider &#x5728;&#x5171;&#x4EAB;&#x72B6;&#x6001;&#x4E0A;&#x8BBE;&#x7F6E;&#x4E86;&#x503C;&#x6216;&#x8005;&#x5F02;&#x5E38;&#x3002;
+future_status::timeout &#x8D85;&#x65F6;&#xFF0C;&#x5373;&#x5728;&#x89C4;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x5171;&#x4EAB;&#x72B6;&#x6001;&#x7684;&#x6807;&#x5FD7;&#x6CA1;&#x6709;&#x53D8;&#x4E3A; ready&#x3002;
+future_status::deferred &#x5171;&#x4EAB;&#x72B6;&#x6001;&#x5305;&#x542B;&#x4E00;&#x4E2A; deferred &#x51FD;&#x6570;</p>
+<p>std::chrono::milliseconds
+std::chrono::seconds</p>
+<h2 id="atomic"><a name="atomic" class="anchor-navigation-ex-anchor" href="#atomic"><i class="fa fa-link" aria-hidden="true"></i></a>7. atomic</h2>
+<p>std::atomic
+std::atomic_flag
+test_and_set() &#x51FD;&#x6570;&#x68C0;&#x67E5; std::atomic_flag &#x6807;&#x5FD7;&#xFF0C;&#x5982;&#x679C; std::atomic_flag &#x4E4B;&#x524D;&#x6CA1;&#x6709;&#x88AB;&#x8BBE;&#x7F6E;&#x8FC7;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E; std::atomic_flag &#x7684;&#x6807;&#x5FD7;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5148;&#x524D;&#x8BE5; std::atomic_flag &#x5BF9;&#x8C61;&#x662F;&#x5426;&#x88AB;&#x8BBE;&#x7F6E;&#x8FC7;&#xFF0C;&#x5982;&#x679C;&#x4E4B;&#x524D; std::atomic_flag &#x5BF9;&#x8C61;&#x5DF2;&#x88AB;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false&#x3002; </p>
+<footer class="page-footer"><span class="copyright">&#xA9; 2017 Trashman all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8A02;&#x6642;&#x9593;&#xFF1A;
+2024-10-14 03:40:54
+</span></footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="md/1-Basic/Basic.html" class="navigation navigation-next " aria-label="Next page: Basic">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Thread","level":"1.2","depth":1,"next":{"title":"Basic","level":"2.1","depth":1,"path":"md/1-Basic/Basic.md","ref":"md/1-Basic/Basic.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["maxiang","image-captions","disqus","codeblock-filename","sectionx","-lunr","-search","-sharing","search-pro","advanced-emoji","puml","katex","emphasize","splitter","editlink","tbfed-pagefooter","youtubex","expandable-chapters","book-summary-scroll-position-saver","include-codeblock","ace","github-buttons","spoiler","youtubex","codetabs","copy-code-button","toolbar","todo","chatlog","bootstrap-callout","tags","chart","hints","theme-comscore","asciitree","anchor-navigation-ex"],"root":"./.temp","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"modify_format":"YYYY-MM-DD HH:mm:ss","modify_label":"修訂時間：","copyright":"© 2017 Trashman"},"disqus":{"useIdentifier":false,"shortName":"trashmans-program-note"},"spoiler":{},"emphasize":{},"ace":{},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/zhenkunhe/Gitbook/edit/master/books/C++"},"puml":{},"todo":{},"book-summary-scroll-position-saver":{},"atoc":{"className":"atoc","addClass":true},"splitter":{},"search-pro":{},"codetabs":{},"chatlog":{"chathead-date-prefix":"<div class=\"chatlog__head\"><span>","chathead-date-suffix":"</span></div>","users":{"mojombo":{"text":"#000","balloon":"#ddd","even":false},"claylo":{"text":"#fff","balloon":"#08f","even":true}}},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"asciitree":{"leadingChar":"no need, because plugin will guess leadingChar.","trimRight":true},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"codeblock-filename":{},"maxiang":{},"theme-comscore":{},"youtubex":{"embedDescription":{"de":"Eingebettetes video:","default":"Embedded video:","en":"Watch this video!"}},"github-buttons":{"repo":"zhenkunhe/Gitbook","types":["star","watch"],"size":"large"},"tags":{"placement":"top"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"toolbar":{"buttons":[{"url":"https://plus.google.com/106302595834859374854/","icon":"fa fa-google-plus","label":"Google+"},{"url":"https://www.facebook.com/zhenkunhe/","icon":"fa fa-facebook","label":"Facebook"},{"url":"https://twitter.com/zhenkunhe/","icon":"fa fa-twitter","label":"Twitter"},{"url":"https://www.pinterest.com/zhenkunhe/","icon":"fa fa-pinterest","label":"Pinterest"},{"url":"http://stackoverflow.com/users/6819791/trashman/","icon":"fa fa-stack-overflow","label":"StackOverflow"},{"url":"https://github.com/zhenkunhe/","icon":"fa fa-github","label":"GitHub"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"monokai","unindent":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"highcharts"},"expandable-chapters":{},"image-captions":{"caption":"Image _PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"Alex Hoh <zhenkunhe@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Trashman's Program Note","language":"zh-tw","gitbook":"*","description":"Trashman's Program Note"},"file":{"path":"Thread.md","mtime":"2024-10-13T19:40:54.657Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-10-13T19:40:55.232Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-maxiang/maxiang.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-youtubex/player.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-spoiler/spoiler.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
