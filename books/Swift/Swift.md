@@ -1,5 +1,7 @@
 # Swift
+
 [TOC]
+
 ## 1
 
 ```swift
@@ -413,7 +415,7 @@ return [super init];
 
 一個class,一個畫面(XML,class) storyboard/xib(容易因為更新跑掉比例) open GL
 
-hide status bar 只有啟動瞬間可以影藏 icon = pix * 2 or pix * 3(高解析壓縮顯示用) 2x 29 =58 pix
+hide status bar 只有啟動瞬間可以影藏 icon = pix *2 or pix* 3(高解析壓縮顯示用) 2x 29 =58 pix
 
 launch image source => 點選,以後使用命名有規則: a.png a@2x.png 1@3x.png
 
@@ -449,7 +451,7 @@ newValue 是 set 區域下的關鍵字,可以讓set不需要引入參數
 
 codebox
 
-政府資料開放平台 https://www.kickstarter.com/discover
+政府資料開放平台 <https://www.kickstarter.com/discover>
 
 台灣 one click 1.1~2.5
 
