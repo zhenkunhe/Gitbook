@@ -1,3 +1,3 @@
 # Resource
 
-@import "1.csv"
+@import "csv/1.csv"

@@ -1,5 +1,0 @@
-分類	Trivial	deleted	define	example
-Copy constructor	base not virtual member not virtual base is trivial member is trivial user-define not 以上全包含則滿足Trivial	member cannot copy base cannot copy bae cannot destructor user-define MC or MA member rvalue ref 以上任一個滿足	Other	"T::T(const T&),T a(b)"
-Move constructor				Data(15) Data d(15) new Data d(15) Data d{15} 
-Copy assignment				
-Move assignment				

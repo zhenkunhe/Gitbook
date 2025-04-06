@@ -1,26 +1,31 @@
 # Fortnite
+
 [TOC]
+
 ## Info
+
 - 窗口是PM-`Shally Tsou`
 - APK - `\\PC14120137\Game\Fornite_APK`
 - [Replay](https://epicgames.ent.box.com/s/7jgxocrx9qxcqmump80ms8xp8zngvyke)
 
 ## Install
+
 ```bash
-$ adb install FortniteClient-Android-Test-arm64-es2_1025.apk
+adb install FortniteClient-Android-Test-arm64-es2_1025.apk
 ```
 
 ## Setup
+
 ```bash
-$ adb shell "mkdir -p /storage/emulated/0/Android/data/com.epicgames.fortnite/files/UE4Game/FortniteGame/"
-$ adb shell "mkdir -p /storage/emulated/0/UE4Game/FortniteGame/"
-$ adb push UE4CommandLine.txt /storage/emulated/0/Android/data/com.epicgames.fortnite/files/UE4Game/FortniteGame/
-$ adb push UE4CommandLine.txt /storage/emulated/0/UE4Game/FortniteGame/
+adb shell "mkdir -p /storage/emulated/0/Android/data/com.epicgames.fortnite/files/UE4Game/FortniteGame/"
+adb shell "mkdir -p /storage/emulated/0/UE4Game/FortniteGame/"
+adb push UE4CommandLine.txt /storage/emulated/0/Android/data/com.epicgames.fortnite/files/UE4Game/FortniteGame/
+adb push UE4CommandLine.txt /storage/emulated/0/UE4Game/FortniteGame/
 ```
 
 ## User
-@import "1.csv"
 
+@import "csv/1.csv"
 
 ## 登入
 
@@ -36,11 +41,11 @@ $ adb push UE4CommandLine.txt /storage/emulated/0/UE4Game/FortniteGame/
 
 地圖中下
 
-![Untitled.png](Untitled.png)
+![Untitled.png](images/Untitled.png)
 
 在麥田裡平視
 
-![Untitled%201.png](Untitled%201.png)
+![Untitled%201.png](images/Untitled%201.png)
 
 ## Profile
 
@@ -77,24 +82,24 @@ $ adb push UE4CommandLine.txt /storage/emulated/0/UE4Game/FortniteGame/
 ```
 
 - 4指觸碰可開啟`console`
-    - 啟動`frame rate stats`
-    
+  - 啟動`frame rate stats`
+
     ```bash
     ​ -execcmds="stat unit"
     ```
-    
-    - 啟動Replay`file.replay`
-    
+
+  - 啟動Replay`file.replay`
+
     ```bash
     -execcmds="playfortlocalreplay file"
     ```
-    
+
     ```bash
     $ adb push file.replay
     /sdcard/Android/data/com.epicgames.fortnite/files/UE4Game/FortniteGame/Fort
     niteGame/Saved/Demos/file.replay
     ```
-    
+
 - 啟動`Vulkan`
 
 ```bash
@@ -121,8 +126,8 @@ $ adb push UE4CommandLine.txt /storage/emulated/0/UE4Game/FortniteGame/
 ```
 
 - 基本Replay，固定30 fps，保存`CSV文件`，其中包含前`56,000` frame的性能資訊
-    - 有可能`csv` file為空，合理資料量`12870`
-    
+  - 有可能`csv` file為空，合理資料量`12870`
+
     ```bash
     -nomcp -execcmds="stat unit,playfortlocalreplay replay,startfpschart"
     -replayperfmode -usefixedtimestep -fps=30 -deterministic -csvcaptureframes=56000

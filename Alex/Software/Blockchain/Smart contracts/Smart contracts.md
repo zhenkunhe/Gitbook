@@ -1,37 +1,39 @@
 # Smart contracts
+
 [TOC]
+
 ## 1. 前言
 
 ### 1-1 Node program
 
-![Untitled.png](Untitled.png)
+![Untitled.png](images/Untitled.png)
 
 - [https://github.com/ethereum/go-ethereum](https://github.com/ethereum/go-ethereum)
-    - [https://github.com/ethereum/mist/](https://github.com/ethereum/mist/)
-        - 已經Build好的：[https://github.com/ethereum/mist/releases](https://github.com/ethereum/mist/releases)
-        - 裡面內建了 geth 核心
-        - sudo apt-get install libgconf2-4
+  - [https://github.com/ethereum/mist/](https://github.com/ethereum/mist/)
+    - 已經Build好的：[https://github.com/ethereum/mist/releases](https://github.com/ethereum/mist/releases)
+    - 裡面內建了 geth 核心
+    - sudo apt-get install libgconf2-4
 - [https://github.com/ethereum/cpp-ethereum](https://github.com/ethereum/cpp-ethereum)
-    - C++
-    - CMake >= 3.4.3
-    - leveldb
-        - 由Google公司所研發的鍵／值對（Key/Value Pair）DB
-        - 不支持SQL語言
-    - 暫時不支援mining（因為前段時間把GPU mining的code移除了）
-    - 挖礦改用https://github.com/ethereum-mining/ethminer
+  - C++
+  - CMake >= 3.4.3
+  - leveldb
+    - 由Google公司所研發的鍵／值對（Key/Value Pair）DB
+    - 不支持SQL語言
+  - 暫時不支援mining（因為前段時間把GPU mining的code移除了）
+  - 挖礦改用<https://github.com/ethereum-mining/ethminer>
 
 - [https://github.com/paritytech/parity](https://github.com/paritytech/parity)
-    - Rust (2010 Mozilla) v1.26.0
-    - 已經Build好的：[https://www.parity.io/](https://www.parity.io/)
-    - 用 Parity 作為 backend，Mist 作為 front end 也是可以，詳情可以看這個 [reddit](https://www.reddit.com/r/ethereum/comments/53eh1w/how_to_use_the_ethereum_wallet_with_parity/)
+  - Rust (2010 Mozilla) v1.26.0
+  - 已經Build好的：[https://www.parity.io/](https://www.parity.io/)
+  - 用 Parity 作為 backend，Mist 作為 front end 也是可以，詳情可以看這個 [reddit](https://www.reddit.com/r/ethereum/comments/53eh1w/how_to_use_the_ethereum_wallet_with_parity/)
 
 - Console
 
-![Untitled%201.png](Untitled%201.png)
+![Untitled%201.png](images/Untitled%201.png)
 
 - Parity UI
 
-![Untitled%202.png](Untitled%202.png)
+![Untitled%202.png](images/Untitled%202.png)
 
 ### 1-2 cpp-ethereum
 
@@ -57,21 +59,21 @@ $ cmake --build .
 ### 2-1. 術語/定義
 
 - **Block** (區塊)
-    - 根據**區塊在鍊上的位置**分為3種區塊：
-    - **Genesis Block**(區塊頭、創世區塊) - Blockchain裡的第一個區塊
-    - **Current Block**(當前區塊) - Blockchain裡的最後區塊
-    - **Orphan Block**(孤兒塊) - 不在區塊鏈上
+  - 根據**區塊在鍊上的位置**分為3種區塊：
+  - **Genesis Block**(區塊頭、創世區塊) - Blockchain裡的第一個區塊
+  - **Current Block**(當前區塊) - Blockchain裡的最後區塊
+  - **Orphan Block**(孤兒塊) - 不在區塊鏈上
 - **Mining** (挖礦)
-    - 產生新Block的演算法
-    - 其實就是尋找**Proof**的過程
+  - 產生新Block的演算法
+  - 其實就是尋找**Proof**的過程
 - **Proof**
-    - 是一個計算的結果數組
-    - 難以產生，但容易驗證
+  - 是一個計算的結果數組
+  - 難以產生，但容易驗證
 - **Node**
-    - 區塊鏈網路上的一台server
-    - 簡單理解成一個HTTP servers
+  - 區塊鏈網路上的一台server
+  - 簡單理解成一個HTTP servers
 - **Consensus(共識)**
-    - 登入區塊鏈網路時，確認**手上的區塊鏈已經跟全世界同步**的一個演算法
+  - 登入區塊鏈網路時，確認**手上的區塊鏈已經跟全世界同步**的一個演算法
 
 ### 2-2. Blockchain是指？
 
@@ -92,16 +94,16 @@ $ cmake --build .
 
 - 用來驗證**Proof**與**其他data**沒有被修改過
 - 產生方式是將 **上一個區塊的hash + 本區塊的data** 做hash運算
-    
+
     > 請理解成：
     hash新值 = HASH演算( hash舊值 || 本區塊的其餘data )
-    > 
+    >
 - 所以從**Genesis Block**（區塊頭、創世區塊）出發，對每個**區塊**做hash然後比較，即可驗證：
-    - 區塊內的資料是沒被竄改過的
-    - 順序沒被調換過
-    
+  - 區塊內的資料是沒被竄改過的
+  - 順序沒被調換過
+
     > 這都要基於：你信任hash的逆向困難特性
-    > 
+    >
 
 #### 2-3-3. Transactions
 
@@ -159,7 +161,7 @@ class Block(object):
 ```
 
 - 這裡有一個method：`get_block_hash()`
-    - 利用`index`,`proof`,`previous_hash`,`transactions`,`timestamp`產生出此Block的`hash`
+  - 利用`index`,`proof`,`previous_hash`,`transactions`,`timestamp`產生出此Block的`hash`
 
 #### 2-4-2. Blockchain
 
@@ -193,6 +195,7 @@ class BlockChain(object):
 ```
 
 1. Constructor
+
 - 從Constructor可以看出，一個**Blockchain**有2個變數
 - Constructor最後呼叫
 
@@ -314,20 +317,20 @@ for block in blockchain.chain:
 - 到目前為止，我們完成了一個BlockChain Class
 
 > 可以運用在HTTP APIs上測試
-> 
+>
 
 ## 3. Smart contracts
 
 ### 3-1. Contract-Oriented Programming Language
 
 - Design by Contract，縮寫為 `DbC`
-    - 先驗條件
-    - 後驗條件
-    - 不變式
+  - 先驗條件
+  - 後驗條件
+  - 不變式
 
-![Untitled%203.png](Untitled%203.png)
+![Untitled%203.png](images/Untitled%203.png)
 
-![Untitled%204.png](Untitled%204.png)
+![Untitled%204.png](images/Untitled%204.png)
 
 ### 3-2. Ethereum
 
@@ -336,11 +339,11 @@ for block in blockchain.chain:
 ### 3-3. Smart contracts 與 Ethereum的關係
 
 - 在 Ethereum 區塊鏈中所屬的物件
-    - 包含程式碼函式
-    - 能夠與其他合約進行互動
-    - 做出決策
-    - 儲存資料
-    - 傳送乙太幣給其他人
+  - 包含程式碼函式
+  - 能夠與其他合約進行互動
+  - 做出決策
+  - 儲存資料
+  - 傳送乙太幣給其他人
 
 #### 3-3-1. Sample 1
 
@@ -361,16 +364,16 @@ contract SimpleStorage {
 ```
 
 - 第一行就是告訴大家源代碼使用Solidity版本0.4.0寫的
-    
+
     > 一般來說，pragmas（編譯指令）是告知編譯器如何處理源代碼的指令的（例如: `pragma once`）
-    > 
+    >
 - Smart contracts的含義就是一個**implement Ethereum interface**的**class**
 - 該contracts允許任何人在contracts中**set**一個number
 - 並且這個number可以被世界上任何人訪問，且沒有可行的辦法阻止你set這個number
 - 當然，任何人都可以再次call set ，傳入不同的value，覆蓋你這個contracts的number
-    
+
     > 但是這個操作仍會被紀錄在Block chain的歷史中
-    > 
+    >
 
 #### Sample 2 - Subcurrency
 
@@ -405,15 +408,15 @@ contract Coin {
 ```
 
 - `address public minter;` = **160**bit value
-    - public會自動產生get function
+  - public會自動產生get function
 
 ```python
 function minter() returns (address) { return minter; }
 ```
 
 - `mapping (address => uint) public balances;`
-    - 同`<key,value>`結構的data
-    - public會自動產生get function
+  - 同`<key,value>`結構的data
+  - public會自動產生get function
 
 ```python
 function balances(address _account) public view returns (uint) {
@@ -440,20 +443,20 @@ Coin.Sent().watch({}, '', function(error, result) {
 - 如果`mint`被contract創造者外的其他人調用則什麼也不會發生
 - 另一方面，`send`函數可被**任何人向他人發送幣**（當然，前提是發送者擁有這些幣）
 - 如果你使用contract發送Subcurrency給一個address，你在Blockchain explorer上查看該address時是看不到任何相關資料的
-    - 因為，實際上你發送幣和更改餘額的info，僅存在這個coin contract中
-    - 通過使用events，你可以非常簡單地為你的新幣創建一個**blockchain explorer**來追踪交易和餘額。
+  - 因為，實際上你發送幣和更改餘額的info，僅存在這個coin contract中
+  - 通過使用events，你可以非常簡單地為你的新幣創建一個**blockchain explorer**來追踪交易和餘額。
 
 ### 3-4. Solidity
 
 - [官方Github](https://github.com/ethereum/solidity)
 - [官方線上IDE](http://remix.ethereum.org/)
 - the Contract-Oriented Programming Language
-    
-    ![Untitled%205.png](Untitled%205.png)
-    
+
+    ![Untitled%205.png](images/Untitled%205.png)
+
 - Contract由撰寫 Solidity 語言來定義
-    - `成員變數`的儲存採用Blockchain交易與合約的方法，來詢問合約或改變的其狀態
-    - 作為Blockchain的副本會分散到網路中的所有節點，任何人都可以詢問合約，以從中搜尋公開的訊息
+  - `成員變數`的儲存採用Blockchain交易與合約的方法，來詢問合約或改變的其狀態
+  - 作為Blockchain的副本會分散到網路中的所有節點，任何人都可以詢問合約，以從中搜尋公開的訊息
 - 支援繼承
 - 高級語言
 - 設計參考自C++,Python和JavaScript
@@ -466,7 +469,7 @@ Coin.Sent().watch({}, '', function(error, result) {
 
 - 在應用中又被稱為`指紋（fingerprint）`、`摘要（digest）`
 - 有以下特點：
-    - **正向快速**：給定明文和 hash 算法，在有限時間和有限資源內能計算出 hash 值
-    - **逆向困難**：給定（若干） hash 值，在有限時間內很難（基本不可能）逆推出明文
-    - **輸入敏感**：原始輸入信息修改一點信息，產生的 hash 值看起來應該都有很大不同
-    - **衝突避免**：很難找到兩段內容不同的明文，使得它們的 hash 值一致（發生衝突）
+  - **正向快速**：給定明文和 hash 算法，在有限時間和有限資源內能計算出 hash 值
+  - **逆向困難**：給定（若干） hash 值，在有限時間內很難（基本不可能）逆推出明文
+  - **輸入敏感**：原始輸入信息修改一點信息，產生的 hash 值看起來應該都有很大不同
+  - **衝突避免**：很難找到兩段內容不同的明文，使得它們的 hash 值一致（發生衝突）
