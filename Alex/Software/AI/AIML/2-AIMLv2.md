@@ -1,7 +1,5 @@
 # AIML v2.0 (Program AB)
 
-tags: AIML,AI
-
 [TOC]
 
 ## Folder

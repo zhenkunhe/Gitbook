@@ -1,10 +1,8 @@
 # iOS
 
-tags: Swift,Language,iOS,Framework
-
 [TOC]
 
-<!--sec data-title="cocoapods" data-id="0" data-nopdf="true" data-collapse=false ces-->
+## cocoapods
 
 - 它是將所有的依賴庫都放到一個名為Pods資料夾中，然後讓專案依賴Pods資料夾，如此，源碼管理工作都從專案移到了Pods資料夾中
 - Pods資料夾最終會編譯成一個名為libPods.a的文件，專案只需要依賴這個.a檔即可
@@ -50,11 +48,9 @@ end
 
 `Install`
 
-```
+```bash
 pod install
 ```
-
-<!--endsec-->
 
 ## Xcode 7
 
@@ -63,9 +59,9 @@ sudo gem install activesupport -v 4.2.6
 sudo gem install cocoapods
 ```
 
-<!--sec data-title="AppDelegate" data-id="1" data-nopdf="true" data-collapse=false ces-->
+## AppDelegate
 
-## App生命週期
+### App生命週期
 
 ``` swift
 import UIKit
@@ -131,9 +127,7 @@ func application(_ application: UIApplication,didFinishLaunchingWithOptions laun
     }
 ```
 
-<!--endsec-->
-
-<!--sec data-title="UIView" data-id="2" data-nopdf="true" data-collapse=false ces-->
+## UIView
 
 - `view.removeFromSuperview()`
 - `view.backgroundColor = UIColor.green`
@@ -258,15 +252,11 @@ var mainView: MainView?
 
 <img src="images/ios2.png" width="300">
 
-<!--endsec-->
-
-<!--sec data-title="ViewController" data-id="3" data-nopdf="true" data-collapse=false ces-->
+## ViewController
 
 - 每個ViewController有一個view作為這次要控制的主view
 
-<!--endsec-->
-
-<!--sec data-title="Touch event" data-id="4" data-nopdf="true" data-collapse=false ces-->
+## Touch event
 
 - touchesBegan
 - touchesMoved
@@ -308,9 +298,7 @@ var mainView: MainView?
 
 <img src="images/ios3.png" width="300">
 
-<!--endsec-->
-
-<!--sec data-title="Draw" data-id="5" data-nopdf="true" data-collapse=false ces-->
+## Draw
 
 ``` swift
     override func draw(_ rect: CGRect) {
@@ -381,9 +369,7 @@ var mainView: MainView?
 
 <img src="images/ios4.png" width="300">
 
-<!--endsec-->
-
-<!--sec data-title="UINavigationController" data-id="6" data-nopdf="true" data-collapse=false ces-->
+## UINavigationController
 
 `AppDelegate.swift`
 
@@ -441,9 +427,7 @@ var mainView: MainView?
 <img src="images/ios5.png" width="300">
 <img src="images/ios6.png" width="300">
 
-<!--endsec-->
-
-<!--sec data-title="UITabBarController ＆ 切頁動畫" data-id="7" data-nopdf="true" data-collapse=false ces-->
+## UITabBarController ＆ 切頁動畫
 
 `TabBarViewController.swift`
 
@@ -508,9 +492,7 @@ class TabBarViewController: UITabBarController,UITabBarControllerDelegate {
 <img src="images/ios7.png" width="300">
 <img src="images/ios8.png" width="300">
 
-<!--endsec-->
-
-<!--sec data-title="動畫" data-id="8" data-nopdf="true" data-collapse=false ces-->
+## 動畫
 
 - 寫在`tableView willDisplayCell`或是`tabBarController shouldSelect viewController`之中
 
@@ -537,5 +519,3 @@ class TabBarViewController: UITabBarController,UITabBarControllerDelegate {
 ```
 
 ![Animation](images/ios9.png)
-
-<!--endsec-->

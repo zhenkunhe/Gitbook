@@ -1,7 +1,5 @@
 # AIML v1.0
 
-tags: AIML,AI
-
 [TOC]
 
 ## 型態

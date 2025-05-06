@@ -35,8 +35,7 @@
   - 建構一個array[256]，如果此array中有某一個值最近被讀取過(進cache)，則下次讀取時，時間必定較快
   - 所以只要利用時間差，就可以知道某一個Address的值是在cache內
   - 利用偷跑指令+觀察cache法，可以讀出任何你想要的memory data
-
-        ![Untitled%203.png](images/Untitled%203.png)
+  ![Untitled%203.png](images/Untitled%203.png)
 
 ### 1-2 Example
 
